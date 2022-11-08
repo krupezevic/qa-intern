@@ -5,7 +5,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Click on `UPDATE` image icon
   * Select image file to upload on profile and click `Select`
   * ==> image is shown in `Edit image` window with available buttons `Crop`, `Circle`, `Rotate` and `UPLOAD`
@@ -18,7 +18,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Click on `X` on right upper side of image icon
   * Click `SAVE` button
   * ==> Picture is removed from profile
@@ -28,7 +28,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Rename `FIRSTNAME` field with 2 characters
   * CLick on `SAVE` button
   * ==> Firstname renamed in list
@@ -38,7 +38,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Rename `FIRSTNAME` field with 1 char
   * ==> Button `SAVE` is not clickable
 
@@ -47,7 +47,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Rename `LASTNAME` field 
   * CLick on `SAVE` button
   * ==> Lastname renamed in list
@@ -57,7 +57,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert valid password in `EXISTING PASSWORD` field
   * Insert new password in field `NEW PASSWORD`
   * Insert new password in field `CONFIRM NEW PASSWORD`
@@ -69,7 +69,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert invalid password in `EXISTING PASSWORD` field
   * Insert new password in field `NEW PASSWORD`
   * Insert new password in field `CONFIRM NEW PASSWORD`
@@ -80,7 +80,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert valid password in `EXISTING PASSWORD` field
   * Leave empty field in `NEW PASSWORD`
   * Insert new password in field `CONFIRM NEW PASSWORD`
@@ -91,7 +91,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert valid password in `EXISTING PASSWORD` field
   * Insert new password in field `NEW PASSWORD`
   * Leave empty field in `CONFIRM NEW PASSWORD`
@@ -102,7 +102,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert valid password in `EXISTING PASSWORD` field
   * Insert value `12345` in field `NEW PASSWORD`
   * Insert value `123456` field `CONFIRM NEW PASSWORD`
@@ -113,7 +113,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Insert value `John` in `FIRST NAME` field
   * Click `SAVE` button
   * ==> Value `John` is displayed in `FIRST NAME` field
@@ -123,7 +123,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * ==> Button `SAVE` in section `Dynamic vCard` is not clickable
 
 * User is not able to upload photo bigger than 150kB in `Dynamic vCard` section
@@ -131,7 +131,7 @@
   * Insert valid Email 
   * Insert valid Password 
   * Click on `LOGIN` button
-  * Click on `Profile` link
+  * Navigate to `Profile` page
   * Click on `UPDATE` in section `Dynamic vCard`
   * Select image file size 160kB to upload on profile and click `Select`
   * ==> Alert box with message `File <file_name> is too big. The accepted file size is less than 150.00kB`
