@@ -1,53 +1,207 @@
 # Forms functionality
 
-* PRECONDITION:
-    * ==> User is already logged in https://app.superphone-stage.com/login
+* User is able to create a new form
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+
+* User is not able to create new form successfully with empty field `SuperPhone URL`
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Use `SuperPhone URL` empty field
+  * ==>`SAVE` button is disabled
+  * ==> `SAVE` button is on the right side
 
 * User is able to click on `Learn more about Forms`-clickable text for more information
-    * Navigate on Forms
-    * Click on `Learn more about Forms`-clickable text
-    * ==> User got new page with more information about `Learn more about Forms`
-    * ==> The URL should be `https://www.superphone-stage.com/getting-started-on-superphone/setting-up-your-forms`
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `Learn more about Forms`
+  * ==> User got new page with more information about Forms `Learn more about Forms`
+  * ==> The URL should be `https://www.superphone-stage.com/getting-started-on-superphone/setting-up-your-forms`
 
-* User is able to create a new form
-    * Navigate on Forms
-    * Click on `New` button
-    * ==> User got new page `New Form`
-    * ==> The URL should be `https://app.superphone-stage.com/forms/new`
+* User is able to create a new form with insert string at `SuperPhone URL`
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert string in `SuperPhone URL`
+  * Click `SAVE` button
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
 
-* User is not able to create a new form without first input field
-    * Navigate on Forms
-    * Click on `New` button
-    * `SuperPhone URL` field is empty or already exist
-    * `Save` button is not clickable
-    * ==> Form is not created
-    * ==> Message `Domain is not valid or already exist` should be shown
-
-* User is able to create a new form with first input field `SuperPhone URL`
-    * Navigate on Forms
-    * Click on `New` button
-    * `SuperPhone URL` field is filled
-    * ==> Form is created
-    * ==> Message `SuccessForm created successfully`
-
-* User is not able to create a new form when the first input field `SuperPhone URL` is space
-    * Navigate on Forms
-    * Click on `New` button
-    * `SuperPhone URL` field can not be `space`
-    * ==> `space` is disabled
+* User is not able to create a new form when the input field `SuperPhone URL` is space
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * If try insert space in `SuperPhone URL`-you cant do that
+  * ==> `SAVE` button should be disabled
+  * ==> `SAVE` button is on the right side
 
 * User is not able to create a new form if `Custom redirect url` is not correctly written
-    * Navigate on Forms
-    * Click on `New` button
-    * `SuperPhone URL` field is correctly written
-    * `Custom redirect url` field is not correctly written
-    * ==> `Save` button disabled
-    * ==> Form should not be created
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert string without protocol or extension in `SuperPhone URL`
+  * `SuperPhone URL` should be incorrect
+  * ==> `SAVE` button should be disabled
+  * ==> `SAVE` button is on the right side
 
-* User is able to create a new form just if `SuperPhone URL` and `Custom redirect url` are correctly written
-    * Navigate on Forms
-    * Click on `New` button
-    * `SuperPhone URL` field is not correctly written
-    * `Custom redirect url` field is correctly written
-    * ==> `Save` button disabled
-    * ==> Form should not be created
+* User is able to create a new form with empty field in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert correct string in `SuperPhone URL`
+  * `Form Submission` field empty
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to create a new form with 1 character in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert correct string in `SuperPhone URL`
+  * Insert string with 1 character in `Form Submission`
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to create a new form with 159 character in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert correct string in `SuperPhone URL`
+  * Insert string with 159 character in `Form Submission`
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to create a form with 160 character in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert correct string in `SuperPhone URL`
+  * Insert string with 160 character in `Form Submission`
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to create a form with 161 character in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert correct string in `SuperPhone URL`
+  * Insert string with 161 character in `Form Submission`
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to create a form with max 53 emojis in Form Submission
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click on `New` button
+  * ==> modal is displayed
+  * Insert to 53 emojis in `Form Submission`
+  * Click on `SAVE`
+  * ==> Form is created `SuccessForm created successfully`
+  * ==> `SAVE` button is on the right side
+
+* User is able to sort forms by `CREATED` in descending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click to sort forms by `CREATED` in descending order
+  * ==> The values are listed in descending order
+
+* User is able to sort forms by `CREATED` in ascending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click to sort forms by `CREATED` in ascending order
+  * ==> The values are listed in ascending order
+
+* User is able to sort forms by `CONTACT` in descending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click to sort forms by `CONTACT` in descending order
+  * ==> The values are listed in descending order
+
+* User is able to sort forms by `CONTACT` in ascending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click to sort forms by `CONTACT` in ascending order
+  * ==> The values are listed in ascending order
+
+* User is able to `enable` Forms
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click `enable` button
+  * ==> Form is enabled
+
+* User is able to `disabled` Forms
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Forms page
+  * Click `disable` button
+  * ==> Form is disabled
