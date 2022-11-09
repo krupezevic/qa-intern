@@ -1,52 +1,142 @@
 # Tags functionality
 
-* PRECONDITION:
-    * ==> User is already logged in https://app.superphone-stage.com/login
+* User is not able to create new tag successfully with empty field
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click on `New` button
+  * ==> modal `New Tag` is displayed
+  * Use empty field
+  * ==>`SAVE` button is disabled
 
 * User is able to create new tag successfully with string
-  * Navigate on tags
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
   * Click on `New` button
+  * ==> a pop-up window is displayed
   * Insert string
-  * Click on `save` button
-  * ==> Tag is created, assert tr+1
+  * Click `SAVE` button
+  * ==>`Tag` is created
 
 * User is able to create new tag successfully with integer
-  * Navigate on tags
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
   * Click on `New` button
+  * ==> a pop-up window is displayed
   * Insert integer
-  * Click on `save` button
-  * ==> Tag is created, assert tr+1
+  * Click `SAVE` button
+  * ==>`Tag` is created
 
 * User is able to delete tag successfully
-  * Navigate on tags
-  * Select the user you want to delete
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Select tag which want to delete
   * Click on `Delete` button
-  * Click on `confirm` button
-  * ==> Tag is removed, assert tr-1
+  * ==> a pop-up window is displayed
+  * Click `Confirm` button
+  * ==> `Confirm` button is on the right side
+  * ==>`Tag` is removed
 
 * User is able to rename tag successfully
-  * Navigate on tags
-  * Select the user you want to rename
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Select tag which want to rename
   * Click on `Rename` button
-  * Insert new name
-  * Click on `confirm` button
-  * ==> Tag is renamed
+  * ==> a pop-up window is displayed
+  * Insert `New Tag Name`
+  * Click `Confirm` button
+  * ==> `Confirm` button is on the right side
+  * ==>`Tag` is renamed
 
-* User is able to click sort button on name (up arrow)-descending order
-  * Navigate on tags
-  * Click on 'up arrow'
+* User is able to sort tags by `NAME` in descending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by `NAME` in descending order
   * ==> The names are listed in alphabetical order
 
-* User is able to click sort button on name (down arrow)-ascending order
-  * Navigate on tags
-  * Click on 'down arrow'
+* User is able to sort tags by `NAME` in ascending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by `NAME` in ascending order
   * ==> The names are listed in alphabetical order in the opposite direction
 
+* User is able to sort tags by `CREATED` in descending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by `CREATED` in descending order
+  * ==> The values are listed in descending order
+
+* User is able to sort tags by `CREATED` in ascending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by `CREATED` in ascending order
+  * ==> The values are listed in ascending order
+
+* User is able to sort tags by contact in descending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by contact in descending order
+  * ==> The values are listed in descending order
+
+* User is able to sort tags by contact in ascending order
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click to sort tags by contact in ascending order
+  * ==> The values are listed in ascending order
+
 * User is able to select/deselect all tags
-  * Navigate on tags
-  * Click checkpoint from "name"
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Click checkpoint from `NAME`
   * ==> User has selected all tags
   * Second click on checkpoint from "name" will deselect all tags
   * ==> User has deselected all tags
 
-
+* User is able to Combine tag successfully
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate on Tags page
+  * Select two or more tags which want to combine
+  * Click on `Combine` button
+  * ==> a pop-up window is displayed
+  * Insert `New Tag Name`
+  * Click `Confirm` button
+  * ==> `Confirm` button is on the right side
+  * ==>`Tags` are combineds
