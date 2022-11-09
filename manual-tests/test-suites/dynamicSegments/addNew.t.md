@@ -1,4 +1,4 @@
-# Add new segment functionality
+# Add new segment for functionality
 
 * User is able to create new segment
   * Open [superphone app](https://app.superphone-stage.com/login)

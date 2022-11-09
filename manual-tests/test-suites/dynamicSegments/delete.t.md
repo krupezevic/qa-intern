@@ -1,4 +1,4 @@
-# Delete segment functionality
+# Delete segment functionality 
 
 * User is able to delete segment
   * Open [superphone app](https://app.superphone-stage.com/login)

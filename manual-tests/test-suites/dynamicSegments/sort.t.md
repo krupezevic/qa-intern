@@ -1,4 +1,4 @@
-# Sort functionality
+# Sort functionality 
 
 * User is able to sort segments by `NAME` in ascending order
   * Open [superphone app](https://app.superphone-stage.com/login)

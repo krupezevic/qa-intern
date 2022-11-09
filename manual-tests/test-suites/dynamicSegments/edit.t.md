@@ -1,4 +1,4 @@
-# Edit segment functionality
+# Edit segment functionality 
 
 * User is able to edit segment - Rename of field `SEGMENT NAME` value
   * Open [superphone app](https://app.superphone-stage.com/login)
