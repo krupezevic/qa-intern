@@ -170,7 +170,7 @@
   * Click to sort `Forms` by `CREATED` in ascending order
   * ==> The values are listed in ascending order
 
-* User is able to sort forms by `CONTACT` in descending order
+* User is able to sort forms by `CONTACT` in ascending/descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
   * Insert valid Email
   * Insert valid Password
