@@ -1,4 +1,4 @@
-# Updating profile functionality
+# Updating profile functionality 
 
 * User is able to add profile picture
   * Open [superphone app](https://app.superphone-stage.com/login)
