@@ -203,7 +203,7 @@
   * Click on `LOGIN` button
   * Navigate on `Forms` page
   * ==> `Forms` page is opened
-  * Click on `update file`s
+  * Click on `update file`
   * Find file (picture) format 144x144 u want update
   * Click on `UPLOAD`
   * ==> `UPLOAD` button is on the right side
