@@ -11,7 +11,7 @@
   * Click on dropdown menu `Add filter` and select one element
   * Click on dropdown menu `Add filter` and select one more element
   * Click on `SAVE` button
-  * ==> New element is visible in list
+  * ==> New element is added to list
 
 * User is not able to create new segment - field `SEGMENT NAME` empty
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -22,7 +22,7 @@
   * Click on `+New` button
   * Leave empty value in `SEGMENT NAME` field
   * Click on dropdown menu `Add filter` and select one element 
-  * ==> Button `SAVE` is not clickable
+  * ==> Button `SAVE` is disabled
 
 * User is not able to create new segment - dropdown menu `Add filter` not used
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -32,4 +32,4 @@
   * Navigate to `Dynamic Segments` page
   * Click on `+New` button
   * Insert value in `SEGMENT NAME` field
-  * ==> Button `SAVE` is not clickable
+  * ==> Button `SAVE` is disabled
