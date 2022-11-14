@@ -9,7 +9,7 @@
   * Click on `New` button
   * ==> modal `New Tag` is displayed
   * Use `empty field`
-  * ==>`SAVE` button is disabled
+  * ==> `SAVE` button is disabled
 
 * User is able to create new tag successfully with `string`
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -21,7 +21,7 @@
   * ==> modal `New Tag` displayed
   * Insert string
   * Click `SAVE` button
-  * ==>`Tag` is created
+  * ==> `Tag` is created
 
 * User is able to `delete` tag/tags successfully
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -34,13 +34,13 @@
   * ==> modal `Delete Tags` displayed
   * Click `CONFIRM` button
   * ==> `CONFIRM` button is on the right side
-  * ==>`Tag` is removed
-  * Click and select more tags u want `delete`
+  * ==> `Tag` is removed
+  * Click and select more tags you want `delete`
   * Click on `Delete` button
   * ==> modal `Delete Tags` displayed
   * Click `CONFIRM` button
   * ==> `CONFIRM` button is on the right side
-  * ==>`Tags` are removed
+  * ==> `Tags` are removed
 
 * User is able to `rename` tag successfully
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -54,7 +54,7 @@
   * Insert `New Tag Name`
   * Click `CONFIRM` button
   * ==> `CONFIRM` button is on the right side
-  * ==>`Tag` is renamed
+  * ==> `Tag` is renamed
 
 * User is able to `sort` tags `by NAME` in ascending/descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
@@ -97,7 +97,7 @@
   * Navigate on `Tags` page
   * Click checkpoint from `NAME`
   * ==> User has selected all tags
-  * Second click on checkpoint from "name" will deselect all tags
+  * Second click on checkpoint from `Name` will deselect all tags
   * ==> User has deselected all tags
 
 * User is able to `Combine` tag successfully
@@ -108,7 +108,7 @@
   * Navigate on `Tags` page
   * Select two or more tags which want to combine
   * Click on `Combine` button
-  * * ==> modal `Combine Tags` displayed
+  * ==> modal `Combine Tags` displayed
   * Insert `New Tag Name`
   * Click `CONFIRM` button
   * ==> `CONFIRM` button is on the right side
