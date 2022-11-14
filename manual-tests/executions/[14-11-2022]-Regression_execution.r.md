@@ -1,6 +1,6 @@
 # [14-11-2022]-Regression_execution
 
-* [unknown]  User is not able to create new tag successfully with `empty field`
+* [passed] @nemanja User is not able to create new tag successfully with `empty field`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -21,7 +21,7 @@
     * ==> `SAVE` button is disabled
 
 
-* [unknown]  User is able to create new tag successfully with `string`
+* [passed] @nemanja User is able to create new tag successfully with `string`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -44,7 +44,7 @@
     * ==> `Tag` is created
 
 
-* [unknown]  User is able to `delete` tag/tags successfully
+* [passed] @nemanja User is able to `delete` tag/tags successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -81,7 +81,7 @@
     * ==> `Tags` are removed
 
 
-* [unknown]  User is able to `rename` tag successfully
+* [passed] @nemanja User is able to `rename` tag successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -108,7 +108,7 @@
     * ==> `Tag` is renamed
 
 
-* [unknown]  User is able to `sort` tags `by NAME` in ascending/descending order
+* [passed] @nemanja User is able to `sort` tags `by NAME` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -129,7 +129,7 @@
     * ==> The names are listed in alphabetical order in the opposite direction
 
 
-* [unknown]  User is able to `sort` tags `by CREATED` in ascending/descending order
+* [passed] @nemanja User is able to `sort` tags `by CREATED` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -150,7 +150,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to `sort` tags `by CONTACT` in ascending/descending order
+* [passed] @nemanja User is able to `sort` tags `by CONTACT` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -171,7 +171,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to `select/deselect` all tags
+* [passed] @nemanja User is able to `select/deselect` all tags
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -192,7 +192,7 @@
     * ==> User has deselected all tags
 
 
-* [unknown]  User is able to `Combine` tag successfully
+* [passed] @nemanja  User is able to `Combine` tag successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -284,7 +284,7 @@
     * ==> Button `SAVE` is disabled
 
 
-* [unknown]  User is able to click on `Learn more`-clickable text for more information
+* [passed] @nemanja User is able to click on `Learn more`-clickable text for more information
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -303,7 +303,7 @@
     * ==> The URL should be `https://www.superphone-stage.com/en/articles/2425807-multiple-phone-numbers-and-routing`
 
 
-* [unknown]  User is able to create a `New` form
+* [passed] @nemanja  User is able to create a `New` form
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -320,7 +320,7 @@
     * ==> modal `New Phone Number` is displayed
 
 
-* [unknown]  User is not able to create `New` number successfully with empty field
+* [passed] @nemanja  User is not able to create `New` number successfully with empty field
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -343,7 +343,8 @@
     * ==> `ADD` button is on the right side
 
 
-* [unknown]  User is able to click `Get in touch`-clickable text
+* [failed] @nemanja User is able to click `Get in touch`-clickable text
+* > https://trello.com/c/JlA0Eaq1
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -371,7 +372,7 @@
       🕒 A few hours`
 
 
-* [unknown]  User is able to click on `Learn more`-clickable text for more information
+* [skipped] @nemanja User is able to click on `Learn more`-clickable text for more information
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -390,7 +391,7 @@
     * ==> The URL should be `https://www.superphone-stage.com/en/articles/2425807-multiple-phone-numbers-and-routing`
 
 
-* [unknown]  User is not able to create `New` number successfully with empty field
+* [skipped] @nemanja  User is not able to create `New` number successfully with empty field
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -413,7 +414,7 @@
     * ==> `ADD` button is on the right side
 
 
-* [unknown]  User is not able to create phone number for `United States` with `one` inserted number / `two` inserted
+* [passed] @nemanja User is not able to create phone number for `United States` with `one` inserted number / `two` inserted
   numbers
 
     * Open [superphone app](https://app.superphone-stage.com/login)
@@ -439,7 +440,7 @@
     * ==> `ADD` button is on the right side
 
 
-* [unknown]  User is not able to create phone number for `United States` with `nine` inserted numbers / `ten` inserted
+* [passed] @nemanja User is not able to create phone number for `United States` with `nine` inserted numbers / `ten` inserted
   numbers/`eleven` inserted numbers
 
     * Open [superphone app](https://app.superphone-stage.com/login)
@@ -475,7 +476,7 @@
     * ==> `ADD` button is on the right side
 
 
-* [unknown]  User is able to click `Get in touch`-clickable text
+* [skipped] @nemanja User is able to click `Get in touch`-clickable text
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -503,7 +504,7 @@
       🕒 A few hours`
 
 
-* [unknown]  User is able to sort `phone numbers` by `CREATED` in ascending / descending order
+* [passed] @nemanja User is able to sort `phone numbers` by `CREATED` in ascending / descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -524,7 +525,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to sort `phone numbers` by `INBOUND` in ascending / descending order
+* [passed] @nemanja User is able to sort `phone numbers` by `INBOUND` in ascending / descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -545,7 +546,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to sort `phone numbers` by `OUTBOUND` in ascending / descending order
+* [passed] @nemanja User is able to sort `phone numbers` by `OUTBOUND` in ascending / descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -566,7 +567,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to sort `phone numbers` by `SUBSCRIBERS` in ascending / descending order
+* [passed] @nemanja User is able to sort `phone numbers` by `SUBSCRIBERS` in ascending / descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -587,7 +588,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to click `region` to sort phone numbers
+* [passed] @nemanja User is able to click `region` to sort phone numbers
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -604,7 +605,7 @@
     * ==> Phone numbers are sorts by `REGION`
 
 
-* [unknown]  User is able to click `copy` phone number
+* [passed] @nemanja User is able to click `copy` phone number
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -624,7 +625,7 @@
     * ==> Paste the value in notes and verify that it's the same `number`
 
 
-* [unknown]  User is able to `Disable Routing` for phone number
+* [passed] @nemanja User is able to `Disable Routing` for phone number
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -647,7 +648,7 @@
     * ==> The `phone number` is disabled
 
 
-* [unknown]  User is able to click on `Read More about Routing`-clickable text for more information
+* [passed] @nemanja  User is able to click on `Read More about Routing`-clickable text for more information
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -672,7 +673,7 @@
     * ==> The URL should be `https://www.superphone-stage.com/en/articles/2425807-multiple-phone-numbers-and-routing`
 
 
-* [unknown]  User is not able to create `New` form successfully with empty field `SuperPhone URL`
+* [passed] @nemanja  User is not able to create `New` form successfully with empty field `SuperPhone URL`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -695,7 +696,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to click on `Learn more about Forms`-clickable text for more information
+* [passed] @nemanja  User is able to click on `Learn more about Forms`-clickable text for more information
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -714,7 +715,7 @@
     * ==> The URL should be `https://www.superphone-stage.com/getting-started-on-superphone/setting-up-your-forms`
 
 
-* [unknown]  User is able to create a `New` form with insert value at `SuperPhone URL`
+* [passed] @nemanja  User is able to create a `New` form with insert value at `SuperPhone URL`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -739,7 +740,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is not able to create a `New` form when the input field `SuperPhone URL` is space
+* [passed] @nemanja  User is not able to create a `New` form when the input field `SuperPhone URL` is space
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -762,7 +763,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is not able to create a `New` form when insert 2 words or letters with space between
+* [passed] @nemanja  User is not able to create a `New` form when insert 2 words or letters with space between
   in `SuperPhone URL` field
 
     * Open [superphone app](https://app.superphone-stage.com/login)
@@ -786,7 +787,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is not able to create a `New` form if `Custom redirect url` is not correctly written
+* [passed] @nemanja  User is not able to create a `New` form if `Custom redirect url` is not correctly written
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -811,7 +812,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to create a `New` form with empty field in `Form Submission`
+* [passed] @nemanja  User is able to create a `New` form with empty field in `Form Submission`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -838,7 +839,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is not able to create a `New` form with empty field in `SuperPhone URL` and insert value
+* [passed] @nemanja  User is not able to create a `New` form with empty field in `SuperPhone URL` and insert value
   in `Form Submission`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
@@ -864,7 +865,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to create a `New` form with empty field in `Form Submission` and insert value
+* [passed] @nemanja  User is able to create a `New` form with empty field in `Form Submission` and insert value
   in `SuperPhone URL`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
@@ -890,7 +891,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to create a `New` form with 1 character in Form Submission
+* [passed] @nemanja  User is able to create a `New` form with 1 character in Form Submission
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -917,7 +918,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to writte message with 159, 160, 161 character in Form Submission
+* [passed] @nemanja  User is able to writte message with 159, 160, 161 character in Form Submission
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -948,7 +949,7 @@
     * ==> 2 segment displayed
 
 
-* [unknown]  User is able to writte message with 52, 53, 54 emojis in Form Submission
+* [passed] @nemanja User is able to writte message with 52, 53, 54 emojis in Form Submission
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -979,7 +980,7 @@
     * ==> 2 segment displayed
 
 
-* [unknown]  User is able to sort forms by `CREATED` in ascending/descending order
+* [passed] @nemanja  User is able to sort forms by `CREATED` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1002,7 +1003,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to sort forms by `CONTACT` in ascending/descending order
+* [passed] @nemanja  User is able to sort forms by `CONTACT` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1025,7 +1026,7 @@
     * ==> The values are listed in ascending order
 
 
-* [unknown]  User is able to `Disable`/`Enable` Forms
+* [passed] @nemanja  User is able to `Disable`/`Enable` Forms
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1052,7 +1053,7 @@
     * ==> `Disabled` button is on the right side
 
 
-* [unknown]  User is able to update file (picture)
+* [passed] @nemanja  User is able to update file (picture)
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1077,7 +1078,7 @@
     * ==> File (picture) is displayed at `Forms` page
 
 
-* [unknown]  User is able to edit `Form`
+* [passed] @nemanja  User is able to edit `Form`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
