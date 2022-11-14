@@ -22,7 +22,7 @@
     * ==> `ADD` button is disabled
     * ==> `ADD` button is on the right side
 
-* User is not able to create phone number for `United States` with `one` inserted number/`two` inserted numbers
+* User is not able to create phone number for `United States` with `one` inserted number / `two` inserted numbers
     * Open [superphone app](https://app.superphone-stage.com/login)
     * Insert valid Email
     * Insert valid Password
@@ -35,7 +35,7 @@
     * ==> `ADD` button is disabled
     * ==> `ADD` button is on the right side
 
-* User is not able to create phone number for `United States` with `nine` inserted numbers/`ten` inserted numbers/`eleven` inserted numbers
+* User is not able to create phone number for `United States` with `nine` inserted numbers / `ten` inserted numbers/`eleven` inserted numbers
     * Open [superphone app](https://app.superphone-stage.com/login)
     * Insert valid Email
     * Insert valid Password
@@ -65,11 +65,11 @@
     * Type message
     * Click on `send button`
     * ==> Got autoreply  `You’ll get replies here and in your email:
-      ✉️ radovanpilipovicrr@yopmail.com
+      ✉️ <account-email>
       Our usual reply time
       🕒 A few hours`
 
-* User is able to sort `phone numbers` by `CREATED` in ascending/descending order
+* User is able to sort `phone numbers` by `CREATED` in ascending / descending order
     * Open [superphone app](https://app.superphone-stage.com/login)
     * Insert valid Email
     * Insert valid Password
@@ -80,7 +80,7 @@
     * Click to sort forms by `CREATED` in ascending order
     * ==> The values are listed in ascending order
 
-* User is able to sort `phone numbers` by `INBOUND` in ascending/descending order
+* User is able to sort `phone numbers` by `INBOUND` in ascending / descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
   * Insert valid Email
   * Insert valid Password
@@ -91,7 +91,7 @@
   * Click to sort forms by `INBOUND` in ascending order
   * ==> The values are listed in ascending order
 
-* User is able to sort `phone numbers` by `OUTBOUND` in ascending/descending order
+* User is able to sort `phone numbers` by `OUTBOUND` in ascending / descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
   * Insert valid Email
   * Insert valid Password
@@ -102,7 +102,7 @@
   * Click to sort forms by `OUTBOUND` in ascending order
   * ==> The values are listed in ascending order
 
-* User is able to sort `phone numbers` by `SUBSCRIBERS` in ascending/descending order
+* User is able to sort `phone numbers` by `SUBSCRIBERS` in ascending / descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
   * Insert valid Email
   * Insert valid Password
@@ -129,10 +129,11 @@
   * Click on `LOGIN` button
   * Navigate on `Phone Numbers` page
   * Click on icon for copy phone number
-  * ==> Message `This phone number has been
+  * Message `This phone number has been
     copied to your clipboard`
+  * ==> Paste the value in notes and verify that it's the same `number`
 
-* User is able to click `Actions` for phone number
+* User is able to `Disable Routing` for phone number
   * Open [superphone app](https://app.superphone-stage.com/login)
   * Insert valid Email
   * Insert valid Password
