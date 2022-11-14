@@ -219,7 +219,7 @@
     * ==>`Tags` are combined
 
 
-* [unknown]  User is able to edit segment - Rename value in field `SEGMENT NAME`
+* [passed] @radovan User is able to edit segment - Rename value in field `SEGMENT NAME`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -242,7 +242,7 @@
     * ==> Value in field `SEGMENT NAME`is changed
 
 
-* [unknown]  User is able to edit segment - Change value in dropdown menu `Filters`
+* [passed] @radovan User is able to edit segment - Change value in dropdown menu `Filters`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -263,7 +263,7 @@
     * ==> Value in dropdown menu `Filters` is changed
 
 
-* [unknown]  User is not able to `SAVE` edited segment - Empty value in `SEGMENT NAME` field
+* [passed] @radovan User is not able to `SAVE` edited segment - Empty value in `SEGMENT NAME` field
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1102,7 +1102,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to change a password
+* [skipped] @radovan User is able to change a password
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1126,7 +1126,7 @@
     * ==> User is logged in. Messages screen is displayed. The URL should be `https://app.superphone-stage.com/messages`
 
 
-* [unknown]  User is able to sort `Order By` by `NAME` and `CREATED` in ascending/descending order
+* [passed] @radovan User is able to sort `Order By` by `NAME` and `CREATED` in ascending/descending order
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1155,7 +1155,7 @@
     * ==> Dates are in descending order
 
 
-* [unknown]  User is able to delete segment
+* [passed] @radovan User is able to delete segment
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1174,7 +1174,7 @@
     * ==> Segment is deleted
 
 
-* [unknown]  User is able to add profile picture
+* [passed] @radovan User is able to add profile picture
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1199,7 +1199,7 @@
     * ==> Picture is displayed on page
 
 
-* [unknown]  User is able to remove profile picture
+* [passed] @radovan User is able to remove profile picture
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1218,7 +1218,7 @@
     * ==> Picture is removed from profile
 
 
-* [unknown]  User is able to change firstname - 2 characters
+* [passed] @radovan User is able to change firstname - 2 characters
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1237,7 +1237,7 @@
     * ==> Firstname renamed in list
 
 
-* [unknown]  User is not able to change firstname - 1 char
+* [passed] @radovan User is not able to change firstname - 1 char
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1254,7 +1254,7 @@
     * ==> Button `SAVE` is disabled
 
 
-* [unknown]  User is able to change lastname
+* [passed] @radovan User is able to change lastname
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1273,7 +1273,7 @@
     * ==> Lastname renamed in list
 
 
-* [unknown]  User is able to change password
+* [passed] @radovan User is able to change password
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1304,7 +1304,7 @@
     * ==> Login with new password successfully
 
 
-* [unknown]  User is not able to change password-invalid password in `EXISTING PASSWORD` field
+* [passed] @radovan User is not able to change password-invalid password in `EXISTING PASSWORD` field
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1327,7 +1327,7 @@
     * ==> Displayed alert message `Error Bad Request please contact support`
 
 
-* [unknown]  User is not able to change password-empty field `NEW PASSWORD`
+* [passed] @radovan User is not able to change password-empty field `NEW PASSWORD`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1348,7 +1348,7 @@
     * ==> Button `SAVE` in section `Password` is disabled
 
 
-* [unknown]  User is not able to change password-empty field `CONFIRM NEW PASSWORD`
+* [passed] @radovan User is not able to change password-empty field `CONFIRM NEW PASSWORD`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1369,7 +1369,7 @@
     * ==> Button `SAVE` in section `Password` is disabled
 
 
-* [unknown]  User is not able to change password-different values for `NEW PASSWORD` and `CONFIRM NEW PASSWORD`
+* [passed] @radovan User is not able to change password-different values for `NEW PASSWORD` and `CONFIRM NEW PASSWORD`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1390,7 +1390,7 @@
     * ==> Button `SAVE` in section `Password` is disabled
 
 
-* [unknown]  User is able to add value in `FIRST NAME` field of `Dynamic vCard` section
+* [passed] @radovan User is able to add value in `FIRST NAME` field of `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1409,7 +1409,7 @@
     * ==> Value `John` is displayed in `FIRST NAME` field
 
 
-* [unknown]  User is able to edit value in `FIRST NAME` field of `Dynamic vCard` section
+* [passed] @radovan User is able to edit value in `FIRST NAME` field of `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1428,7 +1428,7 @@
     * ==> Value `Maja` is displayed in `FIRST NAME` field
 
 
-* [unknown]  User is not able to edit `Dynamic vCard` form
+* [skipped] @radovan User is not able to edit `Dynamic vCard` form
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1443,7 +1443,7 @@
     * ==> Button `SAVE` in section `Dynamic vCard` is disabled
 
 
-* [unknown]  User is not able to upload photo bigger than 150kB in `Dynamic vCard` section
+* [passed] @radovan User is not able to upload photo bigger than 150kB in `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1462,7 +1462,7 @@
     * ==> Alert box with message `File <file_name> is too big. The accepted file size is less than 150.00kB`
 
 
-* [unknown]  User is able to add value to `FACEBOOK` field in `Dynamic vCard` section
+* [passed] @radovan User is able to add value to `FACEBOOK` field in `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1487,7 +1487,7 @@
     * ==> Empty field is displayed in `FACEBOOK` field
 
 
-* [unknown]  User is not able to add invalid value to `FACEBOOK` field in `Dynamic vCard` section
+* [passed] @radovan User is not able to add invalid value to `FACEBOOK` field in `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1512,7 +1512,7 @@
     * ==> Error message  `link is not valid` visible
 
 
-* [unknown]  User is able to login successfully
+* [skipped] @radovan User is able to login successfully
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1529,7 +1529,7 @@
     * ==> The URL should be `https://app.superphone-stage.com/messages`
 
 
-* [unknown]  User is not able to login successfully - invalid password
+* [skipped] @radovan User is not able to login successfully - invalid password
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1544,7 +1544,7 @@
     * ==> Message `ERROR: Invalid username or password.` should be shown
 
 
-* [unknown]  User is not able to login successfully - empty password
+* [skipped] @radovan User is not able to login successfully - empty password
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1559,7 +1559,7 @@
     * ==> Message `Please fill in this field.` should be shown
 
 
-* [unknown]  User is not able to login successfully - invalid email
+* [skipped] @radovan User is not able to login successfully - invalid email
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1574,7 +1574,7 @@
     * ==> Message `ERROR: Invalid username or password.` should be shown
 
 
-* [unknown]  User is not able to login successfully - invalid email format (without @ sign)
+* [skipped] @radovan User is not able to login successfully - invalid email format (without @ sign)
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1587,7 +1587,7 @@
     * ==> Message `Please include an '@' in the email address. 'test' is missing an '@'.` should be shown
 
 
-* [unknown]  User is not able to login successfully - invalid email format (without part after @ sign)
+* [skipped] @radovan User is not able to login successfully - invalid email format (without part after @ sign)
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1600,7 +1600,7 @@
     * ==> Message `Please enter a part following '@'. 'test@' is incomplete.` should be shown
 
 
-* [unknown]  User is not able to login successfully - empty email
+* [skipped] @radovan User is not able to login successfully - empty email
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1615,7 +1615,7 @@
     * ==> Message `Please fill in this field.` should be shown
 
 
-* [unknown]  User is not able to login successfully - empty email and password
+* [skipped] @radovan User is not able to login successfully - empty email and password
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -1628,7 +1628,7 @@
     * ==> Message `Required field` should be shown above both inputs
 
 
-* [unknown]  User is able to create new segment
+* [passed] @radovan User is able to create new segment
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1655,7 +1655,7 @@
     * ==> New element is added to list
 
 
-* [unknown]  User is not able to create new segment - field `SEGMENT NAME` empty
+* [passed] @radovan User is not able to create new segment - field `SEGMENT NAME` empty
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1676,7 +1676,7 @@
     * ==> Button `SAVE` is disabled
 
 
-* [unknown]  User is not able to create new segment - dropdown menu `Add filter` not used
+* [passed] @radovan User is not able to create new segment - dropdown menu `Add filter` not used
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1695,7 +1695,7 @@
     * ==> Button `SAVE` is disabled
 
 
-* [unknown]  User is able to create new widget with only `WIDGET NAME` field parameter
+* [passed] @radovan User is able to create new widget with only `WIDGET NAME` field parameter
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1716,7 +1716,7 @@
     * ==> Created widget is added to list
 
 
-* [unknown]  User is not able to create new widget with empty `WIDGET NAME` field
+* [passed] @radovan User is not able to create new widget with empty `WIDGET NAME` field
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1745,7 +1745,7 @@
     * ==> Button `SAVE` is disabled
 
 
-* [unknown]  User is able to create new widget - `WIDGET TYPE - Overlay`
+* [passed] @radovan User is able to create new widget - `WIDGET TYPE - Overlay`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1792,7 +1792,7 @@
     * ==> The appearance in the file matches the given parameters
 
 
-* [unknown]  User is able to create new widget - `WIDGET TYPE - Fixed Bar`
+* [passed] @radovan User is able to create new widget - `WIDGET TYPE - Fixed Bar`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1839,7 +1839,7 @@
     * ==> The appearance in the file matches the given parameters
 
 
-* [unknown]  User is able to create new widget - `WIDGET TYPE - Page Section`
+* [failed] @radovan User is able to create new widget - `WIDGET TYPE - Page Section`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -1880,7 +1880,7 @@
     * ==> The appearance in the file matches the given parameters
 
 
-* [unknown]  User is able to create new widget - `WIDGET TYPE - Widget`
+* [passed] @radovan User is able to create new widget - `WIDGET TYPE - Widget`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
