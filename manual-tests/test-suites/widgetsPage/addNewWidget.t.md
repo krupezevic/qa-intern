@@ -37,7 +37,7 @@
   * Insert value in `APPLY INBOUND TAG` field, f.ex. `a`
   * Chose from list `tag`
   * Insert value in `AUTO RESPONSE FOR UNKNOWN NUMBERS` field, f.ex. `a`
-  * * ==> Right icon message showing number 1 in `AUTO RESPONSE FOR UNKNOWN NUMBERS` field
+  * ==> Right icon message showing number 1 in `AUTO RESPONSE FOR UNKNOWN NUMBERS` field
   * Check `Enabled` and `Send VCard` checkboxes in section `AUTO RESPONSE FOR UNKNOWN NUMBERS`
   * Navigate to `Insertable Embed` page
   * Select `Overlay` icon in `WIDGET TYPE` field
@@ -59,7 +59,7 @@
   * Click on `+ New` button
   * Insert value in `WIDGET NAME` field, f.ex. `Test2`
   * Insert value in `APPLY INBOUND TAG` field, f.ex. `Ananas`
-  * Click on `Create new tag "Ananas`
+  * Click on `Create new tag "Ananas"`
   * Insert value in `AUTO RESPONSE FOR UNKNOWN NUMBERS` field, f.ex. 161 character
   * ==> Right icon message showing number 2 in `AUTO RESPONSE FOR UNKNOWN NUMBERS` field
   * Uncheck `Enabled` and `Send VCard` checkboxes in section `AUTO RESPONSE FOR UNKNOWN NUMBERS`
