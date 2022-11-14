@@ -8,6 +8,7 @@
   * Navigate to `Dynamic Segments` page
   * Click on `Edit` button
   * Rename value in field `SEGMENT NAME`
+  * ==> `SAVE` button is on the right side
   * Click `SAVE` button
   * ==> Value in field `SEGMENT NAME`is changed
 

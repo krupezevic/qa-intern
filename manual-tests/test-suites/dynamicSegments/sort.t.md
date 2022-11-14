@@ -1,4 +1,4 @@
-# Sort functionality 
+# Sort functionality  
 
 * User is able to sort `Order By` by `NAME` and `CREATED` in ascending/descending order
   * Open [superphone app](https://app.superphone-stage.com/login)
