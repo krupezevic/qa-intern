@@ -1,5 +1,6 @@
-1. In the opened app root create (if absent) .vscode folder with settings.json file
-2. Add to the settings.json file:
+1. In the opened app root create (if absent) .vscode folder with settings.json file <br>
+2. Add to the settings.json file: <br>
+```
 {
     "cucumberautocomplete.steps": [
         "test/step-definitions/*.steps.ts",
@@ -7,4 +8,6 @@
     ],
     "cucumberautocomplete.strictGherkinCompletion": false
 }
+``` 
+
 3. Reload app to apply all the extension changes
