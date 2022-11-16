@@ -1,6 +1,11 @@
 import {Given, Then, When} from "@wdio/cucumber-framework";
+import loginPage from "../pages/login.page";
+import navigationPage from "../pages/navigation.page";
 
 Given('user is on Dynamic Segment page', async () => {
+    await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
+    navigationPage.moveToElementAndCLick(navigationPage.dynamicSegmentLink);
+    
 });
 
 When('user tries to create new segment with valid values', async () => {
