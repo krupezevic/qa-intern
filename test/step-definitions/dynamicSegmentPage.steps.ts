@@ -44,9 +44,6 @@ When('user tries to change value in field Filters in edit section', async () => 
 When('user tries to leave empty SEGMENT NAME field in edit section', async () => {
 });
 
-Then('edited segment cannot be saved', async () => {
-});
-
 When('user tries to sort segments by NAME in ascending order', async () => {
 });
 

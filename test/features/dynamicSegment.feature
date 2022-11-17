@@ -35,7 +35,7 @@ Feature: Dynamic-segments functionality
   # Scenario: User is not able to leave empty "SEGMENT NAME" field in edit section
   #   Given user is on Dynamic Segment page
   #   When user tries to leave empty SEGMENT NAME field in edit section
-  #   Then edited segment cannot be saved
+  #   Then save button is disabled
 
   # Scenario: User is able to sort in ascending order segments by "NAME"
   #   Given user is on Dynamic Segment page
