@@ -9,12 +9,11 @@ Given('user is on Dynamic Segment page', async () => {
 });
 
 When('user tries to create new segment with valid values', async () => {
-    await dynamicSegmentPage.addNewSegment("milka");
+    await dynamicSegmentPage.addNewSegment("milka1");
 });
 
 Then('new segment is created', async () => {
-    const expectedSegmentName = await dynamicSegmentPage.selectSegmentByName.getText();
-    expect(expectedSegmentName).toHaveTextContaining("milka");
+    await expect(dynamicSegmentPage.selectSegmentByName).toHaveText("milka1");
 });
 
 When('user tries to create new segment without Segment name field', async () => {
@@ -27,15 +26,19 @@ When('user tries to create new segment without Add filter field', async () => {
 });
 
 When('user tries to delete selected segment from the list', async () => {
+   await dynamicSegmentPage.deleteSegment();
 });
 
 Then('element is removed from the list', async () => {
+    await expect(dynamicSegmentPage.selectSegmentByName).not.toHaveText("Milka");
 });
 
 When('user tries to enter new value in field SEGMENT NAME in edit section', async () => {
+    await dynamicSegmentPage.editSegment("Jovan");
 });
 
 Then('segment is edited', async () => {
+    await expect(dynamicSegmentPage.selectSegmentByName).toHaveText("Jovan");
 });
 
 When('user tries to change value in field Filters in edit section', async () => {

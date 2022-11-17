@@ -1,6 +1,8 @@
 class Actions {
   public async typeIn(element, value) {
     await this.waitForElementToBeDisplayed(element);
+    //bagovao je bez pauze u edit-u imena segmenta...  
+    await browser.pause(1000);  
     await element.doubleClick();
     await browser.keys('Delete');
     await element.setValue(value);
