@@ -8,12 +8,12 @@ Feature: Dynamic-segments functionality
   # Scenario: User is not able to create new segment without "Segment name" field
   #   Given user is on Dynamic Segment page
   #   When user tries to create new segment without Segment name field
-  #   Then new segment cannot be created
+  #   Then save button is disabled
 
   # Scenario: User is not able to create new segment without "Add filter" field
   #   Given user is on Dynamic Segment page
   #   When user tries to create new segment without Add filter field
-  #   Then new segment cannot be created
+  #   Then save button is disabled
 
   # Scenario: User is able to delete segment from list
   #   Given user is on Dynamic Segment page
@@ -39,12 +39,12 @@ Feature: Dynamic-segments functionality
 
   # Scenario: User is able to sort in ascending order segments by "NAME"
   #   Given user is on Dynamic Segment page
-  #   When user tries to sort segments by NAME in ascending order
+  #   When user tries to sort segments by name in ascending order
   #   Then segments are sorted by name in ascending order
 
   # Scenario: User is able to sort in descending order segments by "NAME"
   #   Given user is on Dynamic Segment page
-  #   When user tries to sort segments by NAME in descending order
+  #   When user tries to sort segments by name in descending order
   #   Then segments are sorted by name in descending order
 
   # Scenario: User is able to sort in ascending order segments by "CREATED"

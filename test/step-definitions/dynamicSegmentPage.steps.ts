@@ -9,18 +9,18 @@ Given('user is on Dynamic Segment page', async () => {
 });
 
 When('user tries to create new segment with valid values', async () => {
-    await dynamicSegmentPage.addNewSegment("jovana");
+    await dynamicSegmentPage.addNewSegment("milka");
 });
 
 Then('new segment is created', async () => {
     const expectedSegmentName = await dynamicSegmentPage.selectSegmentByName.getText();
-    await expect(expectedSegmentName).toHaveTextContaining("jovana");
+    expect(expectedSegmentName).toHaveTextContaining("milka");
 });
 
 When('user tries to create new segment without Segment name field', async () => {
 });
 
-Then('new segment cannot be created', async () => {
+Then('save button is disabled', async () => {
 });
 
 When('user tries to create new segment without Add filter field', async () => {
