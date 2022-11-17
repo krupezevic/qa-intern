@@ -1,83 +1,97 @@
 import { Given, Then, When } from "@wdio/cucumber-framework"
 
-Given('User is on the Phone Numbers Page', async () => { });
+Given('user is on the Phone Numbers page', async () => { });
 
-When('User clicked on Learn more', async () => { });
+When('user clicks on Learn more', async () => { });
 
-Then('User got new page with more information Learn more', async () => { });
+Then('user got new page with more information Learn more', async () => { });
 
-When('User used empty field', async () => { });
+When('user clicks on New button', async () => { });
 
-Then('ADD button is disabled', async () => { });
-
-When('User clicked on Get in touch', async () => { });
-
-Then('modal SuperPhone [TEST] is displayed', async () => { });
-
-When('User inserted one number', async () => { });
+When('user uses empty field', async () => { });
 
 Then('ADD button is disabled', async () => { });
 
-When('User inserted two numbers', async () => { });
+When('user clicks on New button', async () => { });
+
+When('clicks Get in touch', async () => { });
+
+Then('modal SuperPhone TEST is displayed', async () => { });
+
+When('user clicks on New button', async () => { });
+
+When('user inserts one number', async () => { });
 
 Then('ADD button is disabled', async () => { });
 
-When('User inserted nine numbers', async () => { });
+When('user clicks on New button', async () => { });
+
+When('user inserts two numbers', async () => { });
 
 Then('ADD button is disabled', async () => { });
 
-When('User inserted ten numbers', async () => { });
+When('user clicks on New button', async () => { });
+
+When('user inserts nine numbers', async () => { });
+
+Then('ADD button is disabled', async () => { });
+
+When('user clicks on New button', async () => { });
+
+When('user inserts ten numbers', async () => { });
 
 Then('ADD button is unabled', async () => { });
 
-When('User try insert eleven numbers', async () => { });
+When('user clicks on New button', async () => { });
+
+When('user tries insert eleven numbers', async () => { });
 
 Then('ADD button is unabled', async () => { });
 
-When('User sorted Phone Numbers by CREATED in ascending order', async () => { });
+When('user sorts Phone Numbers by created in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User sorted Phone Numbers by CREATED in descending order', async () => { });
+When('user sorts Phone Numbers by created in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User sorted Phone Numbers by INBOUND in ascending order', async () => { });
+When('user sorts Phone Numbers by inbound in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User sorted Phone Numbers by INBOUND in descending order', async () => { });
+When('user sorts Phone Numbers by inbound in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User sorted Phone Numbers by OUTBOUND in ascending order', async () => { });
+When('user sorts Phone Numbers by outbound in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User sorted Phone Numbers by OUTBOUND in descending order', async () => { });
+When('user sorts Phone Numbers by outbound in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User sorted Phone Numbers by SUBSCRIBERS in ascending order', async () => { });
+When('user sorts Phone Numbers by subscribers in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User sorted Phone Numbers by SUBSCRIBERS in descending order', async () => { });
+When('user sorts Phone Numbers by subscribers in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User clicked to sort phone numbers by REGION', async () => { });
+When('user clicks to sort phone numbers by region', async () => { });
 
-Then('Phone numbers are sorts by REGION', async () => { });
+Then('the phone numbers are sorted by region', async () => { });
 
-When('User clicked on icon for copy phone number', async () => { });
+When('user clicks on icon for copy phone number', async () => { });
 
-Then('Number is copied', async () => { });
+Then('number is copied', async () => { });
 
-When('User clicked on Disable Routing', async () => { });
+When('user clicks on Disable Routing', async () => { });
 
-Then('Modal Disable Routing is displayed', async () => { });
+Then('modal Disable Routing is displayed', async () => { });
 
-When('User clicked on Read More about Routing', async () => { });
+When('user clicks on Read More about Routing', async () => { });
 
-Then('User got new page with more information Read More about Routing', async () => { });
+Then('user got new page with more information Read More about Routing', async () => { });
