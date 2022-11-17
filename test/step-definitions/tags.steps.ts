@@ -2,54 +2,62 @@ import { Then, When, Given } from '@wdio/cucumber-framework'
 
 Given('User is on the Tags Page', async () => { });
 
-When('User try to create New Tag Name with empty filed', async () => { });
+When('user clicks on New button', async () => { });
 
-Then('Save button is disabled', async () => { });
+When('user tries to create New Tag name with empty filed', async () => { });
 
-When('User try to create New Tag Name with string', async () => { });
+Then('save button is disabled', async () => { });
 
-Then('Tag is created', async () => { });
+When('user clicks on New button', async () => { });
 
-When('User try to delete Tag', async () => { });
+When('user tries to create New tag name', async () => { });
 
-Then('Tag is removed', async () => { });
+Then('tag is created', async () => { });
 
-When('User try to rename Tag', async () => { });
+When('user marks any tag', async () => { });
 
-Then('Tag is renamed', async () => { });
+When('user tries to delete tag', async () => { });
 
-When('User try to sort tags by name in ascending order', async () => { });
+Then('tag is removed', async () => { });
 
-Then('The names are listed in alphabetical order in the opposite direction', async () => { });
+When('user marks any tag', async () => { });
 
-When('User try to sort tags by name in descending order', async () => { });
+When('user tries to rename tag', async () => { });
 
-Then('The names are listed in alphabetical order', async () => { });
+Then('tag is renamed', async () => { });
 
-When('User try to sort tags by CREATED in ascending order', async () => { });
+When('user sorts tags by name in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User try to sort tags by CREATED in descending order', async () => { });
+When('user sorts tags by name in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User try to sort tags by CONTACT in ascending order', async () => { });
+When('user sorts tags by created in ascending order', async () => { });
 
-Then('The values are listed in ascending order', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User try to sort tags by CONTACT in descending order', async () => { });
+When('user sorts tags by created in descending order', async () => { });
 
-Then('The values are listed in descending order', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User try to select all tags', async () => { });
+When('user sorts tags by contact in ascending order', async () => { });
 
-Then('User has selected all tags', async () => { });
+Then('the values are listed in ascending order', async () => { });
 
-When('User try to deselect all tags', async () => { });
+When('user sorts tags by contact in descending order', async () => { });
 
-Then('User has deselected all tags', async () => { });
+Then('the values are listed in descending order', async () => { });
 
-When('User try to combine tags', async () => { });
+When('user tries to select all tags', async () => { });
 
-Then('Tags are combined', async () => { });
+Then('user selected all tags', async () => { });
+
+When('user tries to deselect all tags', async () => { });
+
+Then('user has deselected all tags', async () => { });
+
+When('user tries to combine tags', async () => { });
+
+Then('tags are combined', async () => { });
