@@ -1,17 +1,20 @@
-import {Given, Then, When} from "@wdio/cucumber-framework";
+import { Given, Then, When } from "@wdio/cucumber-framework";
 import loginPage from "../pages/login.page";
 import navigationPage from "../pages/navigation.page";
+import dynamicSegmentPage from "../pages/dynamicSegment.page";
 
 Given('user is on Dynamic Segment page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
-    navigationPage.moveToElementAndCLick(navigationPage.dynamicSegmentLink);
-    
+    await navigationPage.navigateToDynamicSegmentAndCLick();
 });
 
 When('user tries to create new segment with valid values', async () => {
+    await dynamicSegmentPage.addNewSegment("jovana");
 });
 
 Then('new segment is created', async () => {
+    const expectedSegmentName = await dynamicSegmentPage.selectSegmentByName.getText();
+    await expect(expectedSegmentName).toHaveTextContaining("jovana");
 });
 
 When('user tries to create new segment without Segment name field', async () => {
@@ -69,5 +72,5 @@ Then('segments are sorted by created date in descending order', async () => {
 });
 
 Given('segment is created', async () => {
-    
+
 });

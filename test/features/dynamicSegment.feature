@@ -1,9 +1,9 @@
 Feature: Dynamic-segments functionality
 
   Scenario: User is able to create new segment
-    Given user is on Dynamic Segment page
-    # When user tries to create new segment with valid values
-    # Then new segment is created
+     Given user is on Dynamic Segment page
+     When user tries to create new segment with valid values
+     Then new segment is created
 
   # Scenario: User is not able to create new segment without "Segment name" field
   #   Given user is on Dynamic Segment page
