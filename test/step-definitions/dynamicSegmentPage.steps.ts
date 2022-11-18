@@ -9,11 +9,11 @@ Given('user is on Dynamic Segment page', async () => {
 });
 
 When('user tries to create new segment with valid values', async () => {
-    await dynamicSegmentPage.addNewSegment("milka1");
+    await dynamicSegmentPage.addNewSegment("Petar");
 });
 
 Then('new segment is created', async () => {
-    await expect(dynamicSegmentPage.selectSegmentByName).toHaveText("milka1");
+    await expect(dynamicSegmentPage.selectSegmentByName).toHaveText("Petar");
 });
 
 When('user tries to create new segment without Segment name field', async () => {
@@ -30,7 +30,7 @@ When('user tries to delete selected segment from the list', async () => {
 });
 
 Then('element is removed from the list', async () => {
-    await expect(dynamicSegmentPage.selectSegmentByName).not.toHaveText("Milka");
+    await expect(dynamicSegmentPage.selectSegmentByName).not.toHaveText("Milan");
 });
 
 When('user tries to enter new value in field SEGMENT NAME in edit section', async () => {
@@ -71,6 +71,8 @@ When('user tries to sort segments by created date in descending order', async ()
 Then('segments are sorted by created date in descending order', async () => {
 });
 
-Given('segment is created', async () => {
-
+Given('new dynamic segment is created', async () => {
+    await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
+    await navigationPage.navigateToDynamicSegmentAndCLick();
+    await dynamicSegmentPage.addNewSegment("Milan");
 });

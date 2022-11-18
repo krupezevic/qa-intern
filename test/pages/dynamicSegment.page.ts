@@ -10,7 +10,7 @@ class dynamicSegmentPage {
     }
 
     public get filters() {
-        return $('.SpFormItem:nth-child(1)');
+        return $('//div[contains(text(), "Add filter")]');
     }
 
     public get oneOfFilters() {
@@ -52,7 +52,7 @@ class dynamicSegmentPage {
 
     public async editSegment(name: string){
         await Actions.clickOn(this.editSegmentButton);
-        await Actions.typeIn(this.segmentNameInput, name);
+        await Actions.typeInEditSegment(this.segmentNameInput, name);
         await Actions.clickOn(this.saveButton);
     }
 }

@@ -16,19 +16,17 @@ Feature: Dynamic-segments functionality
    #   Then save button is disabled
 
    Scenario: User is able to rename segment in edit section
-      Given user is on Dynamic Segment page
-      And segment is created
+      Given new dynamic segment is created
       When user tries to enter new value in field SEGMENT NAME in edit section
       Then segment is edited
 
    Scenario: User is able to delete segment from list
-      Given user is on Dynamic Segment page
+      Given new dynamic segment is created
       When user tries to delete selected segment from the list
       Then element is removed from the list
 
 # Scenario: User is able to change value of "Filters" field in edit section
 #   Given user is on Dynamic Segment page
-#   And segment is created
 #   When user tries to change value in field Filters in edit section
 #   Then segment is edited
 
