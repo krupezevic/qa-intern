@@ -1,9 +1,19 @@
-import { Then, When, Given } from '@wdio/cucumber-framework'
+import { Given, Then, When } from "@wdio/cucumber-framework";
+import loginPage from "../pages/login.page";
+import navigationPage from "../pages/navigation.page";
+import tagsPage from "../pages/tags.page";
 
-Given('User is on the Tags Page', async () => { });
 
-When('user clicks on New button', async () => { });
 
+Given('User is on the Tags Page', async () => {
+    await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
+    await navigationPage.Tags();
+ });
+    
+When('user clicks on New button', async () => {
+    await tagsPage.createTags();
+ });
+    
 When('user tries to create New Tag name with empty filed', async () => { });
 
 Then('save button is disabled', async () => { });
