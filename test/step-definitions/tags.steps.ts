@@ -4,17 +4,19 @@ import navigationPage from "../pages/navigation.page";
 import tagsPage from "../pages/tags.page";
 
 
-
 Given('User is on the Tags Page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
-    await navigationPage.Tags();
+    await navigationPage.tags();
  });
     
 When('user clicks on New button', async () => {
-    await tagsPage.createTags();
+    await tagsPage.clickOnNewTag();
+    await browser.pause(3000);
  });
     
-When('user tries to create New Tag name with empty filed', async () => { });
+When('user tries to create New Tag name with empty filed', async () => { 
+    await tagsPage.createTags;
+});
 
 Then('save button is disabled', async () => { });
 

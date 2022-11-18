@@ -3,8 +3,8 @@ Feature: Tags functionality
 
   Scenario: User is not able to create new tag successfully with empty field
      Given User is on the Tags Page
-     When user clicks on New button
-  #   And user tries to create New Tag name with empty filed
+      When user clicks on New button
+   # And user tries to create New Tag name with empty filed
   #   Then save button is disabled
 
   # Scenario: User is able to create new tag successfully
