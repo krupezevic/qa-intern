@@ -1,6 +1,11 @@
 import actions from "../utils/actions"
 class navigation{
-    public get navBar() {
+    public get userInfoLabel() {
         return $('.UserInfoLabel');
     }
+
+    public get phoneNumers() {
+        return $('');
+    }
+
 }
