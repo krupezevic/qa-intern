@@ -1,11 +1,12 @@
 class NavigationPage {
-  public get dynamicSegmentLink() {
-    return $('.desktopNavigation a[href="/segments"]');
+  
+  public get profileLink() {
+    return $('.desktopNavigation a.SpNavItem[href="/settings/profiles"]');
   }
 
-  public async navigateToDynamicSegmentAndCLick() {
-    await this.dynamicSegmentLink.moveTo();
-    await this.dynamicSegmentLink.click()
+  public async navigateToProfilePageAndClick() {
+    await this.profileLink.moveTo();
+    await this.profileLink.click()
   }
 }
 export default new NavigationPage();
