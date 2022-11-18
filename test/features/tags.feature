@@ -1,21 +1,21 @@
 Feature: Tags functionality
 
 
-  Scenario: User is not able to create new tag successfully with empty field
-     Given User is on the Tags Page
-      When user clicks on New button
-   # And user tries to create New Tag name with empty filed
-  #   Then save button is disabled
+#   Scenario: User is not able to create new tag successfully with empty field
+#      Given User is on the Tags Page
+#      When user clicks on New button
+#      And user tries to create New Tag name with empty filed
+#     Then save button is disabled
 
-  # Scenario: User is able to create new tag successfully
-  #   Given User is on the Tags Page
-  #   When user clicks on New button
-  #   And user tries to create New tag name
-  #   Then tag is created
+  Scenario: User is able to create new tag successfully
+    Given User is on the Tags Page
+    When user clicks on New button
+    And user tries to create New tag name
+    Then tag is created
 
-  # Scenario: User is able to delete tag/tags successfully
-  #   Given User is on the Tags Page
-  #   When user marks any tag
+  Scenario: User is able to delete tag/tags successfully
+    Given User is on the Tags Page
+    When user marks any tag
   #   And user tries to delete tag
   #   Then tag is removed
 

@@ -12,10 +12,8 @@ class navigation{
 
     public async tags() {
         await Actions.clickOn(this.navBar);
-        // await this.tagsButton.moveTo();
-        // await this.tagsButton.click();
         await Actions.clickOn(this.tagsButton);
-        await browser.pause(1000);
+        await browser.pause(500);
     }
 
 }

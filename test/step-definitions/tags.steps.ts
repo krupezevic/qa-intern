@@ -11,22 +11,27 @@ Given('User is on the Tags Page', async () => {
     
 When('user clicks on New button', async () => {
     await tagsPage.clickOnNewTag();
-    await browser.pause(3000);
  });
     
 When('user tries to create New Tag name with empty filed', async () => { 
-    await tagsPage.createTags;
+    await tagsPage.createTags("");
 });
 
-Then('save button is disabled', async () => { });
+Then('save button is disabled', async () => {
 
-When('user clicks on New button', async () => { });
+ });
 
-When('user tries to create New tag name', async () => { });
+When('user tries to create New tag name', async () => {
+    await tagsPage.createTags("Percan");
+ });
 
-Then('tag is created', async () => { });
+Then('tag is created', async () => { 
+    await expect(tagsPage.selectTagsByName).toHaveText("Percan");
+});
 
-When('user marks any tag', async () => { });
+When('user marks any tag', async () => {
+    await tagsPage.selectTwoTags;
+ });
 
 When('user tries to delete tag', async () => { });
 

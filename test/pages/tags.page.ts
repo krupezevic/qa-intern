@@ -8,19 +8,40 @@ class Tags{
     }
 
       public get newTagNameInput() {
-        return $('//input[@id="name"]');
-    }
+        return $('#name');
+      }
     
+    public get buttonSave() {
+        return $('//*[.="save"]');
+    }
+
+    public get selectTagsByName() {
+        return $('.SpTableTbody tr:nth-child(1)');
+    }
+
+    public get checkTag() {
+        return $('//*[.="Percan"]')
+
+    }
+
+    public get checkTag2() {
+        return $('//*[.="Yui"]')
+
+    }
+
+    public async selectTwoTags() {
+        await Actions.clickOn(this.checkTag);
+        await Actions.clickOn(this.checkTag2);
+    }
+
     public async createTags(name: string) {
-        await Actions.clickOn(this.addNewTag);
-        await browser.pause(5000);
         await Actions.typeIn(this.newTagNameInput, name);
+        await browser.pause(2000);
+        await Actions.clickOn(this.buttonSave);
     }
     public async clickOnNewTag() {
-        console.log('dosao ovde');
         await Actions.waitForElementToBeDisplayed(this.addNewTag);
         await Actions.clickOn(this.addNewTag);
-        console.log('zavrsio ovde');
         await browser.pause(3000);
     }
 }
