@@ -1,5 +1,5 @@
 class NavigationPage {
-  
+
   public get profileLink() {
     return $('.desktopNavigation a.SpNavItem[href="/settings/profiles"]');
   }
