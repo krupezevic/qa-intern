@@ -16,8 +16,8 @@ Feature: Tags functionality
   Scenario: User is able to delete tag/tags successfully
     Given User is on the Tags Page
     When user marks any tag
-  #   And user tries to delete tag
-  #   Then tag is removed
+    And user tries to delete tag
+    Then tag is removed
 
   # Scenario: User is able to rename tag successfully
   #   Given User is on the Tags Page
