@@ -1,3 +1,5 @@
+import Actions from "../utils/actions";
+
 class NavigationPage {
 
   public get profileLink() {
@@ -6,7 +8,7 @@ class NavigationPage {
 
   public async navigateToProfilePageAndClick() {
     await this.profileLink.moveTo();
-    await this.profileLink.click()
+    await Actions.clickOn(this.profileLink);
   }
 }
 export default new NavigationPage();
