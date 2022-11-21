@@ -1,20 +1,20 @@
 import Actions from "../utils/actions";
 
-class dynamicSegmentPage {
+class DynamicSegmentsPage {
     public get addNewLink() {
-        return $('//*[.="New"]')
+        return $('.SpSettingsHeader .SpSuperButtonContent')
     }
 
     public get segmentNameInput() {
-        return $('.SpFieldInputWrapper input');
+        return $('[placeholder="My New Segment"]');
     }
 
     public get filters() {
-        return $('//div[contains(text(), "Add filter")]');
+        return $('//descendant::*[.="Add filter"][5]');
     }
 
     public get oneOfFilters() {
-        return $('//div[contains(text(),"Added This Month")]');
+        return $('//div[.="Added This Month")]');
     }
 
     public get saveButton() {
@@ -25,15 +25,15 @@ class dynamicSegmentPage {
         return $('.SpTableTbody tr:nth-child(1) a');
     }
 
-    public get editSegmentButton(){
+    public get editSegmentButton() {
         return $('.SpTableTbody tr:nth-child(1) div:nth-child(1) button');
     }
 
-    public get deleteSegmentButton(){
+    public get deleteSegmentButton() {
         return $('.SpTableTbody tr:nth-child(1) div:nth-child(2) button');
     }
 
-    public get confirmButton(){
+    public get confirmButton() {
         return $('//div[.="Confirm"]');
     }
 
@@ -45,15 +45,15 @@ class dynamicSegmentPage {
         await Actions.clickOn(this.saveButton);
     }
 
-    public async deleteSegment(){
+    public async deleteSegment() {
         await Actions.clickOn(this.deleteSegmentButton);
         await Actions.clickOn(this.confirmButton);
     }
 
-    public async editSegment(name: string){
+    public async editSegment(name: string) {
         await Actions.clickOn(this.editSegmentButton);
-        await Actions.typeInEditSegment(this.segmentNameInput, name);
+        await Actions.typeIn(this.segmentNameInput, name);
         await Actions.clickOn(this.saveButton);
     }
 }
-export default new dynamicSegmentPage();
+export default new DynamicSegmentsPage();
