@@ -16,11 +16,5 @@ class Actions {
     await element.waitForDisplayed();
     await element.waitForClickable();
   }
-
-  public async typeInVC(element, value) {
-    await this.waitForElementToBeDisplayed(element);
-    await element.clearValue();
-    await element.setValue(value);
-  }
 }
 export default new Actions();

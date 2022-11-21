@@ -1,12 +1,14 @@
+import { sample } from "../test-data/dynamicVCard";
 import Actions from "../utils/actions";
 
-class profilePage {
+class ProfilePage {
+
     public get firstName() {
-        return $('.SpProfileColumn input[placeholder="Enter your First name"]');
+        return $('[placeholder="Enter your First name"]');
     }
 
     public get lastName() {
-        return $('.SpProfileColumn input[placeholder="Enter your Last name"]');
+        return $('[placeholder="Enter your Last name"]');
     }
 
     public get clickSave() {
@@ -21,20 +23,20 @@ class profilePage {
         return $('//descendant::button[.="Save"][3]');
     }
 
-    public get currentPass() {
+    public get currentPassword() {
         return $('#currentPassword');
     }
 
-    public get newPass() {
+    public get newPassword() {
         return $('#password');
     }
 
-    public get confirmPass() {
+    public get confirmPassword() {
         return $('#repeatPassword');
     }
 
     public get userInfo() {
-        return $('span.userName');
+        return $('.userName');
     }
 
     public get logoutLink() {
@@ -42,23 +44,23 @@ class profilePage {
     }
 
     public get firstNameDynamicVCard() {
-        return $('input[placeholder="First Name"]');
+        return $('[placeholder="First Name"]');
     }
 
     public get lastNameDynamicVCard() {
-        return $('input[placeholder="Last Name"]');
+        return $('[placeholder="Last Name"]');
     }
 
     public get title() {
-        return $('input[placeholder="Job Title"]');
+        return $('[placeholder="Job Title"]');
     }
 
     public get organization() {
-        return $('input[placeholder="Company Name"]');
+        return $('[placeholder="Company Name"]');
     }
 
     public get email() {
-        return $('input[placeholder="Email"]');
+        return $('[placeholder="Email"]');
     }
 
     public get facebook() {
@@ -90,57 +92,56 @@ class profilePage {
     }
 
     public get store() {
-        return $('input[placeholder="https://"]');
+        return $('[placeholder="https://"]');
     }
-    
-    public get webSite() {
-        return $('input[placeholder="Web Site"]');
+    public get website() {
+        return $('[placeholder="Web Site"]');
     }
 
     public get zipCode() {
-        return $('input[placeholder="Postal Code"]');
+        return $('[placeholder="Postal Code"]');
     }
 
     public get note() {
-        return $('input[placeholder="Note"]');
+        return $('[placeholder="Note"]');
     }
 
-    public async enterNameAndLastnameFieldsAndClick(name: string, lastname: string) {
+    public async enterNameAndLastnameFields(name: string, lastname: string) {
         await Actions.typeIn(this.firstName, name);
         await Actions.typeIn(this.lastName, lastname);
         await Actions.clickOn(this.clickSave);
     }
 
-    public async enterPasswordFields(currentP: string, newP: string, confirmP: string) {
-        await Actions.typeIn(this.currentPass, currentP);
-        await Actions.typeIn(this.newPass, newP);
-        await Actions.typeIn(this.confirmPass, confirmP);
+    public async enterPasswordFields(currentPassword: string, newPassword: string, confirmPassword: string) {
+        await Actions.typeIn(this.currentPassword, currentPassword);
+        await Actions.typeIn(this.newPassword, newPassword);
+        await Actions.typeIn(this.confirmPassword, confirmPassword);
         await Actions.clickOn(this.clickSavePassword);
     }
 
-    public async logoutAndLogInToAccount() {
+    public async logoutFromAccount() {
         await Actions.clickOn(this.userInfo);
         await Actions.clickOn(this.logoutLink);
     }
-    public async enterAllDynamicVCardFields(){
-        await Actions.typeInVC(this.firstNameDynamicVCard, "sample1");
-        await Actions.typeInVC(this.lastNameDynamicVCard, "sample2");
-        await Actions.typeInVC(this.title, "sample3");
-        await Actions.typeInVC(this.organization, "sample4");
-        await Actions.typeInVC(this.email, "Emailmail1@gmail.com");
-        await Actions.typeInVC(this.facebook, "https://facebook.com/test1");
-        await Actions.typeInVC(this.instagram, "https://instagram.com/test1");
-        await Actions.typeInVC(this.twitter, "https://twitter.com/Test");
-        await Actions.typeInVC(this.linkedin, "https://linkedin.com/in/test1");
-        await Actions.typeInVC(this.youtube, "https://youtube.com/test");
-        await Actions.typeInVC(this.snapchat, "https://snapchat.com/add/test");
-        await Actions.typeInVC(this.soundcloud, "https://soundcloud.com/test");
-        await Actions.typeInVC(this.store, "sample5");
-        await Actions.typeInVC(this.webSite, "sample6");
-        await Actions.typeInVC(this.zipCode, "sample7");
-        await Actions.typeIn(this.note, "sample8");
+    public async enterAllDynamicVCardFields() {
+        await Actions.typeIn(this.firstNameDynamicVCard, sample.firstName);
+        await Actions.typeIn(this.lastNameDynamicVCard, sample.lastName);
+        await Actions.typeIn(this.title, sample.title);
+        await Actions.typeIn(this.organization, sample.organization);
+        await Actions.typeIn(this.email, sample.email);
+        await Actions.typeIn(this.facebook, sample.facebook);
+        await Actions.typeIn(this.instagram, sample.instagram);
+        await Actions.typeIn(this.twitter, sample.twitter);
+        await Actions.typeIn(this.linkedin, sample.linkedin);
+        await Actions.typeIn(this.youtube, sample.youtube);
+        await Actions.typeIn(this.snapchat, sample.snapchat);
+        await Actions.typeIn(this.soundcloud, sample.soundcloud);
+        await Actions.typeIn(this.store, sample.store);
+        await Actions.typeIn(this.website, sample.website);
+        await Actions.typeIn(this.zipCode, sample.zipCode);
+        await Actions.typeIn(this.note, sample.note);
 
         await Actions.clickOn(this.clickSaveDynamicVCard);
     }
 }
-export default new profilePage();
+export default new ProfilePage();

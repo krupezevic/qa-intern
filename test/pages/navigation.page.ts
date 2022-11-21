@@ -6,7 +6,7 @@ class NavigationPage {
     return $('.desktopNavigation a.SpNavItem[href="/settings/profiles"]');
   }
 
-  public async navigateToProfilePageAndClick() {
+  public async navigateToProfilePage() {
     await this.profileLink.moveTo();
     await Actions.clickOn(this.profileLink);
   }
