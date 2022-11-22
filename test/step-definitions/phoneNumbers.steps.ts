@@ -11,13 +11,14 @@ Given('user is on the Phone Numbers page', async () => {
 });
 
 When('user tries to create New phone number', async () => {
-
-});
-Then('phone number is created', async () => {
-
+  await phoneNumbersPage.createNewPhoneNumber;
 });
 
-When('user clicks on Learn more', async () => { });
+// Then('phone number is created', async () => {
+
+// });
+
+// When('user clicks on Learn more', async () => { });
 
 // Then('user got new page with more information Learn more', async () => { });
 

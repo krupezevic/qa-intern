@@ -1,7 +1,8 @@
 import Actions from "../utils/actions";
 class Navigation {
+
     public get dropDownMenu() {
-        return $('.dropdown-button-text');
+        return $('.userName');
     }
 
     public get phoneNumersCard() {
@@ -11,7 +12,9 @@ class Navigation {
     public async navigationToPhoneNumbersPage() {
         await Actions.clickOn(this.dropDownMenu);
         await Actions.clickOn(this.phoneNumersCard);
+        await browser.pause(5000);
     }
+
 
 }
 export default new Navigation();

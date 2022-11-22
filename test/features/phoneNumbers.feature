@@ -4,7 +4,7 @@ Feature: PhoneNumbers functionality
     Scenario: user is able to create New number successfully
         Given user is on the Phone Numbers page
         When user tries to create New phone number
-        Then phone number is created
+# Then phone number is created
 
 
 #   Scenario: user is able to click on Learn more-clickable text for more information
