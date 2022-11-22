@@ -1,7 +1,7 @@
 class FirstEntryScreenPage {
-    public get title() {
-        return $('.SpPageTitle');
-    }
+  public get title() {
+    return $('.SpPageTitle')
+  }
 }
 
-export default new FirstEntryScreenPage();
+export default new FirstEntryScreenPage()

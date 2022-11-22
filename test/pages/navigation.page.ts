@@ -1,20 +1,16 @@
-import Actions from "../utils/actions"
-class navigation{
-    
-    public get navBar() {
-        return $(".desktopNavigation");
-        // return $(".scrollbar-container");
-    }
+import Actions from '../utils/actions';
+class Navigation {
+  public get navBar() {
+    return $('.desktopNavigation');
+  }
 
-    public get tagsButton(){
-        return $('.desktopNavigation a[href="/tags"]');
-    }
+  public get tagsButton() {
+    return $('.desktopNavigation a[href="/tags"]');
+  }
 
-    public async tags() {
-        await Actions.clickOn(this.navBar);
-        await Actions.clickOn(this.tagsButton);
-        await browser.pause(500);
-    }
-
+  public async tagsLink() {
+    await Actions.clickOn(this.navBar);
+    await Actions.clickOn(this.tagsButton);
+  }
 }
-export default new navigation();
+export default new Navigation();

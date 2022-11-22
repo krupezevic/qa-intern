@@ -1,88 +1,97 @@
-import Actions from "../utils/actions";
+import { RenameInfo } from 'typescript';
+import actions from '../utils/actions';
+import Actions from '../utils/actions';
 
-//yarn e2e-stage-win
-class Tags{
-    i:Number;
-    public get addNewTag() {
-        return $('//button[.="New"]');
-    }
+class Tags {
+  public get addNewTag() {
+    return $('//button[.="New"]');
+  }
 
-      public get newTagNameInput() {
-        return $('#name');
-      }
-    
-    public get buttonSave() {
-        return $('//*[.="save"]');
-    }
-    public get deleteButton() {
-        return $('//*[.="Delete"]')
-    }
+  public get newTagNameInput() {
+    return $('#name');
+  }
 
-    public get selectTagsByName() {
-        return $('.SpTableTbody tr:nth-child(1) td:nth-child(2)');
-    }
+  public get buttonSave() {
+    return $('//button[.="save"]');
+  }
 
-    public get timeCreated() {
-        return $('.SpTableTbody tr:nth-child(1) td:nth-child(3)')
-    }
-    
-    public get checkers() {
-        return ("tbody use");
-       
-    }
-    public get firstChecker() {
-        return $('tbody tr:nth-child(1) td:nth-child(1)')
-    }
-    public async checkAny(userToBeSelected) {
-        return $('tbody tr:nth-child("'+ userToBeSelected +'") td:nth-child(1)')
-    }
-    public async selectByUserName(userName) {
-      
-        await Actions.clickOn((await (await $("//*[.='" + userName + "']")).parentElement()).previousElement());
-        // let span = $("//*[.='" + userName + "']");
-        // let tdField = span.parentElement();
-        // await Actions.clickOn(tdField.previousElement())
-        
-    }
+  public get buttonDelete() {
+    return $('//button[.="Delete"]');
+  }
 
-    public async selectTwoTags(user1,user2) {
-        await this.selectByUserName(user1);
-        await this.selectByUserName(user2);
-    }
-    public async anyButton(buttonName) {
+  public get buttonRename() {
+    return $('//button[.="Rename"]');
+  }
 
-        await Actions.clickOn($('//*[.="' + buttonName + '"]'));
-        
-    }
+  public get buttonConfirm() {
+    return $('//button[.="confirm"]');
+  }
 
-    public get numberOfRows() {
-        return  $$("//tbody//tr").length;
-    }
-    public async deleteFirstUser() {
-        this.i= Number(this.numberOfRows);
-        this.anyButton("Delete");
-        await browser.pause(1000);
-        this.anyButton("confirm");
-        await browser.pause(1000);
-        
-    }
-    
-    public async checkNUmberOfRowsAfterDelete() {
-        await expect(Number(this.numberOfRows)).toEqual(Number(this.i) - 1)
-        await browser.pause(1000)
-    }
-    
-    public async createTags(name: string) {
-        await Actions.typeIn(this.newTagNameInput, name);
-        await browser.pause(2000);
-        await this.anyButton("save");
-        
-    }
-    
-    public async clickOnNewTag() {
-        await Actions.waitForElementToBeDisplayed(this.addNewTag);
-        await Actions.clickOn(this.addNewTag);
-        await browser.pause(3000);
-    }
+  public get buttonCombine() {
+    return $('//button[.="Combine"]');
+  }
+
+  public get combineInput() {
+    return $('#name');
+  }
+
+  public get selectFirstTagByName() {
+    return $('.SpTableTbody tr:nth-child(1) td:nth-child(2)');
+  }
+
+  public get selectSecondTagByName() {
+    return $('.SpTableTbody tr:nth-child(2) td:nth-child(2)');
+  }
+
+  public get firstTagCheck() {
+    return $('tbody tr:nth-child(1) td:nth-child(1) span');
+  }
+  public get secondTagCheck() {
+    return $('tbody tr:nth-child(2) td:nth-child(1) span');
+  }
+
+  public get renameField() {
+    return $('#name');
+  }
+
+  public get numberOfRows() {
+    return $$('//tbody//tr');
+  }
+
+  public async firstSecondTagCheck() {
+    await Actions.clickOn(this.firstTagCheck);
+    await Actions.clickOn(this.secondTagCheck);
+    await Actions.clickOn(this.buttonCombine);
+  }
+
+  public async combineTwoTags(name: string) {
+    await Actions.typeIn(this.combineInput, name);
+    await Actions.clickOn(this.buttonConfirm);
+  }
+
+  public async clickOnNewTag() {
+    await Actions.clickOn(this.addNewTag);
+    await Actions.waitForElementToBeDisplayed(this.newTagNameInput);
+  }
+
+  public async createTags(name: string) {
+    await Actions.typeIn(this.newTagNameInput, name);
+    await Actions.clickOn(this.buttonSave);
+  }
+
+  public async renameFirstUser(rename: string) {
+    await Actions.clickOn(this.firstTagCheck);
+    await Actions.clickOn(this.buttonRename);
+    await Actions.waitForElementToBeDisplayed(this.renameField);
+    await Actions.typeIn(this.renameField, rename);
+    await Actions.clickOn(this.buttonConfirm);
+  }
+
+  public async deleteFirstUser() {
+    await Actions.clickOn(this.firstTagCheck);
+    await Actions.clickOn(this.buttonDelete);
+    await Actions.waitForElementToBeDisplayed(this.buttonConfirm);
+    await Actions.clickOn(this.buttonConfirm);
+  }
 }
 export default new Tags();
