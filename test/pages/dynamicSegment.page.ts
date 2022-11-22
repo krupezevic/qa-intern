@@ -9,11 +9,11 @@ class DynamicSegmentsPage {
         return $('[placeholder="My New Segment"]');
     }
 
-    public get filters() {
+    public get addFilterLink() {
         return $('//descendant::*[.="Add filter"][5]');
     }
 
-    public get oneOfFilters() {
+    public get optionAddedThisMonth() {
         return $('//div[.="Added This Month")]');
     }
 
@@ -40,8 +40,8 @@ class DynamicSegmentsPage {
     public async addNewSegment(name: string) {
         await Actions.clickOn(this.addNewLink);
         await Actions.typeIn(this.segmentNameInput, name);
-        await Actions.clickOn(this.filters);
-        await Actions.clickOn(this.oneOfFilters);
+        await Actions.clickOn(this.addFilterLink);
+        await Actions.clickOn(this.optionAddedThisMonth);
         await Actions.clickOn(this.saveButton);
     }
 
