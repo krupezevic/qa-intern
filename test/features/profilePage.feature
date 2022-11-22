@@ -14,3 +14,15 @@ Feature: Profile page functionality
     Given user is on Profile page
     When user tries to insert values in all fields
     Then populated fields are saved
+
+  Scenario Outline: User is not able to change password
+    Given user is on Profile page
+    When user insert "<currentPassword>" and "<newPasword>" and "<confirmPassword>"
+    Then password is not changed
+
+    Examples:
+      | currentPassword | newPasword | confirmPassword |
+      | superphone      | example1   | example2        |
+      | superphone      | example1   |                 |
+      | superphone      |            | example2        |
+      | invalidPassword | example1   | example1        |

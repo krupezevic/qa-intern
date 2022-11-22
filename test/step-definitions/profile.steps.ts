@@ -52,4 +52,12 @@ Then('populated fields are saved', async () => {
     await expect(profilePage.website).toHaveValue(dynamicVCard.website);
     await expect(profilePage.zipCode).toHaveValue(dynamicVCard.zipCode);
     await expect(profilePage.note).toHaveValue(dynamicVCard.note);
+});
+
+When('user insert {string} and {string} and {string}', async (currentPassword, newPassword, confirmPassword) => {
+    await profilePage.enterPasswordFields(currentPassword, newPassword, confirmPassword);
+});
+
+Then('password is not changed', async () => {
+    await expect(profilePage.clickSavePassword).not.toBeDisabled();
 })
