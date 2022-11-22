@@ -1,4 +1,4 @@
-## Cucumber setup in VSCode
+## Cucumber setup in VSCode 
 In order to have fully supported Cucumber in VSCode, please follow the following steps.
 Steps for setup:
 1. Install from VSCode extension: "Cucumber Full Language Support"
