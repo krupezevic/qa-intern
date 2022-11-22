@@ -6,6 +6,7 @@
   "scripts": {
     "e2e-stage": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts",
     "e2e-generate-report": "allure generate --clean && allure open"
+    
   },
   "author": "",
   "license": "ISC",
