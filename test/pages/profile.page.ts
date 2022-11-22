@@ -1,4 +1,4 @@
-import { sample } from "../test-data/dynamicVCard";
+import { dynamicVCard } from "../test-data/dynamicVCard";
 import Actions from "../utils/actions";
 
 class ProfilePage {
@@ -124,22 +124,22 @@ class ProfilePage {
         await Actions.clickOn(this.logoutLink);
     }
     public async enterAllDynamicVCardFields() {
-        await Actions.typeIn(this.firstNameDynamicVCard, sample.firstName);
-        await Actions.typeIn(this.lastNameDynamicVCard, sample.lastName);
-        await Actions.typeIn(this.title, sample.title);
-        await Actions.typeIn(this.organization, sample.organization);
-        await Actions.typeIn(this.email, sample.email);
-        await Actions.typeIn(this.facebook, sample.facebook);
-        await Actions.typeIn(this.instagram, sample.instagram);
-        await Actions.typeIn(this.twitter, sample.twitter);
-        await Actions.typeIn(this.linkedin, sample.linkedin);
-        await Actions.typeIn(this.youtube, sample.youtube);
-        await Actions.typeIn(this.snapchat, sample.snapchat);
-        await Actions.typeIn(this.soundcloud, sample.soundcloud);
-        await Actions.typeIn(this.store, sample.store);
-        await Actions.typeIn(this.website, sample.website);
-        await Actions.typeIn(this.zipCode, sample.zipCode);
-        await Actions.typeIn(this.note, sample.note);
+        await Actions.typeIn(this.firstNameDynamicVCard, dynamicVCard.firstName);
+        await Actions.typeIn(this.lastNameDynamicVCard, dynamicVCard.lastName);
+        await Actions.typeIn(this.title, dynamicVCard.title);
+        await Actions.typeIn(this.organization, dynamicVCard.organization);
+        await Actions.typeIn(this.email, dynamicVCard.email);
+        await Actions.typeIn(this.facebook, dynamicVCard.facebook);
+        await Actions.typeIn(this.instagram, dynamicVCard.instagram);
+        await Actions.typeIn(this.twitter, dynamicVCard.twitter);
+        await Actions.typeIn(this.linkedin, dynamicVCard.linkedin);
+        await Actions.typeIn(this.youtube, dynamicVCard.youtube);
+        await Actions.typeIn(this.snapchat, dynamicVCard.snapchat);
+        await Actions.typeIn(this.soundcloud, dynamicVCard.soundcloud);
+        await Actions.typeIn(this.store, dynamicVCard.store);
+        await Actions.typeIn(this.website, dynamicVCard.website);
+        await Actions.typeIn(this.zipCode, dynamicVCard.zipCode);
+        await Actions.typeIn(this.note, dynamicVCard.note);
 
         await Actions.clickOn(this.clickSaveDynamicVCard);
     }

@@ -1,4 +1,4 @@
-export const sample = {
+export const dynamicVCard = {
     firstName: 'Petar',
     lastName: 'Jovic',
     title: 'dizajn',

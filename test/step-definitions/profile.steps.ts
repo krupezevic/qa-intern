@@ -2,7 +2,7 @@ import { Given, Then, When } from "@wdio/cucumber-framework";
 import loginPage from "../pages/login.page";
 import navigationPage from "../pages/navigation.page";
 import profilePage from "../pages/profile.page";
-import { sample } from "../test-data/dynamicVCard";
+import { dynamicVCard } from "../test-data/dynamicVCard";
 
 Given('user is on Profile page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
@@ -36,20 +36,20 @@ When('user tries to insert values in all fields', async () => {
 });
 
 Then('populated fields are saved', async () => {
-    await expect(profilePage.firstNameDynamicVCard).toHaveValue(sample.firstName);
-    await expect(profilePage.lastNameDynamicVCard).toHaveValue(sample.lastName);
-    await expect(profilePage.title).toHaveValue(sample.title);
-    await expect(profilePage.organization).toHaveValue(sample.organization);
-    await expect(profilePage.email).toHaveValue(sample.email);
-    await expect(profilePage.facebook).toHaveValue(sample.facebook);
-    await expect(profilePage.instagram).toHaveValue(sample.instagram);
-    await expect(profilePage.twitter).toHaveValue(sample.twitter);
-    await expect(profilePage.linkedin).toHaveValue(sample.linkedin);
-    await expect(profilePage.youtube).toHaveValue(sample.youtube);
-    await expect(profilePage.snapchat).toHaveValue(sample.snapchat);
-    await expect(profilePage.soundcloud).toHaveValue(sample.soundcloud);
-    await expect(profilePage.store).toHaveValue(sample.store);
-    await expect(profilePage.website).toHaveValue(sample.website);
-    await expect(profilePage.zipCode).toHaveValue(sample.zipCode);
-    await expect(profilePage.note).toHaveValue(sample.note);
+    await expect(profilePage.firstNameDynamicVCard).toHaveValue(dynamicVCard.firstName);
+    await expect(profilePage.lastNameDynamicVCard).toHaveValue(dynamicVCard.lastName);
+    await expect(profilePage.title).toHaveValue(dynamicVCard.title);
+    await expect(profilePage.organization).toHaveValue(dynamicVCard.organization);
+    await expect(profilePage.email).toHaveValue(dynamicVCard.email);
+    await expect(profilePage.facebook).toHaveValue(dynamicVCard.facebook);
+    await expect(profilePage.instagram).toHaveValue(dynamicVCard.instagram);
+    await expect(profilePage.twitter).toHaveValue(dynamicVCard.twitter);
+    await expect(profilePage.linkedin).toHaveValue(dynamicVCard.linkedin);
+    await expect(profilePage.youtube).toHaveValue(dynamicVCard.youtube);
+    await expect(profilePage.snapchat).toHaveValue(dynamicVCard.snapchat);
+    await expect(profilePage.soundcloud).toHaveValue(dynamicVCard.soundcloud);
+    await expect(profilePage.store).toHaveValue(dynamicVCard.store);
+    await expect(profilePage.website).toHaveValue(dynamicVCard.website);
+    await expect(profilePage.zipCode).toHaveValue(dynamicVCard.zipCode);
+    await expect(profilePage.note).toHaveValue(dynamicVCard.note);
 })
