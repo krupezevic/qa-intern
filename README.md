@@ -1,5 +1,5 @@
-## Setup for maping steps in VSCode  
-Use when the shortcut in *.feature file "Ctrl + left mouse click" does not switch to the *.steps.ts file function
+## Cucumber setup in VSCode 
+In order to have fully supported Cucumber in VSCode, please follow the following steps.
 Steps for setup:
 1. Install from VSCode extension: "Cucumber Full Language Support"
 2. In the opened app root create (if absent) .vscode folder with settings.json file
