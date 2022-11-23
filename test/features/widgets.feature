@@ -5,9 +5,9 @@ Feature: Widgets functionality
     When user tries to create new widget
     Then widget is created
 
-# Scenario: User is able to edit new widget
-#   Given created new widget
-#   When user tries to edit new widget
-#   Then widget is edited
+  Scenario: User is able to edit new widget
+    Given created new widget
+    When user tries to edit new widget
+    Then widget is edited
 
 

@@ -46,11 +46,15 @@ class WidgetsPage {
         return $('//button[.="save"]')
     }
 
+    public get saveButtonAfterEditWidget() {
+        return $('//descendant::button[.="save"][2]')
+    }
+
     public get nameOfTheFirstElementInList() {
         return $('.SpTableTbody tr:nth-child(1) b');
     }
 
-    public get alertMessage(){
+    public get alertMessage() {
         return $('div[type="success"]');
     }
 
@@ -58,12 +62,12 @@ class WidgetsPage {
         return $('.SpLayoutContent .title');
     }
 
-    public get editOfTheFirstElementInList() {
-        return $('tr:nth-child(2) td:last-child a');
+    public get editOfTheFirstRowInList() {
+        return $('tr:nth-child(1) td:last-child a');
     }
 
-    public get selectWidgetTypePageSection(){
-        return $('//*[.="Page Section"]');
+    public get selectWidgetTypePageSection() {
+        return $('//descendant::img[3]');
     }
 
     public async createNewWidget(name: string, searchForExistingTag: string, searchForCreateNewTag: string) {
@@ -81,17 +85,16 @@ class WidgetsPage {
         await Actions.clickOn(this.saveButton);
         await Actions.waitForElementToBeDisplayed(this.alertMessage);
         await Actions.clickOn(this.backToListOfWidgets);
-
     }
 
-    public async editWidget(name:string){
-        await Actions.clickOn(this.editOfTheFirstElementInList);
+    public async editWidget(name: string) {
+        await Actions.clickOn(this.editOfTheFirstRowInList);
+        await Actions.waitForElementToBeDisplayed(this.widgetName);
         await Actions.typeIn(this.widgetName, name);
         await Actions.clickOn(this.selectWidgetTypePageSection);
-
-
-
-
+        await Actions.clickOn(this.saveButtonAfterEditWidget);
+        await Actions.waitForElementToBeDisplayed(this.alertMessage);
+        await Actions.clickOn(this.backToListOfWidgets);
     }
 }
 export default new WidgetsPage();
