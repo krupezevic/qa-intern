@@ -1,19 +1,21 @@
+import { faker, Sex } from '@faker-js/faker';
+
 export const dynamicVCard = {
-    firstName: 'Petar',
-    lastName: 'Jovic',
-    title: 'dizajn',
-    organization: 'ITService',
-    email: 'petarJovic2@gmail.com',
-    facebook: 'https://facebook.com/test2',
-    instagram: 'https://instagram.com/test2',
-    twitter: 'https://twitter.com/test2',
-    linkedin: 'https://linkedin.com/in/test2',
-    youtube: 'https://youtube.com/test2',
-    snapchat: 'https://snapchat.com/add/test2',
-    soundcloud: 'https://soundcloud.com/test2',
-    store: 'Store2',
-    website: 'Website2',
-    zipCode: 'zipCode2',
-    note: 'note2'
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+    title: faker.name.firstName(),
+    organization: faker.name.firstName(),
+    email: faker.internet.email(),
+    facebook: `https://facebook.com/${faker.word.verb()}`,
+    instagram: `https://instagram.com/${faker.word.verb()}`,
+    twitter: `https://twitter.com/${faker.word.verb()}`,
+    linkedin: `https://linkedin.com/in/${faker.word.verb()}`,
+    youtube: `https://youtube.com/${faker.word.verb()}`,
+    snapchat: `https://snapchat.com/add/${faker.word.verb()}`,
+    soundcloud: `https://soundcloud.com/${faker.word.verb()}`,
+    store: faker.name.firstName(),
+    website: faker.internet.domainName(),
+    zipCode: faker.finance.account(5),
+    note: faker.word.verb(),
     }
     
