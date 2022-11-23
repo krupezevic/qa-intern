@@ -15,14 +15,26 @@ When('user tries to create New phone number', async () => {
 });
 
 Then('user is created the phone number', async () => {
-  await expect(phoneNumbersPage.assertMessageWaitToBeDisplayed).toContain("Success A New Phone number has been added");
+
 });
 
+Given('phone number for Actions is created', async () => {
+  await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
+  await navigationPage.navigationToPhoneNumbersPage();
+  await phoneNumbersPage.createNewPhoneNumber();
+});
 
-When('user tries to use Actions-Release', async () => { });
-Then('user is executed Release', async () => { });
+When('user tries to Release phone number', async () => {
+  await phoneNumbersPage.actionRelease();
+});
 
-When('user tries to use Actions-Make Default', async () => { });
+Then('user is executed Release', async () => {
+});
+
+When('user tries to use Actions-Make Default', async () => {
+  await phoneNumbersPage.actionMakeDefault();
+});
+
 Then('user is executed Make Default', async () => { });
 
 

@@ -6,15 +6,15 @@ Feature: PhoneNumbers functionality
         When user tries to create New phone number
         Then user is created the phone number
 
-    Scenario: user is able to use Actions-Release
-        Given user is on the Phone Numbers page
-        When user tries to use Actions-Release
-        Then user is executed Release
+# Scenario: user is able to use Actions-Release
+#     Given phone number for Release is created
+#     When user tries to Release phone number
+#     Then user is executed Release
 
-    Scenario: user is able to use Actions-Make Default
-        Given user is on the Phone Numbers page
-        When user tries to use Actions-Make Default
-        Then user is executed Make Default
+# Scenario: user is able to use Actions-Make Default
+#     Given phone number for Actions is created
+#     When user tries to use Actions-Make Default
+# Then user is executed Make Default
 
 
 #   Scenario: user is able to click on Learn more-clickable text for more information
