@@ -4,7 +4,17 @@ Feature: PhoneNumbers functionality
     Scenario: user is able to create New number successfully
         Given user is on the Phone Numbers page
         When user tries to create New phone number
-# Then phone number is created
+        Then user is created the phone number
+
+    Scenario: user is able to use Actions-Release
+        Given user is on the Phone Numbers page
+        When user tries to use Actions-Release
+        Then user is executed Release
+
+    Scenario: user is able to use Actions-Make Default
+        Given user is on the Phone Numbers page
+        When user tries to use Actions-Make Default
+        Then user is executed Make Default
 
 
 #   Scenario: user is able to click on Learn more-clickable text for more information

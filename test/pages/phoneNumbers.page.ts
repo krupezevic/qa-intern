@@ -16,7 +16,11 @@ class phoneNumbers {
     }
 
     public get firstNumberOfSix() {
-        return $('.SpNumberOptions div:nth-child(1)');
+        return $('div.pointer.number-option:nth-child(1)');
+    }
+
+    public get assertMessage() {
+        return $('SpNotificationMessagesContent');
     }
 
     public async createNewPhoneNumber() {
@@ -25,5 +29,10 @@ class phoneNumbers {
         await actions.clickOn(this.buttonAdd);
         await actions.clickOn(this.buttonConfirm);
     }
+
+    public async assertMessageWaitToBeDisplayed() {
+        await (this.assertMessage).waitForExist;
+    }
+
 }
 export default new phoneNumbers();

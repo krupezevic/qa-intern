@@ -11,12 +11,22 @@ Given('user is on the Phone Numbers page', async () => {
 });
 
 When('user tries to create New phone number', async () => {
-  await phoneNumbersPage.createNewPhoneNumber;
+  await phoneNumbersPage.createNewPhoneNumber();
 });
 
-// Then('phone number is created', async () => {
+Then('user is created the phone number', async () => {
+  await expect(phoneNumbersPage.assertMessageWaitToBeDisplayed).toContain("Success A New Phone number has been added");
+});
 
-// });
+
+When('user tries to use Actions-Release', async () => { });
+Then('user is executed Release', async () => { });
+
+When('user tries to use Actions-Make Default', async () => { });
+Then('user is executed Make Default', async () => { });
+
+
+
 
 // When('user clicks on Learn more', async () => { });
 

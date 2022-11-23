@@ -12,7 +12,6 @@ class Navigation {
     public async navigationToPhoneNumbersPage() {
         await Actions.clickOn(this.dropDownMenu);
         await Actions.clickOn(this.phoneNumersCard);
-        await browser.pause(5000);
     }
 
 
