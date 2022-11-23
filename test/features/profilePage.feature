@@ -17,7 +17,7 @@ Feature: Profile page functionality
 
   Scenario Outline: User is not able to change password
     Given user is on Profile page
-    When user insert "<currentPassword>" and "<newPasword>" and "<confirmPassword>"
+    When user insert current password "<currentPassword>" and new pasword "<newPasword>" and confirm password "<confirmPassword>"
     Then password is not changed
 
     Examples:

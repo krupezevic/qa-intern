@@ -54,7 +54,7 @@ Then('populated fields are saved', async () => {
     await expect(profilePage.note).toHaveValue(dynamicVCard.note);
 });
 
-When('user insert {string} and {string} and {string}', async (currentPassword, newPassword, confirmPassword) => {
+When('user insert current password {string} and new pasword {string} and confirm password {string}', async (currentPassword, newPassword, confirmPassword) => {
     await profilePage.enterPasswordFields(currentPassword, newPassword, confirmPassword);
 });
 
