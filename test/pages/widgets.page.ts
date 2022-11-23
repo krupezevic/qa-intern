@@ -51,12 +51,21 @@ class WidgetsPage {
     }
 
     public get alertMessage(){
-        return $('SpNotificationStatusText');
+        return $('div[type="success"]');
     }
 
     public get backToListOfWidgets() {
         return $('.SpLayoutContent .title');
     }
+
+    public get editOfTheFirstElementInList() {
+        return $('tr:nth-child(2) td:last-child a');
+    }
+
+    public get selectWidgetTypePageSection(){
+        return $('//*[.="Page Section"]');
+    }
+
     public async createNewWidget(name: string, searchForExistingTag: string, searchForCreateNewTag: string) {
         await Actions.clickOn(this.newWidgetLink);
         await Actions.typeIn(this.widgetName, name);
@@ -70,9 +79,18 @@ class WidgetsPage {
         await Actions.clickOn(this.checkboxSendVCardUnderAutoResponseUnknownNumbers);
         await Actions.clickOn(this.checkboxSendVCardUnderAutoResponseKnownNumbers);
         await Actions.clickOn(this.saveButton);
-        await browser.pause(1000);
+        await Actions.waitForElementToBeDisplayed(this.alertMessage);
         await Actions.clickOn(this.backToListOfWidgets);
-        await browser.pause(5000);
+
+    }
+
+    public async editWidget(name:string){
+        await Actions.clickOn(this.editOfTheFirstElementInList);
+        await Actions.typeIn(this.widgetName, name);
+        await Actions.clickOn(this.selectWidgetTypePageSection);
+
+
+
 
     }
 }
