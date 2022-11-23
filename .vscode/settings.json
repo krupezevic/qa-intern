@@ -4,12 +4,4 @@
     "node_modules/qa-lib/src/step_definitions/*.js"
   ],
   "cucumberautocomplete.strictGherkinCompletion": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[feature]": {
-    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
-  }
 }

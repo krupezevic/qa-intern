@@ -2,7 +2,7 @@ import { RenameInfo } from 'typescript';
 import actions from '../utils/actions';
 import Actions from '../utils/actions';
 
-class Tags {
+class TagsPage {
   public get addNewTag() {
     return $('//button[.="New"]');
   }
@@ -58,7 +58,7 @@ class Tags {
     return $$('//tbody//tr');
   }
 
-  public async firstSecondTagCheck() {
+  public async selectFirstTwoTags() {
     await Actions.clickOn(this.firstTagCheck);
     await Actions.clickOn(this.secondTagCheck);
     await Actions.clickOn(this.buttonCombine);
@@ -82,7 +82,6 @@ class Tags {
   public async renameFirstUser(rename: string) {
     await Actions.clickOn(this.firstTagCheck);
     await Actions.clickOn(this.buttonRename);
-    await Actions.waitForElementToBeDisplayed(this.renameField);
     await Actions.typeIn(this.renameField, rename);
     await Actions.clickOn(this.buttonConfirm);
   }
@@ -94,4 +93,4 @@ class Tags {
     await Actions.clickOn(this.buttonConfirm);
   }
 }
-export default new Tags();
+export default new TagsPage();

@@ -98,7 +98,7 @@ Given('Tags for combine are created', async () => {
 });
 
 When('user tries to combine tags', async () => {
-  await tagsPage.firstSecondTagCheck();
+  await tagsPage.selectFirstTwoTags();
   await tagsPage.combineTwoTags('Nesto trece');
 });
 
