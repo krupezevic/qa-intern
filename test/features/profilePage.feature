@@ -25,7 +25,7 @@ Feature: Profile page functionality
       | superphone      | example1   | example2        |
       | superphone      | example1   |                 |
       | superphone      |            | example2        |
-      | invalidPassword | example1   | example1        |
+      | invalidPassword | example1   | example2        |
       |                 |            |                 |
       |                 | example1   | example1        |
       |                 | example1   | example2        |

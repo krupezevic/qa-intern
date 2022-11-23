@@ -59,5 +59,5 @@ When('user insert {string} and {string} and {string}', async (currentPassword, n
 });
 
 Then('password is not changed', async () => {
-    await expect(profilePage.clickSavePassword).not.toBeDisabled();
+    await expect(profilePage.clickSavePassword).toHaveElementClassContaining('disabled');
 })
