@@ -85,14 +85,14 @@ class TagsPage {
     await Actions.clickOn(this.buttonSave);
   }
 
-  public async renameFirstUser(rename: string) {
+  public async renameFirstTag(rename: string) {
     await Actions.clickOn(this.firstTagCheck);
     await Actions.clickOn(this.buttonRename);
     await Actions.typeIn(this.renameField, rename);
     await Actions.clickOn(this.buttonConfirm);
   }
 
-  public async deleteFirstUser() {
+  public async deleteFirstTag() {
     await Actions.clickOn(this.firstTagCheck);
     await Actions.clickOn(this.buttonDelete);
     await Actions.waitForElementToBeDisplayed(this.buttonConfirm);

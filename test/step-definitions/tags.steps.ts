@@ -34,7 +34,7 @@ Given('new tag is created', async () => {
 });
 
 When('user tries to delete tag', async () => {
-  await tagsPage.deleteFirstUser();
+  await tagsPage.deleteFirstTag();
 });
 
 Then('tag is removed', async () => {
@@ -43,7 +43,7 @@ Then('tag is removed', async () => {
 
 
 When('user tries to rename tag', async () => {
-  await tagsPage.renameFirstUser("Bojan");
+  await tagsPage.renameFirstTag("Bojan");
 });
 
 Then('tag is renamed', async () => {
