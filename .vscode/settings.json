@@ -3,5 +3,5 @@
     "test/step-definitions/*.steps.ts",
     "node_modules/qa-lib/src/step_definitions/*.js"
   ],
-  "cucumberautocomplete.strictGherkinCompletion": false
+  "cucumberautocomplete.strictGherkinCompletion": true
 }
