@@ -1,6 +1,7 @@
 import Actions from "../utils/actions";
 
 class LoginPage {
+
   public get emailInput() {
     return $('#email');
   }

@@ -1,4 +1,5 @@
 import Actions from "../utils/actions";
+
 class Navigation {
 
   public get dropDownMenu() {

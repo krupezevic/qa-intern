@@ -1,6 +1,5 @@
 import actions from "../utils/actions";
 
-
 class phoneNumbers {
 
     public get buttonNew() {
@@ -34,6 +33,15 @@ class phoneNumbers {
     public get optionMakeDefault() {
         return $('//descendant::span[.="Make Default"][2]');
     }
+
+    public get sumTableRows() {
+        return $$('//tbody//tr').length;
+    }
+
+    public get firstNumberInTable() {
+        return $('.default-number');
+    }
+
 
     public async createNewPhoneNumber() {
         await actions.clickOn(this.buttonNew);
