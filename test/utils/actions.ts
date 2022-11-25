@@ -16,6 +16,5 @@ class Actions {
     await element.waitForDisplayed();
     await element.waitForClickable();
   }
-
 }
 export default new Actions();
