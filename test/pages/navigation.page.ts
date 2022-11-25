@@ -1,5 +1,7 @@
 import Actions from '../utils/actions';
+
 class NavigationPage {
+
   public get navBar() {
     return $('.desktopNavigation');
   }

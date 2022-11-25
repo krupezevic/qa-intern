@@ -3,6 +3,7 @@ import actions from '../utils/actions';
 import Actions from '../utils/actions';
 
 class TagsPage {
+
   public get addNewTag() {
     return $('//button[.="New"]');
   }
@@ -46,6 +47,7 @@ class TagsPage {
   public get firstTagCheck() {
     return $('tbody tr:nth-child(1) td:nth-child(1) span');
   }
+
   public get secondTagCheck() {
     return $('tbody tr:nth-child(2) td:nth-child(1) span');
   }
@@ -56,6 +58,10 @@ class TagsPage {
 
   public get numberOfRows() {
     return $$('//tbody//tr');
+  }
+
+  public get waitForModal() {
+    return $$('.SpModalContent');
   }
 
   public async selectFirstTwoTags() {
