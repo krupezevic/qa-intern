@@ -14,7 +14,7 @@ class DynamicSegmentsPage {
     }
 
     public get optionAddedThisMonth() {
-        return $('//div[.="Added This Month")]');
+        return $('//div[.="Added This Month"]');
     }
 
     public get saveButton() {
