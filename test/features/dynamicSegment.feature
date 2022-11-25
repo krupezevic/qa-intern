@@ -1,5 +1,5 @@
 Feature: Dynamic-segments functionality
-
+   @only
    Scenario: User is able to create new segment
       Given user is on Dynamic Segment page
       When user tries to create new segment with valid values

@@ -1,5 +1,5 @@
 Feature: Profile page functionality
-
+  @smoke
   Scenario: User is able to change "FIRST NAME" and "LAST NAME" fields
     Given user is on Profile page
     When user tries to change profiles name and lastname

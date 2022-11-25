@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "e2e-stage": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts",
-    "e2e-generate-report": "allure generate --clean && allure open"
+    "e2e-generate-report": "allure generate --clean && allure open",
+    "e2e-tags": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=$TAG",
+    "e2e-only": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@moroo/wdio-slack-reporter": "^2.1.1",
     "@wdio/allure-reporter": "^7.25.1",
     "@wdio/cli": "^7.25.1",
     "@wdio/cucumber-framework": "^7.25.1",

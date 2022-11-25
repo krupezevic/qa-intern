@@ -1,6 +1,7 @@
 import type { Options } from "@wdio/types";
 import allure from "@wdio/allure-reporter";
 import { config as configDotEnv } from "dotenv";
+import SlackReporter from '@moroo/wdio-slack-reporter';
 
 export const config: Options.Testrunner = {
   //
@@ -169,7 +170,26 @@ export const config: Options.Testrunner = {
     disableWebdriverScreenshotsReporting: true,
     useCucumberStepReporter: true
 
-  }],
+  }], [ SlackReporter, {
+      slackOptions: {
+        type: 'webhook',
+        webhook: `${process.env.SLACKE2E}`,
+        slackName: "NK QA Reporter",
+        slackIconUrl: "https://webdriver.io/img/webdriverio.png",
+      },
+      resultsUrl: process.env.JENKINS_URL,
+      notifyTestFinishMessage: true,
+      emojiSymbols: {
+        passed: ':white_check_mark:',
+        failed: ':x:',
+        skipped: ':double_vertical_bar:',
+        pending: ':grey_question:',
+        start: ':rocket:',
+        finished: ':checkered_flag:',
+        watch: ':stopwatch:'
+      }
+    }
+  ]
   ],
 
   //
