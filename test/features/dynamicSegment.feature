@@ -1,5 +1,5 @@
 Feature: Dynamic-segments functionality
-   @only
+   
    Scenario: User is able to create new segment
       Given user is on Dynamic Segment page
       When user tries to create new segment with valid values
@@ -14,7 +14,7 @@ Feature: Dynamic-segments functionality
    #   Given user is on Dynamic Segment page
    #   When user tries to create new segment without Add filter field
    #   Then save button is disabled
-
+   
    Scenario: User is able to rename segment in edit section
       Given new dynamic segment is created
       When user tries to enter new value in field SEGMENT NAME in edit section

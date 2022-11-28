@@ -1,7 +1,10 @@
 import type { Options } from "@wdio/types";
 import allure from "@wdio/allure-reporter";
 import { config as configDotEnv } from "dotenv";
-import SlackReporter from '@moroo/wdio-slack-reporter';
+import { IncomingWebhook } from '@slack/webhook';
+
+let message: string;
+const listOfMessages: string[] = [];
 
 export const config: Options.Testrunner = {
   //
@@ -170,26 +173,7 @@ export const config: Options.Testrunner = {
     disableWebdriverScreenshotsReporting: true,
     useCucumberStepReporter: true
 
-  }], [ SlackReporter, {
-      slackOptions: {
-        type: 'webhook',
-        webhook: `${process.env.SLACKE2E}`,
-        slackName: "NK QA Reporter",
-        slackIconUrl: "https://webdriver.io/img/webdriverio.png",
-      },
-      resultsUrl: process.env.JENKINS_URL,
-      notifyTestFinishMessage: true,
-      emojiSymbols: {
-        passed: ':white_check_mark:',
-        failed: ':x:',
-        skipped: ':double_vertical_bar:',
-        pending: ':grey_question:',
-        start: ':rocket:',
-        finished: ':checkered_flag:',
-        watch: ':stopwatch:'
-      }
-    }
-  ]
+  }]
   ],
 
   //
@@ -232,7 +216,7 @@ export const config: Options.Testrunner = {
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    */
-  onPrepare: function(config, capabilities) {
+  onPrepare: function (config, capabilities) {
     configDotEnv();
     require("custom-env").env();
   },
@@ -297,7 +281,7 @@ export const config: Options.Testrunner = {
    * @param {ITestCaseHookParameter} world    world object containing information on pickle and test step
    * @param {Object}                 context  Cucumber World object
    */
-  beforeScenario: async function(world, context) {
+  beforeScenario: async function (world, context) {
     await browser.reloadSession();
     await browser.maximizeWindow();
   },
@@ -333,8 +317,15 @@ export const config: Options.Testrunner = {
    * @param {number}                 result.duration  duration of scenario in milliseconds
    * @param {Object}                 context          Cucumber World object
    */
-  // afterScenario: function(world, result, context) {
-  // }
+
+  afterScenario: function (world, result, context) {
+    if (world.result.status === 'PASSED') {
+      message = `:white_check_mark: ${world.pickle.name}\n`;
+    } else {
+      message = `:x: ${world.pickle.name}\n`;
+    }
+    listOfMessages.push(message)
+  },
   /**
    *
    * Runs after a Cucumber Feature.
@@ -360,9 +351,16 @@ export const config: Options.Testrunner = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that ran
    */
-  // after: function (result, capabilities, specs) {
-  // },
+  after: async function (result, capabilities, specs) {
+    const url = `${process.env.SLACK_E2E}`;
+    const webhook = new IncomingWebhook(url);
+    const final = listOfMessages.join("\n")
+    await webhook.send({
+      text: final
+    });
+  },
   /**
+   
    * Gets executed right after terminating the webdriver session.
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
