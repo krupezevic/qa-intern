@@ -495,7 +495,7 @@
   dependencies:
     "@types/node" "*"
 
-"@wdio/allure-reporter@^7.25.1":
+"@wdio/allure-reporter@^7.26.0":
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/@wdio/allure-reporter/-/allure-reporter-7.26.0.tgz#8285a63e5c973c085deac781675b3a0b9438faff"
   integrity sha512-ZrudVFeyWd9GNFTFpeH8VLnsI+61pwXeXJfzHvE4h3HUwTXPepLaJyigltpLXV87kuziM1B4G20CauAg030uNQ==
