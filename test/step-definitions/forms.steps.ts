@@ -12,11 +12,11 @@ Given('User is on the Forms Page', async () => {
 
 When('user tries to create New Form', async () => {
     await formsPage.clickOnNewForms();
-    await formsPage.createForms('prvaforma777');
+    await formsPage.createForms('prvaforma777777');
 });
 
 Then('new form is created', async () => {
-    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('prvaforma777.superphone-stage.com');
+    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('prvaforma777777.superphone-stage.com');
 });
 
 
@@ -24,15 +24,15 @@ Given('Form is created', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.formsLink();
     await formsPage.clickOnNewForms();
-    await formsPage.createForms('zarename888');
+    await formsPage.createForms('zarename104019');
 });
 
 When('user tries to edit Form', async () => {
-    await formsPage.editForms('renamedform999');
+    await formsPage.editForms('renamedform104011');
 });
 
 Then('form is edited', async () => {
-    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('renamedform999.superphone-stage.com');
+    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('renamedform104011.superphone-stage.com');
 });
 
 
