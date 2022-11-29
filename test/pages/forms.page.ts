@@ -27,7 +27,7 @@ class formsPage {
     }
 
     public get nameOfTheFirstElementInList() {
-        return $('.SpForms td:first-child p');
+        return $('.SpForms tr:nth-child(1) td:nth-child(1) p');
     }
 
     public get buttonDisable() {
@@ -45,8 +45,9 @@ class formsPage {
 
     public async createForms(name: string) {
         await actions.typeIn(this.newFormsInput, name);
-        await actions.clickOn(this.buttonSave);
         await browser.pause(4000);
+        await actions.clickOn(this.buttonSave);
+
     }
 
     public async editForms(rename: string) {
