@@ -1,9 +1,9 @@
 Feature: Login functionality
-
+  @only
   Scenario: User is able to login successfully
     When user tries to login with valid credentials
     Then user is logged in
-
+  @only
   Scenario: User is not able to login successfully - invalid password
     When user tries to login with invalid password
     Then error is shown with message "ERROR: Invalid username or password."
