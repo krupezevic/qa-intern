@@ -5,6 +5,7 @@ import { IncomingWebhook } from '@slack/webhook';
 
 let message: string;
 const listOfMessages: string[] = [];
+const now = new Date();
 
 export const config: Options.Testrunner = {
   //
@@ -320,9 +321,9 @@ export const config: Options.Testrunner = {
 
   afterScenario: function (world, result, context) {
     if (world.result.status === 'PASSED') {
-      message = `:white_check_mark: ${world.pickle.name}\n`;
+      message = `:white_check_mark: ${world.pickle.name}`;
     } else {
-      message = `:x: ${world.pickle.name}\n`;
+      message = `:x: ${world.pickle.name}`;
     }
     listOfMessages.push(message)
   },
@@ -354,9 +355,10 @@ export const config: Options.Testrunner = {
   after: async function (result, capabilities, specs) {
     const url = `${process.env.SLACK_E2E}`;
     const webhook = new IncomingWebhook(url);
-    const final = listOfMessages.join("\n")
+    const final = listOfMessages.join("\n");
     await webhook.send({
-      text: final
+      text: "Regression executed at " + now.toUTCString() + "\n" +
+        "Executed tests:\n" + final
     });
   },
   /**
