@@ -10,9 +10,9 @@ Given('User is on the Forms Page', async () => {
     await navigationPage.formsLink();
 });
 
-When('user tries to create New Form', async () => {
-    await formsPage.clickOnNewForms();
-    await formsPage.createForms('prvaforma777777');
+When('user tries to create New form', async () => {
+    await formsPage.clickOnNewForm();
+    await formsPage.createForm('prvaforma777777');
 });
 
 Then('new form is created', async () => {
@@ -23,12 +23,12 @@ Then('new form is created', async () => {
 Given('Form is created', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.formsLink();
-    await formsPage.clickOnNewForms();
-    await formsPage.createForms('zarename104019');
+    await formsPage.clickOnNewForm();
+    await formsPage.createForm('zarename104019');
 });
 
-When('user tries to edit Form', async () => {
-    await formsPage.editForms('renamedform104011');
+When('user tries to edit form', async () => {
+    await formsPage.editForm('renamedform104011');
 });
 
 Then('form is edited', async () => {
@@ -36,7 +36,7 @@ Then('form is edited', async () => {
 });
 
 
-When('user tries to Disable Form', async () => {
+When('user tries to Disable form', async () => {
     await formsPage.disableForm();
 });
 

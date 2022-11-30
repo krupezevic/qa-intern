@@ -37,28 +37,29 @@ class formsPage {
     public get buttonEnable() {
         return $('tr:nth-child(1) td:nth-child(4) .Supper-button-button');
     }
+
     public get buttonCancel() {
         return $('//button[.="cancel"]');
-
     }
+
     public get form() {
         return $('.SpForms');
     }
 
-    public async clickOnNewForms() {
+    public async clickOnNewForm() {
         await actions.waitForPageLoad();
         await actions.clickOn(this.buttonNew);
         await actions.waitForElementToBeDisplayed(this.newFormsInput);
     }
 
-    public async createForms(name: string) {
+    public async createForm(name: string) {
         await actions.waitForPageLoad();
         await actions.typeIn(this.newFormsInput, name);
         await actions.waitForElementToBeEnabled(this.buttonSave);
         await actions.clickOn(this.buttonSave);
     }
 
-    public async editForms(rename: string) {
+    public async editForm(rename: string) {
         await actions.waitForPageLoad();
         await actions.clickOn(this.buttonEdit);
         await actions.typeIn(this.editFormsInput, rename);
