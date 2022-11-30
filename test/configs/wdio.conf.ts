@@ -172,7 +172,9 @@ export const config: Options.Testrunner = {
     disableWebdriverStepsReporting: true,
     disableWebdriverScreenshotsReporting: true,
     useCucumberStepReporter: true
-
+  }],
+  ['json',{
+      outputDir: './JsonResults'
   }]
   ],
 
