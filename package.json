@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "e2e-stage": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts",
-    "e2e-generate-report": "allure generate --clean && allure open"
+    "e2e-generate-report": "allure generate --clean && allure open"  
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@slack/webhook": "^6.1.0",
     "@wdio/allure-reporter": "^7.25.1",
     "@wdio/cli": "^7.25.1",
     "@wdio/cucumber-framework": "^7.25.1",
