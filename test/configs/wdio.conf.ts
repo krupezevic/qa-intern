@@ -5,7 +5,6 @@ import { IncomingWebhook } from '@slack/webhook';
 
 let message: string;
 const listOfMessages: string[] = [];
-const now = new Date();
 
 export const config: Options.Testrunner = {
   //
@@ -356,9 +355,9 @@ export const config: Options.Testrunner = {
     const url = `${process.env.SLACK_E2E}`;
     const webhook = new IncomingWebhook(url);
     const final = listOfMessages.join("\n");
+    
     await webhook.send({
-      text: "Regression executed at " + now.toUTCString() + "\n" +
-        "Executed tests:\n" + final
+      text:`Regression executed at ${new Date().toLocaleString()}\n Executed tests:\n ${final}`
     });
   },
   /**

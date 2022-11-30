@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "e2e-stage": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts",
-    "e2e-generate-report": "allure generate --clean && allure open",
-    "e2e-tags": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=$TAG",
-    "e2e-only": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only"
+    "e2e-generate-report": "allure generate --clean && allure open"  
   },
   "author": "",
   "license": "ISC",
