@@ -9,11 +9,11 @@ Given('user is on Widgets page', async () => {
 });
 
 When('user tries to create new widget', async () => {
-    await widgetsPage.createNewWidget('Widget007', 'a', 'newTagsad');
+    await widgetsPage.createNewWidget('Widget009', 'a', 'newTagsad');
 });
 
 Then('widget is created', async () => {
-    await expect(widgetsPage.nameOfTheFirstElementInList).toHaveText('Widget007');
+    await expect(widgetsPage.nameOfTheFirstElementInList).toHaveText('Widget009');
 });
 
 Given('created new widget', async () => {

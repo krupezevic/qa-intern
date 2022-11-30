@@ -14,8 +14,8 @@ class WidgetsPage {
         return $('.Select-input input');
     }
 
-    public get optionTag988() {
-        return $('//*[.="tag988"]');
+    public get firstTag() {
+        return $('.Select-option:nth-child(2)');
     }
 
     public get selectCreateTagLink() {
@@ -74,7 +74,7 @@ class WidgetsPage {
         await Actions.clickOn(this.newWidgetLink);
         await Actions.typeIn(this.widgetName, name);
         await Actions.typeIn(this.applyInboundTag, searchForExistingTag);
-        await Actions.clickOn(this.optionTag988);
+        await Actions.clickOn(this.firstTag);
         await this.applyInboundTag.addValue(searchForCreateNewTag);
         await Actions.clickOn(this.selectCreateTagLink);
         await Actions.clickOn(this.formField);
