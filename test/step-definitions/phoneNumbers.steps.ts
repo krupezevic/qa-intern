@@ -1,10 +1,8 @@
 import { Given, Then, When } from '@wdio/cucumber-framework';
-import { sortAndDeduplicateDiagnostics } from 'typescript';
 import loginPage from '../pages/login.page';
 import navigationPage from '../pages/navigation.page';
 import phoneNumbersPage from '../pages/phoneNumbers.page';
 import actions from '../utils/actions';
-import { faker } from '@faker-js/faker';
 
 Given('user is on the Phone Numbers page', async () => {
   await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);

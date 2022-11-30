@@ -42,7 +42,6 @@ class phoneNumbers {
         return $('.default-number');
     }
 
-
     public async createNewPhoneNumber() {
         await actions.clickOn(this.buttonNew);
         await actions.clickOn(this.firstNumberOfSix);
@@ -64,6 +63,5 @@ class phoneNumbers {
         await actions.clickOn(this.buttonActions);
         await actions.clickOn(this.optionMakeDefault);
     }
-
 }
 export default new phoneNumbers();
