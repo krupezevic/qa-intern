@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@wdio/allure-reporter": "^7.25.1",
     "@wdio/cli": "^7.25.1",
     "@wdio/cucumber-framework": "^7.25.1",

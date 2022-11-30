@@ -19,4 +19,3 @@ Feature: Login functionality
     Scenario: User is not able to login successfully - empty email
         When user tries to login with empty email
         Then validation is shown with message "Required field"
-        
