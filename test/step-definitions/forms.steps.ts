@@ -1,5 +1,4 @@
 import { Given, Then, When } from '@wdio/cucumber-framework';
-import { sortAndDeduplicateDiagnostics } from 'typescript';
 import loginPage from '../pages/login.page';
 import navigationPage from '../pages/navigation.page';
 import formsPage from '../pages/forms.page';
@@ -24,15 +23,15 @@ Given('Form is created', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.formsLink();
     await formsPage.clickOnNewForm();
-    await formsPage.createForm('zarename104019');
+    await formsPage.createForm('zarename10004');
 });
 
 When('user tries to edit form', async () => {
-    await formsPage.editForm('renamedform104011');
+    await formsPage.editForm('renamedform10005');
 });
 
 Then('form is edited', async () => {
-    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('renamedform104011.superphone-stage.com');
+    await expect(formsPage.nameOfTheFirstElementInList).toHaveText('renamedform10005.superphone-stage.com');
 });
 
 

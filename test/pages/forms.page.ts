@@ -1,6 +1,6 @@
 import actions from "../utils/actions";
 
-class formsPage {
+class FormsPage {
 
     public get buttonNew() {
         return $('//button[.="New"]');
@@ -75,4 +75,4 @@ class formsPage {
     }
 
 }
-export default new formsPage(); 
+export default new FormsPage(); 
