@@ -1,3 +1,4 @@
+
 class Actions {
 
   public async typeIn(element, value) {
@@ -20,6 +21,21 @@ class Actions {
   public async waitForElementToBeClickable(element) {
     await this.waitForElementToBeDisplayed(element);
     await element.waitForClickable();
+  }
+
+  public async waitForPageLoad() {
+    browser.waitUntil(
+      () => browser.execute(() => document.readyState === 'complete'),
+      {
+        timeout: 60 * 1000,
+        timeoutMsg: 'Page not loaded!'
+      });
+  }
+
+  public async waitForButtonSaveToBeEnabled(element) {
+    await browser.waitUntil(
+      async () => (await element.getAttribute("class")) !==
+        ("sc-dvQaRk hfkeMz Supper-button Supper-button-button  disabled"), { timeout: 3000, timeoutMsg: "Element still disabled" });
   }
 }
 export default new Actions();

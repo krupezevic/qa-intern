@@ -7,7 +7,8 @@
     "e2e-stage": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts",
     "e2e-generate-report": "allure generate --clean && allure open",
     "e2e-saucelab-only": "NODE_ENV=stage wdio run test/configs/saucelab.conf.ts --cucumberOpts.tagExpression=@only",
-    "e2e-only": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only"
+    "e2e-only": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only",
+    "e2e-regression": "NODE_ENV=stage wdio run test/configs/regressionTests.conf.ts"
   },
   "author": "",
   "license": "ISC",
