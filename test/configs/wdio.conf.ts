@@ -173,9 +173,14 @@ export const config: Options.Testrunner = {
     disableWebdriverScreenshotsReporting: true,
     useCucumberStepReporter: true
   }],
-  ['json',{
-      outputDir: './JsonResults'
-  }]
+  ['json', {
+    outputDir: './JsonResults'
+  }],
+  ['cucumberjs-json', {
+    jsonFolder: './CucumberJson',
+    language: 'en',
+  },
+  ]
   ],
 
   //
@@ -357,7 +362,7 @@ export const config: Options.Testrunner = {
     const url = `${process.env.SLACK_E2E}`;
     const webhook = new IncomingWebhook(url);
     const final = listOfMessages.join("\n");
-    
+
     await webhook.send({
       text:`Regression executed at ${new Date().toLocaleString()}\n Executed tests:\n ${final}`
     });
