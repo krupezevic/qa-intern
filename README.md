@@ -34,7 +34,7 @@ Steps for setup:
 
 ## Allure Framework for Windows
 In order to have fully supported Allure Framework on Windows follow the steps below.
-Steps for setup:
+Steps for setup: 
 1. Open Windows PowerShell
 2. Add the following line: 
 ```
