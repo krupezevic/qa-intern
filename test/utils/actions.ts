@@ -1,4 +1,3 @@
-
 class Actions {
 
   public async typeIn(element, value) {

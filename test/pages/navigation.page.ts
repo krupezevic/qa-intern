@@ -51,5 +51,14 @@ class NavigationPage {
     await actions.waitForPageLoad();
     await actions.clickOn(this.formsButton);
   }
+
+  public get tagsButton() {
+    return $('.desktopNavigation a[href="/tags"]');
+  }
+
+  public async tagsLink() {
+    await Actions.clickOn(this.navBar);
+    await Actions.clickOn(this.tagsButton);
+  }
 }
 export default new NavigationPage();
