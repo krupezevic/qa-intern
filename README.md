@@ -31,3 +31,16 @@ Steps for setup:
  ```
     $ allure --version
  ```
+
+## Allure Framework for Windows
+In order to have fully supported Allure Framework on Windows follow the steps below.
+Steps for setup: 
+1. Open Windows PowerShell
+2. Add the following line: 
+```
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+3. 
+```
+Invoke Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```

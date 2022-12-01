@@ -1,4 +1,5 @@
 class Actions {
+
   public async typeIn(element, value) {
     await this.waitForElementToBeClickable(element);
     await element.doubleClick();
