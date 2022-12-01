@@ -28,9 +28,10 @@ class Actions {
     await element.waitForClickable();
   }
 
-  public async waitForElementToBeEnabled(element) {
+  public async waitForButtonSaveToBeEnabled(element) {
     await browser.waitUntil(
-      async () => (await element.getAttribute("class")) !== ("sc-dvQaRk hfkeMz Supper-button Supper-button-button  disabled"), { timeout: 3000, timeoutMsg: "Element still disabled" });
+      async () => (await element.getAttribute("class")) !==
+        ("sc-dvQaRk hfkeMz Supper-button Supper-button-button  disabled"), { timeout: 3000, timeoutMsg: "Element still disabled" });
   }
 
 }

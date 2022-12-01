@@ -55,7 +55,7 @@ class FormsPage {
     public async createForm(name: string) {
         await actions.waitForPageLoad();
         await actions.typeIn(this.newFormsInput, name);
-        await actions.waitForElementToBeEnabled(this.buttonSave);
+        await actions.waitForButtonSaveToBeEnabled(this.buttonSave);
         await actions.clickOn(this.buttonSave);
     }
 
@@ -63,7 +63,7 @@ class FormsPage {
         await actions.waitForPageLoad();
         await actions.clickOn(this.buttonEdit);
         await actions.typeIn(this.editFormsInput, rename);
-        await actions.waitForElementToBeEnabled(this.buttonSave);
+        await actions.waitForButtonSaveToBeEnabled(this.buttonSave);
         await actions.clickOn(this.buttonSave);
         await actions.clickOn(this.buttonCancel);
         await actions.waitForElementToBeDisplayed(this.form);
