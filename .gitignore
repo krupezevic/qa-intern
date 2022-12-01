@@ -20,4 +20,5 @@ node_modules/
 
 # Reporter files
 allure-results/
+JsonResults/
 allure-report/
