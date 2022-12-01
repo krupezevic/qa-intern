@@ -17,15 +17,25 @@ class NavigationPage {
 
   public async navigateToDynamicSegmentAndCLick() {
     await this.dynamicSegmentLink.moveTo();
-    await this.dynamicSegmentLink.click()
+    await this.dynamicSegmentLink.click();
   }
+
   public get widgetsPageLink() {
     return $('.desktopNavigation a[href="/widgets"]');
   }
 
-  public async navigateToWidgetsPage() {
-    await this.widgetsPageLink.moveTo();
-    await Actions.clickOn(this.widgetsPageLink);
+  public get dropDownMenu() {
+    return $('.userName');
+  }
+
+  public get phoneNumersCard() {
+    return $('.SpActionDropdownContent a[href="/phone-numbers"]');
+  }
+
+  public async navigationToPhoneNumbersPage() {
+    await Actions.clickOn(this.dropDownMenu);
+    await Actions.clickOn(this.phoneNumersCard);
   }
 }
+
 export default new NavigationPage();
