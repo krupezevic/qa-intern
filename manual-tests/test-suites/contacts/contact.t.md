@@ -1,6 +1,6 @@
 # Contact functionality
 
-* User is able to edit `NICKNAME` contact
+* User is able to edit contact (Nickname)
   * Open [Superphone app](https://app.superphone-stage.com)
   * Insert valid Email 
   * Insert valid Password
@@ -14,6 +14,9 @@
   * ==> Nickname is displayed
 
 * User is able to `Show Tags` for contacts
+  * PRECONDITION:
+  * ==> Tags are not displayed
+  * =========================
   * Open [Superphone app](https://app.superphone-stage.com)
   * Insert valid Email
   * Insert valid Password
@@ -24,12 +27,14 @@
   * ==> Tags are displayed
 
 * User is able to `Hide Tags` for contacts
+  * PRECONDITION:
+  * ==> Tags are displayed
+  * =========================
   * Open [Superphone app](https://app.superphone-stage.com)
   * Insert valid Email
   * Insert valid Password
   * Click on `LOGIN` button
   * Navigate on `Contacts` page
-  * ==> Tags are displayed
   * Click on `Actions`
   * Click on `Hide Tags`
   * ==> Tags are not displayed
@@ -48,16 +53,14 @@
   * ==> Selected contact is archived
 
 * User is able to `Restore` contact
+  * PRECONDITION:
+  * ==> User already has some archived contacts
+  * =========================
   * Open [Superphone app](https://app.superphone-stage.com)
   * Insert valid Email
   * Insert valid Password
   * Click on `LOGIN` button
   * Navigate on `Contacts` page
-  * Selected one contact from the list
-  * Click on `Actions`
-  * Click on `Archive`
-  * ==> `Archive Contact` is opened
-  * Click on `ARCHIVE` button
   * Click on `Archived Contact` from filters
   * ==> `Archived Contact` is opened
   * Select one contact from the list
