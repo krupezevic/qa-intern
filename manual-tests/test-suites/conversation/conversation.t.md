@@ -107,20 +107,6 @@
    * Click on `Archive`
    * ==> Archive conversation modal window pop out with "Do you want to archive the selected conversations?" text
    * Click on `ARCHIVE` button 
+   * ==> A notification box appears with a message "Conversation is archived"
 
 
-* Archive Conversation notification box
-  * PRECONDITION:
-  * ==> User already has some conversation
-  * =====================================
-  * Open [superphone app](https://app.superphone-stage.com)
-  * Insert valid Email
-  * Insert valid Password
-  * Click on `LOGIN` button
-  * Navigate to conversation page
-  * Choose conversation and click on `ACTIONS`
-  * ==> Dropdown menu is displayed
-  * Click on `Archive`
-  * ==> Archive conversation modal window pop out with "Would you like to archive the selected conversations?" text
-  * Click on `ARCHIVE` button 
-  * ==> A notification box appears with a message "Conversation is archived" 
