@@ -87,5 +87,8 @@
   * Click on `Actions` dropdown menu and choose `Delete`
   * ==> `Delete Contact` is opened
   * Click on `DELETE` button
-  * ==> Selected contact is deleted
-  * ==> The number of contacts is reduced
+  * ==> New `Delete Contact` modal is opened
+  * ==> Question is displayed `Do you want to delete the selected contact?`
+  * Click on `CONFIRM`
+  * ==> Contact is deleted
+  * ==> List of contacts is reduced
