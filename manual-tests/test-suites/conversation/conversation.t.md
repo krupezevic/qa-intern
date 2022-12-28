@@ -66,7 +66,7 @@
     * Insert valid Password
     * Click on `LOGIN` button
     * ==> User is logged in
-    * Navigate to `Compose Message icon`
+    * Click on `Compose Message icon`
     * ==> Message Contacts window pop out
     * Choose contact by name or number
     * Enter message text
@@ -93,3 +93,17 @@
     * Click on `Send` button
     * ==> Success message displayed
 
+* User is able to archive conversation
+   * PRECONDITION:
+   * ==> User already has some conversation
+   * =====================================
+   * Open [superphone app](https://app.superphone-stage.com)
+   * Insert valid Email
+   * Insert valid Password
+   * Click on `LOGIN` button
+   * Navigate to conversation page
+   * Choose conversation and click on `ACTIONS` 
+   * ==> Dropdown menu is displayed
+   * Click on `Archive`
+   * ==> Archive conversation modal window pop out with "Do you want to archive the selected conversations?" text
+   * Click on `ARCHIVE` button 
