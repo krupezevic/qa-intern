@@ -91,3 +91,4 @@
   * ==> Question is displayed `Do you want to delete the selected contact?`
   * Click on `CONFIRM`
   * ==> Contact is deleted
+  * ==> List of contacts is reduced
