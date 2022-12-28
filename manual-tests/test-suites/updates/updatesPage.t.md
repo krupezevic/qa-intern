@@ -67,7 +67,7 @@
 
 * Scheduled update was sent at the correct time
   * Open [superphone app](https://app.superphone-stage.com/segments)
-  * Insert valid Email
+  * Insert valid Email 
   * Insert valid Password
   * Click on `LOGIN` button
   * Navigate to `Updates` page
