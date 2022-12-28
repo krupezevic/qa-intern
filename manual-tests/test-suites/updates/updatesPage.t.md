@@ -1,37 +1,35 @@
 # Updates page functionality
 
-* <b>User is able to search `updates` by filter
-    * <b>PRECONDITION:
+* User is able to search `updates` by filter
+    * PRECONDITION:
     * ==> User should have Scheduled or Sent updates
-    * ========================================
+    * ======================================
     * Open [superphone app](https://app.superphone-stage.com/segments)
     * Insert valid Email
     * Insert valid Password
     * Click on `LOGIN` button
     * Navigate to `Updates` page
-    * Click on `View All Updates`
-    * ==> Dropdown is visible
-    * Click on `Sent Updates`
+    * Click on `View All Updates` snd select `Sent Updates`
     * ==> User is seeing only sent updates
 
 
-* <b>User is able to `Send Scheduled Update`
+* User is able to `Send Scheduled Update`
     * Open [superphone app](https://app.superphone-stage.com/segments)
     * Insert valid Email
     * Insert valid Password
     * Click on `LOGIN` button
     * Navigate to `Updates` page
     * Click on `New Update` button
-    * In the `Compose your message` field type in some text with merge field `
+    * In the `Compose your message` field type in some text with merge field
     * On the `Recipients` section choose `All Contacts`
     * On the `Scheduled Time` section choose 1 minute from current time
     * On the `Interval` section choose `Once`
     * Click on the `Save` button
     * Click on the filters `dropdown` and select `Scheduled Updates`
-    * ==> Previously sent update is visible
+    * ==> Previously scheduled update is visible
 
 
-* <b>User is able to `Edit Scheduled Update`
+* User is able to `Edit Scheduled Update`
     * <b>PRECONDITION:
     * ==> User should have Scheduled Update
     * =================================
@@ -48,7 +46,7 @@
     * ==> Scheduled update message is edited
 
 
-* <b>User is able to `Delete Scheduled Update`
+* User is able to `Delete Scheduled Update`
     * Open [superphone app](https://app.superphone-stage.com/segments)
     * Insert valid Email
     * Insert valid Password
@@ -67,9 +65,9 @@
     * ==> `Scheduled Update` is deleted
 
 
-* <b>Scheduled update was sent at the correct time
+* Scheduled update was sent at the correct time
   * Open [superphone app](https://app.superphone-stage.com/segments)
-  * Insert valid Email
+  * Insert valid Email 
   * Insert valid Password
   * Click on `LOGIN` button
   * Navigate to `Updates` page
