@@ -74,7 +74,7 @@
   * Click on `LOGIN` button
   * Navigate to `Updates` page
   * Click on `New Update` button
-  * In the `Compose your message` field type in some text with merge field `
+  * In the `Compose your message` field type in some text with merge field
   * On the `Recipients` section choose `All Contacts`
   * On the `Scheduled Time` section choose 1 minute in the future
   * On the `Interval` section choose `Once`
@@ -85,14 +85,14 @@
   * ==> Scheduled message is not visible
 
 
-* <b>Scheduled update is in the `sent updates` filter search after scheduled time
+* Scheduled update is in the `sent updates` filter search after scheduled time
   * Open [superphone app](https://app.superphone-stage.com/segments)
   * Insert valid Email
   * Insert valid Password
   * Click on `LOGIN` button
   * Navigate to `Updates` page
   * Click on `New Update` button
-  * In the `Compose your message` field type in some text with merge field `
+  * In the `Compose your message` field type in some text with merge field
   * On the `Recipients` section choose `All Contacts`
   * On the `Scheduled Time` section choose 1 minute in the future
   * On the `Interval` section choose `Once`
@@ -103,3 +103,15 @@
   * ==> Scheduled message is not visible
   * Click on the filters `dropdown` and select `Sent Updates`
   * ==> Scheduled update is visible
+
+* User is able to search `Failed Updates` by filter
+  * PRECONDITION:
+  * ==> User should have Failed Updates
+  * ===============================
+  * Open [superphone app](https://app.superphone-stage.com/segments)
+  * Insert valid Email
+  * Insert valid Password
+  * Click on `LOGIN` button
+  * Navigate to `Updates` page
+  * Click on `View All Updates` and select `Failed Updates`
+  * ==> User is seeing only failed updates
