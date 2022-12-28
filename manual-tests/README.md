@@ -90,19 +90,19 @@ Regression test execution files should be named in format `[yyyy:MM:dd]-Regressi
 
 ## Useful symbols
 
-🔍 (Conversations page)
-📞 (Conversations page)
-📝 (Conversations page)
-📎 (`Message Contacts` modal)
-⚡ (`Message Contacts` modal)
-😊 (`Message Contacts` modal)
-✖️ (`Message Contacts` modal)
-🔥 (Conversations page)
-🕑 (Conversations page)
-➕ (`Saved Response` modal)
-✏️ (Contacts page - contact detail bar)
-🚥 (Contacts page - contact detail bar)
-⚙️ (Contacts page - contact detail bar)
+<br>🔍 (Conversations page)</br>
+<br>📞 (Conversations page)</br>
+<br>📝 (Conversations page)</br>
+<br>📎 (`Message Contacts` modal)</br>
+<br>⚡ (`Message Contacts` modal)</br>
+<br>😊 (`Message Contacts` modal)</br>
+<br>✖️ (`Message Contacts` modal)</br>
+<br>🔥 (Conversations page)</br>
+<br>🕑 (Conversations page)</br>
+<br>➕ (`Saved Response` modal)</br>
+<br>✏️ (Contacts page - contact detail bar)</br>
+<br>🚥 (Contacts page - contact detail bar)</br>
+<br>⚙️ (Contacts page - contact detail bar)</br>
 
 ## Useful links for testing
 - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
