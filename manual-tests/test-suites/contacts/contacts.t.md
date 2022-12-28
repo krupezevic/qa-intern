@@ -55,6 +55,7 @@
   * Click on `Actions` dropdown menu and choose `Archive`
   * ==> `Archive Contact` is opened
   * Click on `ARCHIVE` button
+  * ==> Notification message is displayed `Contact is archived`
   * ==> Selected contact is archived
 
 * User is able to `Restore` contact
