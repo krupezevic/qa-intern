@@ -24,7 +24,7 @@
     * Click on `New Update` button
     * In the `Compose your message` field type in some text with merge field `
     * On the `Recipients` section choose `All Contacts`
-    * On the `Scheduled Time` section choose 1 to 2 minutes from current time
+    * On the `Scheduled Time` section choose 1 minute from current time
     * On the `Interval` section choose `Once`
     * Click on the `Save` button
     * Click on the filters `dropdown` and select `Scheduled Updates`
@@ -76,7 +76,7 @@
   * Click on `New Update` button
   * In the `Compose your message` field type in some text with merge field `
   * On the `Recipients` section choose `All Contacts`
-  * On the `Scheduled Time` section choose 1 to 2 minutes in the future
+  * On the `Scheduled Time` section choose 1 minute in the future
   * On the `Interval` section choose `Once`
   * Click on the `Save` button
   * Click on the filters `dropdown` and select `Scheduled Updates`
@@ -94,7 +94,7 @@
   * Click on `New Update` button
   * In the `Compose your message` field type in some text with merge field `
   * On the `Recipients` section choose `All Contacts`
-  * On the `Scheduled Time` section choose 1 to 2 minutes in the future
+  * On the `Scheduled Time` section choose 1 minute in the future
   * On the `Interval` section choose `Once`
   * Click on the `Save` button
   * Click on the filters `dropdown` and select `Scheduled Updates`
