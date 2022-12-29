@@ -107,3 +107,4 @@
    * Click on `Archive`
    * ==> Archive conversation modal window pop out with "Do you want to archive the selected conversations?" text
    * Click on `ARCHIVE` button 
+   * ==> A notification box appears with a message "Conversation is archived"
