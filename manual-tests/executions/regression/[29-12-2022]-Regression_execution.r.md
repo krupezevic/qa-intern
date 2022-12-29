@@ -232,8 +232,8 @@
     * ==> Value in dropdown menu `Filters` is changed
 
 
-* [skipped] @Ognjen User is able to create a `New` form
-    > Test is not complete, last step is missing ![](../../assets/(..%2F..%2Fassets%2FScreenshot%20from%202022-12-29%2011-26-45.png)
+* [failed] @Ognjen User is able to create a `New` form
+    
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
     * Insert valid Email
@@ -247,6 +247,8 @@
     * Click on `New` button
 
     * ==> modal `New Phone Number` is displayed
+
+    > Test is not complete, last step is missing, screenshot is the last written step ![](../../assets/(..%2F..%2Fassets%2FScreenshot%20from%202022-12-29%2011-26-45.png)
 
 
 * [unknown]  User is able to `Disable Routing` for phone number
