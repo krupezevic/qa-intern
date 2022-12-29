@@ -55,7 +55,7 @@
     * Click on `LOGIN` button
     * Navigate to `Updates` page
     * Click on `New Update` button
-    * In the `Compose your message` field type in some text
+    * In the `Compose your message` field type in some text with merge field
     * On the `Recipients` section choose `All Contacts`
     * On the `Scheduled Time` section choose 1 minute in the future
     * On the `Interval` section choose `Once`
