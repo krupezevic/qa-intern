@@ -64,7 +64,7 @@
     * Find previously created update and click on it
     * Click on the `Delete Update` button
     * Edit `Confirm` button
-    * ==> `Scheduled Update` is deleted
+    * ==> `Scheduled Update` is deleted 
 
 
 * Scheduled update is in the `sent updates` filter search after scheduled time
