@@ -1,6 +1,6 @@
 # [29-12-2022]-Regression_execution
 
-* [unknown]  User is able to create new tag successfully with `string`
+* [passed] @Ognjen User is able to create new tag successfully with `string`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -23,7 +23,7 @@
     * ==> `Tag` is created
 
 
-* [unknown]  User is able to `delete` tag/tags successfully
+* [passed] @Ognjen  User is able to `delete` tag/tags successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -60,7 +60,7 @@
     * ==> `Tags` are removed
 
 
-* [unknown]  User is able to `rename` tag successfully
+* [passed] @Ognjen  User is able to `rename` tag successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -87,7 +87,7 @@
     * ==> `Tag` is renamed
 
 
-* [unknown]  User is able to `Combine` tag successfully
+* [passed] @Ognjen  User is able to `Combine` tag successfully
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -114,7 +114,7 @@
     * ==>`Tags` are combined
 
 
-* [unknown]  User is able to edit contact (Nickname)
+* [passed] @Ognjen  User is able to edit contact (Nickname)
 
     * PRECONDITION:
 
@@ -145,7 +145,7 @@
     * ==> Nickname is displayed
 
 
-* [unknown]  User is able to `Archive` contact
+* [passed] @Ognjen  User is able to `Archive` contact
 
     * PRECONDITION:
 
@@ -174,7 +174,7 @@
     * ==> Selected contact is archived
 
 
-* [unknown]  User is able to `Delete` contact
+* [passed] @Ognjen User is able to `Delete` contact
 
     * PRECONDITION:
 
@@ -211,7 +211,7 @@
     * ==> List of contacts is reduced
 
 
-* [unknown]  User is able to edit segment - Change value in dropdown menu `Filters`
+* [passed] @Ognjen  User is able to edit segment - Change value in dropdown menu `Filters`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -232,8 +232,8 @@
     * ==> Value in dropdown menu `Filters` is changed
 
 
-* [unknown]  User is able to create a `New` form
-
+* [skipped] @Ognjen User is able to create a `New` form
+    > Test is not complete, last step is missing ![](../../assets/(..%2F..%2Fassets%2FScreenshot%20from%202022-12-29%2011-26-45.png)
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
     * Insert valid Email
