@@ -515,7 +515,7 @@
     * ==> Segment is deleted
 
 
-* [unknown]  User is able to search `updates` by filter
+* [passed] @vojislav User is able to search `updates` by filter
 
     * PRECONDITION:
 
@@ -538,7 +538,7 @@
     * ==> User is seeing only sent updates
 
 
-* [unknown]  User is able to `Send Scheduled Update`
+* [passed] @vojislav User is able to `Send Scheduled Update`
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -567,7 +567,7 @@
     * ==> Previously scheduled update is visible
 
 
-* [unknown]  User is able to `Edit Scheduled Update`
+* [passed] @vojislav User is able to `Edit Scheduled Update`
 
     * <b>PRECONDITION:
 
@@ -598,7 +598,7 @@
     * ==> Scheduled update message is edited
 
 
-* [unknown]  User is able to `Delete Scheduled Update`
+* [failed] @vojislav User is able to `Delete Scheduled Update`
 
     * Open [superphone app](https://app.superphone-stage.com/segments)
 
@@ -631,9 +631,9 @@
     * Edit `Confirm` button
 
     * ==> `Scheduled Update` is deleted
+    > ![](../../assets/updateScreen.png)
 
-
-* [unknown]  User is able to change lastname
+* [passed] @vojislav User is able to change lastname
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -652,7 +652,7 @@
     * ==> Lastname renamed in list
 
 
-* [unknown]  User is able to add value in `FIRST NAME` field of `Dynamic vCard` section
+* [passed] @vojislav User is able to add value in `FIRST NAME` field of `Dynamic vCard` section
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -671,7 +671,7 @@
     * ==> Value `John` is displayed in `FIRST NAME` field
 
 
-* [unknown]  User is not able to login successfully - empty email and password
+* [passed] @vojislav User is not able to login successfully - empty email and password
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -684,7 +684,7 @@
     * ==> Message `Required field` should be shown above both inputs
 
 
-* [unknown]  User is able to create new segment
+* [passed] @vojislav User is able to create new segment
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -711,7 +711,7 @@
     * ==> New element is added to list
 
 
-* [unknown]  User is able to create new widget with only `WIDGET NAME` field parameter
+* [passed] @vojislav User is able to create new widget with only `WIDGET NAME` field parameter
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
