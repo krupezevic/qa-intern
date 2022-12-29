@@ -249,7 +249,7 @@
     * ==> modal `New Phone Number` is displayed
 
 
-* [unknown]  User is able to `Disable Routing` for phone number
+* [passed]  @matriona User is able to `Disable Routing` for phone number
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -270,9 +270,10 @@
     * Click `DISABLE`
 
     * ==> The `phone number` is disabled
+    * > Phone number is disabled ![](../../assets/Screenshot%20from%202022-12-29%2010-53-10.png)
 
 
-* [unknown]  User is able to create a `New` form with insert value at `SuperPhone URL`
+* [failed]  @matriona User is able to create a `New` form with insert value at `SuperPhone URL`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -295,9 +296,10 @@
     * ==> Form is created `SuccessForm created successfully`
 
     * ==> `SAVE` button is on the right side
+    * > Error message "Domain is not valid or already exists" ![](../../assets/Screenshot%20from%202022-12-29%2011-00-48.png)
 
 
-* [unknown]  User is able to create a `New` form with empty field in `Form Submission`
+* [passed] @matriona User is able to create a `New` form with empty field in `Form Submission`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -324,7 +326,8 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to `Disable`/`Enable` Forms
+
+* [passed] @matriona User is able to `Disable`/`Enable` Forms
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -351,7 +354,7 @@
     * ==> `Disabled` button is on the right side
 
 
-* [unknown]  User is able to edit `Form`
+* [passed]  @matriona User is able to edit `Form`
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
@@ -376,7 +379,7 @@
     * ==> `SAVE` button is on the right side
 
 
-* [unknown]  User is able to search archived conversation
+* [passed] @matriona User is able to search archived conversation
 
     * PRECONDITION:
 
@@ -403,7 +406,7 @@
     * ==> Archived conversations are displayed on the page
 
 
-* [unknown]  User is able to send message
+* [passed] @matriona User is able to send message
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -430,7 +433,7 @@
     * ==> Success message displayed
 
 
-* [unknown]  User is able to send schedule message
+* [failed] @matriona User is able to send schedule message
 
     * Open [superphone app](https://app.superphone-stage.com)
 
@@ -459,9 +462,10 @@
     * Click on `Send` button
 
     * ==> Message is displayed in conversations at the specified time
+  * > Error message "Internal Server Error" ![](../../assets/schmessage.png)
 
 
-* [unknown]  User is able to archive conversation
+* [passed]  @matriona User is able to archive conversation
 
     * PRECONDITION:
 
@@ -490,7 +494,7 @@
     * Click on `ARCHIVE` button
 
 
-* [unknown]  User is able to delete segment
+* [passed]  @matriona User is able to delete segment
 
     * Open [superphone app](https://app.superphone-stage.com/login)
 
