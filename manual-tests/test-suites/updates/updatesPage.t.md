@@ -27,6 +27,8 @@
     * Click on the `Save` button
     * Click on the filters `dropdown` and select `Scheduled Updates`
     * ==> Previously scheduled update is visible
+    * Wait for the scheduled time
+    * ==> Scheduled message is not visible
 
 
 * User is able to `Edit Scheduled Update`
@@ -62,25 +64,7 @@
     * Find previously created update and click on it
     * Click on the `Delete Update` button
     * Edit `Confirm` button
-    * ==> `Scheduled Update` is deleted
-
-
-* Scheduled update was sent at the correct time
-  * Open [superphone app](https://app.superphone-stage.com/segments)
-  * Insert valid Email 
-  * Insert valid Password
-  * Click on `LOGIN` button
-  * Navigate to `Updates` page
-  * Click on `New Update` button
-  * In the `Compose your message` field type in some text with merge field
-  * On the `Recipients` section choose `All Contacts`
-  * On the `Scheduled Time` section choose 1 minute in the future
-  * On the `Interval` section choose `Once`
-  * Click on the `Save` button
-  * Click on the filters `dropdown` and select `Scheduled Updates`
-  * ==> Scheduled update is visible
-  * Wait for the scheduled time
-  * ==> Scheduled message is not visible
+    * ==> `Scheduled Update` is deleted 
 
 
 * Scheduled update is in the `sent updates` filter search after scheduled time
