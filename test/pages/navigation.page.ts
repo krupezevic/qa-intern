@@ -2,6 +2,37 @@ import Actions from "../utils/actions";
 
 class NavigationPage {
 
+  
+  public get contactsLink() {
+    
+    return $('.desktopNavigation a[href="/contacts"]');
+  }
+  public get navigation() {
+    
+    return $('.scrollbar-container ps ps--active-x');
+  }
+ 
+  public async navigateToContactsPage() {
+    await this.navigation.moveTo();
+    await Actions.clickOn(this.contactsLink);
+    console.log('aaaaaaaa');
+  }
+ 
+  public get menuButton() {
+    
+    return $('.menu btn11');
+  }
+  public async clickOnMenuButton() {
+    await Actions.clickOn(this.menuButton);
+  }
+
+
+
+
+
+
+
+
   public get profileLink() {
     return $('.desktopNavigation a.SpNavItem[href="/settings/profiles"]');
   }
@@ -46,10 +77,10 @@ class NavigationPage {
   }
 
   public async formsLink() {
-    await actions.waitForPageLoad();
-    await actions.clickOn(this.navBar);
-    await actions.waitForPageLoad();
-    await actions.clickOn(this.formsButton);
+    await Actions.waitForPageLoad();
+    await Actions.clickOn(this.navBar);
+    await Actions.waitForPageLoad();
+    await Actions.clickOn(this.formsButton);
   }
 
   public get tagsButton() {
