@@ -10,6 +10,10 @@ class NavigationPage {
     return $('.desktopNavigation a[href="/segments"]');
   }
 
+  public get updatesLink() {
+    return $('.desktopNavigation a[href="/updates"]')
+  }
+
   public async navigateToProfilePage() {
     await this.profileLink.moveTo();
     await Actions.clickOn(this.profileLink);
@@ -18,6 +22,11 @@ class NavigationPage {
   public async navigateToDynamicSegmentAndCLick() {
     await this.dynamicSegmentLink.moveTo();
     await this.dynamicSegmentLink.click();
+  }
+
+  public async navigateToUpdatesAndCLick() {
+    await this.updatesLink.moveTo();
+    await this.updatesLink.click();
   }
 
   public get widgetsPageLink() {
@@ -46,10 +55,10 @@ class NavigationPage {
   }
 
   public async formsLink() {
-    await actions.waitForPageLoad();
-    await actions.clickOn(this.navBar);
-    await actions.waitForPageLoad();
-    await actions.clickOn(this.formsButton);
+    await Actions.waitForPageLoad();
+    await Actions.clickOn(this.navBar);
+    await Actions.waitForPageLoad();
+    await Actions.clickOn(this.formsButton);
   }
 
   public get tagsButton() {

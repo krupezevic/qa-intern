@@ -22,7 +22,7 @@
     "@wdio/mocha-framework": "^7.26.0",
     "@wdio/sauce-service": "^7.27.0",
     "@wdio/spec-reporter": "^7.26.0",
-    "chromedriver": "^106.0.1",
+    "chromedriver": "^108.0.0",
     "custom-env": "^2.0.1",
     "dotenv": "^16.0.3",
     "expect-webdriverio": "^3.4.0",
