@@ -248,7 +248,7 @@
 
     * ==> modal `New Phone Number` is displayed
 
-    > Test is not complete, last step is missing, screenshot is the last written step ![](../../assets/(..%2F..%2Fassets%2FScreenshot%20from%202022-12-29%2011-26-45.png)
+    > Test is not complete, last step is missing, screenshot is the last written step ![](../../assets/Screenshot%20from%202022-12-29%2011-26-45.png)
 
 
 * [passed]  @matriona User is able to `Disable Routing` for phone number
