@@ -1,4 +1,4 @@
-import Actions from "../utils/actions";
+import actions from "../utils/actions";
 
 class UpdatesPage {
     public get newUpdateButton() {
@@ -13,7 +13,7 @@ class UpdatesPage {
         return $('.css-tlfecz-indicatorContainer')
     }
 
-    public get selectRecipients() {
+    public get selectAllContacts() {
         return $("//div[contains(text(),'All Contacts')]")
     }
 
@@ -26,15 +26,15 @@ class UpdatesPage {
     }
 
     public get saveUpdate() {
-        return $('(//button)[4]')
+        return $("//span[normalize-space()='Save']")
     }
 
     public get scheduleUpdate() {
-        return $("(//span[normalize-space()='Schedule'])[1]")
+        return $("//span[normalize-space()='Schedule']")
     }
 
     public get allUpdates() {
-        return $("(//span[contains(text(),'All Updates')])[1]")
+        return $("//span[@class='label-text']")
     }
 
     public get scheduledUpdates() {
@@ -42,29 +42,27 @@ class UpdatesPage {
     }
 
     public get checkUpdate() {
-        return $('.filter-label')
+        return $('.filter-label span')
     }
 
-    public async newScheduledUpdate(name: string) {
-        await Actions.clickOn(this.newUpdateButton);
-        await Actions.clickOn(this.updateTextField);
-        await Actions.typeIn(this.updateTextField, name);
-        await Actions.clickOn(this.updateRecipients);
-        await Actions.clickOn(this.selectRecipients);
-        await Actions.clickOn(this.scheduledTime);
-        await Actions.clickOn(this.selectTime);
+    public async newUpdate(name: string) {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.updateTextField);
+        await actions.typeIn(this.updateTextField, name);
+        await actions.clickOn(this.updateRecipients);
+        await actions.clickOn(this.selectAllContacts);
+        await actions.clickOn(this.scheduledTime);
+        await actions.clickOn(this.selectTime);
     }
 
-    public async sendScheduledUpdate() {
-        await Actions.clickOn(this.saveUpdate);
-        await Actions.clickOn(this.scheduleUpdate);
-        await Actions.clickOn(this.allUpdates);
-        await Actions.clickOn(this.scheduledUpdates);
+    public async sendUpdate() {
+        await actions.clickOn(this.saveUpdate);
+        await actions.clickOn(this.scheduleUpdate);
     }
 
     public async checkScheduledUpdate() {
-        await Actions.clickOn(this.allUpdates);
-        await Actions.clickOn(this.scheduledUpdates);
+        await actions.clickOn(this.allUpdates);
+        await actions.clickOn(this.scheduledUpdates);
     }
 
 }

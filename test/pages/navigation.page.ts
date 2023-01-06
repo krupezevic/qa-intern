@@ -1,4 +1,4 @@
-import Actions from "../utils/actions";
+import actions from "../utils/actions";
 
 class NavigationPage {
 
@@ -16,7 +16,7 @@ class NavigationPage {
 
   public async navigateToProfilePage() {
     await this.profileLink.moveTo();
-    await Actions.clickOn(this.profileLink);
+    await actions.clickOn(this.profileLink);
   }
 
   public async navigateToDynamicSegmentAndCLick() {
@@ -24,7 +24,7 @@ class NavigationPage {
     await this.dynamicSegmentLink.click();
   }
 
-  public async navigateToUpdatesAndCLick() {
+  public async navigateToUpdatesPage() {
     await this.updatesLink.moveTo();
     await this.updatesLink.click();
   }
@@ -42,8 +42,8 @@ class NavigationPage {
   }
 
   public async navigationToPhoneNumbersPage() {
-    await Actions.clickOn(this.dropDownMenu);
-    await Actions.clickOn(this.phoneNumersCard);
+    await actions.clickOn(this.dropDownMenu);
+    await actions.clickOn(this.phoneNumersCard);
   }
 
   public get navBar() {
@@ -55,10 +55,10 @@ class NavigationPage {
   }
 
   public async formsLink() {
-    await Actions.waitForPageLoad();
-    await Actions.clickOn(this.navBar);
-    await Actions.waitForPageLoad();
-    await Actions.clickOn(this.formsButton);
+    await actions.waitForPageLoad();
+    await actions.clickOn(this.navBar);
+    await actions.waitForPageLoad();
+    await actions.clickOn(this.formsButton);
   }
 
   public get tagsButton() {
@@ -66,8 +66,8 @@ class NavigationPage {
   }
 
   public async tagsLink() {
-    await Actions.clickOn(this.navBar);
-    await Actions.clickOn(this.tagsButton);
+    await actions.clickOn(this.navBar);
+    await actions.clickOn(this.tagsButton);
   }
 }
 export default new NavigationPage();
