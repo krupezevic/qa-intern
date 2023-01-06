@@ -1,5 +1,6 @@
-    # Feature: Login functionality
+    Feature: Login functionality
 
+    
     Scenario: User is able to login successfully
         When user tries to login with valid credentials
         Then user is logged in
