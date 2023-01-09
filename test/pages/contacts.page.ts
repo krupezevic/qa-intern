@@ -1,57 +1,47 @@
-import Actions from "../utils/actions";
+import actions from "../utils/actions";
 
 class ContactsPage {
-
-   /* public get contactsButton() {
-        return $('.//*[@id="app"]/div[1]/div/div/div[2]/section/div/div[1]/nav/div[2]/a');
-    }
-
-    public async clickOnContactsButton() {
-        await Actions.clickOn(this.contactsButton);
-
-    }*/
-
-
 
     public get editContactButton() {
         return $('.moon icon-new edit-2');
     }
 
-
-    public async clickOnEditContactButton() {
-        await Actions.clickOn(this.editContactButton);
-
+    public get nicknameInput() {
+        return $('.contact-editing .form-group:nth-child(3) .SpFieldInputWrapper');
     }
-    public get contactName() {
-        return $('.sc-cTAqQK eMpORC SpContactName');
-    }
-    public async selectContact() {
-        await Actions.clickOn(this.contactName);
 
+    public get saveButton() {
+        return $('//span[.="Save"]');
+    }
+
+    public get userNickname() {
+        return $('.SpContactDetailsBar b');
     }
     
+    public get contactFromList() {
+        return $('.SpTableTbody tr:nth-child(1) td:nth-child(2)');
+    }
 
-
-    public get nickname() {
-    return $('//*[@id="app"]/section[2]/div/div[2]/div/div/section/div[3]/div');
-
+    public async clickOnEditContactButton() {
+        await actions.clickOn(this.editContactButton);
+    }
+    
+    public async clickOnContact() {
+        await actions.waitForElementToBeDisplayed(this.contactFromList);
+        //await actions.clickOn(this.contactFromList);
+        await this.contactFromList.moveTo();
+        await this.contactFromList.click();
+        console.log('contactClicked')
+    }
+    
+    public async editNickname(nickname: string) {
+        await actions.typeIn(this.nicknameInput, nickname);
+        console.log('test123');
+        await actions.clickOn(this.saveButton);
 }
-    public get saveButton() {
-    return $('.//*[@id="app"]/section[2]/div/div[2]/div/div/section/div[16]/div[2]/button');
 
-}
-//public async clickOnSaveButtone() {
-  //  await actions.clickOn(this.saveButton);
+//public get userNicknameNew() {
+ //   return $('.SpContactDetailsBar b');
 //}
-
-   public async editNickname(nickname: string) {
-    await Actions.typeIn(this.nickname, nickname);
-    console.log('test123');
-    await Actions.clickOn(this.saveButton);
-}
-public get userNickname() {
-    return $('.//*[@id="app"]/div[1]/div/div/div[2]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[1]/div[2]/div[5]/div[2]');
-
-}
 }
 export default new ContactsPage();

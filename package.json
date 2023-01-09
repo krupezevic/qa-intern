@@ -10,7 +10,9 @@
     "e2e-only": "NODE_ENV=stage wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only",
     "win-e2e-only": "SET NODE_ENV=stage&&wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only",
     "e2e-regression": "NODE_ENV=stage wdio run test/configs/regressionTests.conf.ts --cucumberOpts.tagExpression=@regression",
-    "win-e2e-regression": "SET NODE_ENV=stage&&wdio run test/configs/regressionTests.conf.ts --cucumberOpts.tagExpression=@regression"
+    "win-e2e-regression": "SET NODE_ENV=stage&&wdio run test/configs/regressionTests.conf.ts --cucumberOpts.tagExpression=@regression",
+    "win-e2e-saucelabs-only": "SET NODE_ENV=stage&&wdio run test/configs/saucelab.conf.ts --cucumberOpts.tagExpression=@only"
+
   },
   "author": "",
   "license": "ISC",
@@ -37,9 +39,6 @@
     "wdio-chromedriver-service": "^8.0.1",
     "wdio-cucumberjs-json-reporter": "^4.4.3",
     "wdio-json-reporter": "^0.4.0"
-  },
-  "dependencies": {
-    "package": "^1.0.1"
-  },
-  "packageManager": "yarn@3.3.1"
+  }
+
 }
