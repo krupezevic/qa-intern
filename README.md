@@ -44,3 +44,21 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 Invoke Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
+
+## Finding elements in dropdown list
+In order to find elements in dropdown menu follow the steps below.
+Steps for setup:
+1. Right click on element, then click inspect
+2. Click on three dots
+3. Navigate to more tools, then click on Rendering
+4. Select Emulate a focused page
+5. Refresh page
+
+
+
+
+
+
+
+
+
