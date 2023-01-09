@@ -1,77 +1,54 @@
 import actions from "../utils/actions";
 import navigationPage from "./navigation.page";
 
-class conversation {
+class Conversation {
 
-    public get composeMsgBtn(){
+    public get composeMessageButton(){
         return $('#compose-icon');
-    }
-
-
-    public get contactContainer(){
-        return $('.sp-select__placeholder');
     }
 
     public get contact(){
         return $('.contact-name');
     }
-
-    // public get contact(){
-    //     return $('//span[.="Edmund Goodwin"]');
-    // }
     
-
     public get textBox(){
-        return $('//*[@id="app"]/section[2]/div/div[2]/div/div/div[3]/section/div[2]/div/div/div/div[2]/section/div/div[2]/div/div/div');
+        return $('.messageModal-form .SpEditor [data-editor]');
+        
+        
     }
 
-
-    public get sendBtn(){
-        return $('//*[@id="app"]/section[2]/div/div[2]/div/div/div[3]/section/div[5]/div/button');
+    public get sendButton(){
+        return $('//span[.="Send"]');
     }
 
-
-    public get succesMsgConfirmation(){
+    public get succesMessageConfirmation(){
         return $('//span[.="Message sent successfully."]');
     }
 
-
-
-    public get savedResponseBtn(){
-        return $('//span[.="⚡"]');
+    public get savedResponseButton(){
+        return $('.message-input-container #zap');
     }
 
-    public get savedResponseMsg(){
-        return $('//span[.="Hello"]');
+    public get savedResponseMessage(){
+        return $('.SpSortableWrapper .SpSortable');
     }
-
-
 
     public async sendMessage(message: String){
         await actions.clickOn(this.contact);
-        await actions.clickOn(this.composeMsgBtn);
-        console.log('11111111111111111');
+        await actions.clickOn(this.composeMessageButton);
         await actions.typeIn(this.textBox, message);
-        console.log('2222222222222222');
-        await actions.clickOn(this.sendBtn);
-        console.log('3333333333333333333');
+        await actions.clickOn(this.sendButton);
     }
 
     public async sendSavedResponse(){
         await actions.clickOn(this.contact);
-        await actions.clickOn(this.composeMsgBtn);
-        console.log('111111111111111111111111');
-        await actions.clickOn(this.savedResponseBtn);
-        console.log('22222222222222222222222');
-        await actions.clickOn(this.savedResponseMsg);
-        console.log('333333333333333333333333');
+        await actions.clickOn(this.composeMessageButton);
+        await actions.clickOn(this.savedResponseButton);
+        await actions.clickOn(this.savedResponseMessage);
         await actions.clickOn(this.textBox);
-        console.log('4444444444444444444444444');
-        await actions.clickOn(this.sendBtn);
-        console.log('55555555555555555555555555');
-
+        await actions.clickOn(this.sendButton);
     }
 
 
 }
-export default new conversation(); 
+export default new Conversation(); 
