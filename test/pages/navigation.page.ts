@@ -4,7 +4,7 @@ class NavigationPage {
 
  
   public get contactsLink() {
-    return $('.desktopNavigation a[href="/contacts"]');
+    return $('.desktopNavigation .SpNavGroup:nth-child(2) .SpNavGroupContent a[href="/contacts"]');
   }
  
   public get profileLink() {
@@ -70,5 +70,6 @@ class NavigationPage {
     await this.dynamicSegmentLink.moveTo();
     await this.dynamicSegmentLink.click();
   }
+  
 }
 export default new NavigationPage();

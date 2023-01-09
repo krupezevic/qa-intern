@@ -1,13 +1,14 @@
 import actions from "../utils/actions";
+import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
 
     public get editContactButton() {
-        return $('.moon icon-new edit-2');
+        return $('.contact-action .edit-2');
     }
 
     public get nicknameInput() {
-        return $('.contact-editing .form-group:nth-child(3) .SpFieldInputWrapper');
+        return $('.contact-editing .form-group:nth-child(3) .SpFieldInputWrapper [type="text"]');
     }
 
     public get saveButton() {
@@ -28,20 +29,14 @@ class ContactsPage {
     
     public async clickOnContact() {
         await actions.waitForElementToBeDisplayed(this.contactFromList);
-        //await actions.clickOn(this.contactFromList);
         await this.contactFromList.moveTo();
         await this.contactFromList.click();
-        console.log('contactClicked')
     }
     
-    public async editNickname(nickname: string) {
-        await actions.typeIn(this.nicknameInput, nickname);
-        console.log('test123');
+    public async editNickname() {
+        await actions.typeIn(this.nicknameInput, contacts.nickname);
         await actions.clickOn(this.saveButton);
-}
+    }
 
-//public get userNicknameNew() {
- //   return $('.SpContactDetailsBar b');
-//}
 }
 export default new ContactsPage();
