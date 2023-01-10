@@ -26,5 +26,5 @@ When('user tries to archive conversation', async () => {
 });
 
 Then('the conversation was archived', async () => {
-    await conversationPage.archivedConversationList.sumTableRows + 1;
+    await expect(conversationPage.contactIcon).toBeClickable();
 });
