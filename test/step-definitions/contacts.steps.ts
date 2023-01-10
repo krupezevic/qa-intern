@@ -10,8 +10,6 @@ Given('user is on the Contacts Page', async () => {
 });
 
 When('user tries to edit contact', async () => {
-    await contactsPage.clickOnContact();
-    await contactsPage.clickOnEditContactButton();
     await contactsPage.editNickname();
 });
 

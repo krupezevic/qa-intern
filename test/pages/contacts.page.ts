@@ -8,7 +8,7 @@ class ContactsPage {
     }
 
     public get nicknameInput() {
-        return $('.contact-editing .form-group:nth-child(3) .SpFieldInputWrapper [type="text"]');
+       return $('.contact-editing .form-group:nth-child(3) [type="text"]');
     }
 
     public get saveButton() {
@@ -22,18 +22,10 @@ class ContactsPage {
     public get contactFromList() {
         return $('.SpTableTbody tr:nth-child(1) td:nth-child(2)');
     }
-
-    public async clickOnEditContactButton() {
-        await actions.clickOn(this.editContactButton);
-    }
-    
-    public async clickOnContact() {
-        await actions.waitForElementToBeDisplayed(this.contactFromList);
-        await this.contactFromList.moveTo();
-        await this.contactFromList.click();
-    }
     
     public async editNickname() {
+        await actions.clickOn(this.contactFromList);
+        await actions.clickOn(this.editContactButton);
         await actions.typeIn(this.nicknameInput, contacts.nickname);
         await actions.clickOn(this.saveButton);
     }
