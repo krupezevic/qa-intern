@@ -53,12 +53,3 @@ Steps for setup:
 3. Navigate to more tools, then click on Rendering
 4. Select Emulate a focused page
 5. Refresh page
-
-
-
-
-
-
-
-
-
