@@ -4,16 +4,17 @@ import { contacts } from "../test-data/contacts";
 class ContactsPage {
     
     public get nameForAssertion() {
-        return $('.SpModalContentHolder-inner .name');
+        return $('.kbnePo .name');
     }
     
     public get amountForAssertion() {
-        return $('.SpModalContentHolder-inner .table-row .amount');
+        return $('.SpModalContentHolder-inner .amount');
     }
 
     public get SpentValue() {
-        return $('.link');
+        return $('.m-t-20 .clickable');
     }
+
     public get CommerceAmountInput() {
         return $('.ContributionEditItem [placeholder="Amount"]');
     }
@@ -22,8 +23,8 @@ class ContactsPage {
         return $('.ContributionEditItem .field-name [placeholder="Name"]');
     }
     
-    public get AddContribution() {
-        return $('.ContributionEditAdd');
+    public get addContributionButton() {
+        return $('.ContributionEditAdd .menu-content-item');
     }
 
     public get editContactButton() {
@@ -36,10 +37,8 @@ class ContactsPage {
 
     public get saveButton() {
         return $('//span[.="Save"]');
-
-    }//span[.="Save"]
-    //div ["SpModalContentHolder-inner"] //span[.="Save"]
-    //.contact-editing .lm span
+    }
+    
     public get userNickname() {
         return $('.SpContactDetailsBar b');
     }
@@ -63,26 +62,20 @@ class ContactsPage {
         await actions.clickOn(this.saveButton);
     }
 
-    public async clickOnAddContrabution() {
-        await actions.clickOn(this.AddContribution);
-    }
-
-    public async insertCommerceName() {
+    public async addContrabution() {
+        await actions.clickOn(this.contactFromList);
+        await actions.clickOn(this.editContactButton);
+        await actions.clickOn(this.addContributionButton);
         await actions.typeIn(this.CommerceNameInput, contacts.commerceName);
-        
-    }
-    public async insertCommerceAmount() {
         await actions.typeIn(this.CommerceAmountInput, contacts.commerceAmount);
-        
-    }
-    public async clickOnSave() {
-       // await actions.clickOn(this.saveButton);
-        await actions.waitForElementToBeDisplayed(this.saveButton);
-        await this.saveButton.moveTo();
-        await this.saveButton.click();
-    }
-    public async clickOnSpentValue() {
+        await actions.clickOn(this.saveButton);
         await actions.clickOn(this.SpentValue);
     }
+
+    public async clickOnSave() {
+        await actions.waitForElementToBeDisplayed(this.saveButton);
+        await actions.clickOn(this.saveButton)
+    }
+    
 }
 export default new ContactsPage();
