@@ -23,7 +23,7 @@ When('user tries to send saved response', async () => {
 
 When('user tries to archive conversation', async () => {
     await conversationPage.archiveConversation();
-});
+});  
 
 Then('the conversation was archived', async () => {
     await expect(conversationPage.contactIcon).toBeClickable();

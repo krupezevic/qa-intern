@@ -9,7 +9,7 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user tries to send saved response
         Then new message was sent
-    @only
+   
     Scenario: User is able to archive conversation
         Given user is on the conversation page
         When user tries to archive conversation
