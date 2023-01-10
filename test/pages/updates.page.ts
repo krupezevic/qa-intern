@@ -45,6 +45,22 @@ class UpdatesPage {
         return $('.filter-label span')
     }
 
+    public get firstUpdate() {
+        return $('.update-item:nth-child(1)')
+    }
+
+    public get numberOfDidntRespond() {
+        return $('.SpAvatarContent > div:nth-child(1)')
+    }
+
+    public get viewNumberOfDidntRespond() {
+        return $('.Supper-button-text')
+    }
+
+    public get verifyNumberOfDidntRespond() {
+        return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
+    }
+
     public async newUpdate(name: string) {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.updateTextField);
@@ -63,6 +79,14 @@ class UpdatesPage {
     public async checkScheduledUpdate() {
         await actions.clickOn(this.allUpdates);
         await actions.clickOn(this.scheduledUpdates);
+    }
+
+    public async checkNumberOfDidntResponded() {
+        await actions.clickOn(this.firstUpdate);
+    }
+
+    public async verifyNumberOfDidntResponded() {
+        await actions.clickOn(this.viewNumberOfDidntRespond);
     }
 
 }

@@ -17,3 +17,14 @@ When('the user tries to send a scheduled update', async () => {
 Then('the previously scheduled update should be visible in the Scheduled Updates filter', async () => {
     await expect(updatesPage.checkUpdate).toHaveTextContaining('1 UPDATE')
 })
+
+When('the user checks if the number of contacts who did not responded matches with the number on the view contacts page', async () => {
+    await updatesPage.checkNumberOfDidntResponded();
+    await expect(updatesPage.numberOfDidntRespond).toHaveTextContaining("196 Didn't Respond");
+    await updatesPage.verifyNumberOfDidntResponded();
+})
+
+Then('the user verifies that the numbers match', async () => {
+    await expect(updatesPage.verifyNumberOfDidntRespond).toHaveTextContaining('196');
+})
+
