@@ -1,7 +1,7 @@
 import actions from "../utils/actions";
 import navigationPage from "./navigation.page";
 
-class Conversation {
+class ConversationPage {
 
     public get composeMessageButton(){
         return $('#compose-icon');
@@ -13,8 +13,6 @@ class Conversation {
     
     public get textBox(){
         return $('.messageModal-form .SpEditor [data-editor]');
-        
-        
     }
 
     public get sendButton(){
@@ -33,6 +31,38 @@ class Conversation {
         return $('.SpSortableWrapper .SpSortable');
     }
 
+    public get actionsButton(){
+        return $('//button[.="Actions"]');
+    }
+
+    public get archiveDropDownButton(){
+        return $('.jIagxW #archive-icon');
+    }
+
+    public get archiveButton(){
+        return $('//span[.="Archive"]');
+    }
+
+    public get searchConversations(){
+        return $('.sp-sidebar-search .SpSearchBarInput');
+    }
+
+    public get archivedConversation(){
+        return $('.conversationarchived .item-name');
+    }
+
+    public get resultsButton(){
+        return $('.SpResultsPreview .result-bar-desc');
+    }
+
+    public get archivedConversationList(){
+        return $('.SpConversationListWrapper .scrollbar-container');
+    }
+
+    public get contactIcon(){
+        return $('.ps--active-y .initials');
+    }
+
     public async sendMessage(message: String){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -49,6 +79,15 @@ class Conversation {
         await actions.clickOn(this.sendButton);
     }
 
+    public async archiveConversation(){
+        await actions.clickOn(this.contactIcon);
+        await actions.clickOn(this.actionsButton);
+        await actions.clickOn(this.archiveDropDownButton);
+        await actions.clickOn(this.archiveButton);
+        await actions.clickOn(this.searchConversations);
+        await actions.clickOn(this.archivedConversation);
+        await actions.clickOn(this.resultsButton);
+    }
 
 }
-export default new Conversation(); 
+export default new ConversationPage(); 

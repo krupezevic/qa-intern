@@ -20,3 +20,11 @@ Then('new message was sent', async () => {
 When('user tries to send saved response', async () => {
     await conversationPage.sendSavedResponse();
 });
+
+When('user tries to archive conversation', async () => {
+    await conversationPage.archiveConversation();
+});
+
+Then('the conversation was archived', async () => {
+    await conversationPage.archivedConversationList.sumTableRows + 1;
+});
