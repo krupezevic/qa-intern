@@ -1,23 +1,18 @@
-import Actions from "../utils/actions";
+import actions from "../utils/actions";
 
 class NavigationPage {
 
+ 
+  public get contactsLink() {
+    return $('.desktopNavigation .SpNavGroup:nth-child(2) .SpNavGroupContent a[href="/contacts"]');
+  }
+ 
   public get profileLink() {
     return $('.desktopNavigation a.SpNavItem[href="/settings/profiles"]');
   }
 
   public get dynamicSegmentLink() {
     return $('.desktopNavigation a[href="/segments"]');
-  }
-
-  public async navigateToProfilePage() {
-    await this.profileLink.moveTo();
-    await Actions.clickOn(this.profileLink);
-  }
-
-  public async navigateToDynamicSegmentAndCLick() {
-    await this.dynamicSegmentLink.moveTo();
-    await this.dynamicSegmentLink.click();
   }
 
   public get widgetsPageLink() {
@@ -32,17 +27,21 @@ class NavigationPage {
     return $('.SpActionDropdownContent a[href="/phone-numbers"]');
   }
 
-  public async navigationToPhoneNumbersPage() {
-    await Actions.clickOn(this.dropDownMenu);
-    await Actions.clickOn(this.phoneNumersCard);
-  }
-
   public get navBar() {
     return $('.desktopNavigation');
   }
 
   public get formsButton() {
     return $('.desktopNavigation a[href="/forms"]');
+  }
+
+  public get tagsButton() {
+    return $('.desktopNavigation a[href="/tags"]');
+  }
+
+  public async navigationToPhoneNumbersPage() {
+    await actions.clickOn(this.dropDownMenu);
+    await actions.clickOn(this.phoneNumersCard);
   }
 
   public async formsLink() {
@@ -52,13 +51,25 @@ class NavigationPage {
     await actions.clickOn(this.formsButton);
   }
 
-  public get tagsButton() {
-    return $('.desktopNavigation a[href="/tags"]');
+  public async tagsLink() {
+    await actions.clickOn(this.navBar);
+    await actions.clickOn(this.tagsButton);
+  }
+  
+  public async navigateToContactsPage() {
+    await this.contactsLink.moveTo();
+    await this.contactsLink.click();
   }
 
-  public async tagsLink() {
-    await Actions.clickOn(this.navBar);
-    await Actions.clickOn(this.tagsButton);
+  public async navigateToProfilePage() {
+    await this.profileLink.moveTo();
+    await actions.clickOn(this.profileLink);
   }
+
+  public async navigateToDynamicSegmentAndCLick() {
+    await this.dynamicSegmentLink.moveTo();
+    await this.dynamicSegmentLink.click();
+  }
+  
 }
 export default new NavigationPage();
