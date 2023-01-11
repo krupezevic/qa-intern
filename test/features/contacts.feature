@@ -5,7 +5,7 @@ Feature: Contacts functionality
       Given user is on the Contacts Page
       When user tries to edit contact
       Then contact is edited
-@only
+
    Scenario: User is able to edit contact (Add contribution)
       Given user is on the Contacts Page
       When user tries to add contribution
