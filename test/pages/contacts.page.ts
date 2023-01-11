@@ -74,7 +74,7 @@ class ContactsPage {
 
     public async clickOnSave() {
         await actions.waitForElementToBeDisplayed(this.saveButton);
-        await actions.clickOn(this.saveButton)
+        await actions.clickOn(this.saveButton);
     }
     
 }
