@@ -4,7 +4,7 @@ import { contacts } from "../test-data/contacts";
 class ContactsPage {
     
     public get nameForAssertion() {
-        return $('.kbnePo .name');
+        return $('.SpModalContentHolder .name');
     }
     
     public get amountForAssertion() {
@@ -12,7 +12,7 @@ class ContactsPage {
     }
 
     public get SpentValue() {
-        return $('.m-t-20 .clickable');
+        return $('.message-stats .clickable');
     }
 
     public get CommerceAmountInput() {
@@ -62,11 +62,6 @@ class ContactsPage {
         await actions.typeIn(this.CommerceAmountInput, contacts.commerceAmount);
         await actions.clickOn(this.saveButton);
         await actions.clickOn(this.SpentValue);
-    }
-
-    public async clickOnSave() {
-        await actions.waitForElementToBeDisplayed(this.saveButton);
-        await actions.clickOn(this.saveButton);
     }
     
 }
