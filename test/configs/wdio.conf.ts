@@ -132,7 +132,7 @@ export const config: Options.Testrunner = {
   baseUrl: "http://localhost",
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 10000,
+  waitforTimeout: 60000,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response
@@ -145,20 +145,21 @@ export const config: Options.Testrunner = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: [
-    ['chromedriver', {
-        logFileName: 'wdio-chromedriver.log', // default
-        outputDir: 'driver-logs', // overwrites the config.outputDir
-        args: ['--silent']
-    }]
-  ],
+  // services: [
+  //   ['chromedriver', {
+  //       logFileName: 'wdio-chromedriver.log', // default
+  //       outputDir: 'driver-logs', // overwrites the config.outputDir
+  //       args: ['--silent']
+  //   }]
+  // ],
+  services: ["chromedriver"],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
   // see also: https://webdriver.io/docs/frameworks
   //
   // Make sure you have the wdio adapter package for the specific framework installed
-  // before running any tests.
+  // before running any test.
   framework: "cucumber",
   //
   // The number of times to retry the entire specfile when it fails as a whole
@@ -179,14 +180,6 @@ export const config: Options.Testrunner = {
     disableWebdriverScreenshotsReporting: true,
     useCucumberStepReporter: true
   }],
-  ['json', {
-    outputDir: './JsonResults'
-  }],
-  ['cucumberjs-json', {
-    jsonFolder: './CucumberJson',
-    language: 'en',
-  },
-  ]
   ],
 
   //
