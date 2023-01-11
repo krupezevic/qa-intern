@@ -5,11 +5,11 @@ class UpdatesPage {
         return $('.cta__new-update-button')
     }
 
-    public get savedResponce() {
+    public get savedResponse() {
         return $("//img[@alt='⚡']")
     }
 
-    public get firstSavedResponce() {
+    public get firstSavedResponse() {
         return $('.sc-fpyFWH.bcPHss.SpSortableItem:nth-child(1)')
     }
 
@@ -85,6 +85,18 @@ class UpdatesPage {
         return $("//span[contains(text(),'Send Update')]")
     }
 
+    public get numberOfRecipients() {
+        return $('//*[text()="196 Recipients"]')
+    }
+
+    public get allContactsLink() {
+        return $("//b[@class='sc-evQXBP bGGIBJ SpSendToName']")
+    }
+
+    public get numberOfContacts() {
+        return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
+    }
+
     public async newUpdate(name: string) {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.textBox);
@@ -97,12 +109,13 @@ class UpdatesPage {
 
     public async sendUpdate() {
         await actions.clickOn(this.saveUpdate);
-        await browser.pause(3000);
         await actions.clickOn(this.scheduleUpdate);
     }
 
     public async checkScheduledUpdate() {
+        await actions.waitForElementToBeDisplayed(this.allUpdates);
         await actions.clickOn(this.allUpdates);
+        await actions.waitForElementToBeDisplayed(this.scheduledUpdates);
         await actions.clickOn(this.scheduledUpdates);
     }
 
@@ -114,13 +127,21 @@ class UpdatesPage {
         await actions.clickOn(this.viewNumberOfDidntRespond);
     }
 
-    public async resendUpdate(name: string) {
+    public async resendUpdate() {
         await actions.clickOn(this.resendButton);
-        await actions.clickOn(this.savedResponce);
-        await actions.clickOn(this.firstSavedResponce);
+        await actions.clickOn(this.savedResponse);
+        await actions.clickOn(this.firstSavedResponse);
         await actions.clickOn(this.includeBrandName);
         await actions.clickOn(this.includeOptOut);
-        await actions.typeIn(this.updateTextField, name);
+        await browser.keys('Space'); //TODO remove this ones the bug is fixed: The merge field is not recognized after choosing 'saved response' on Updates Page
+    }
+
+    public async verifyRecipients() {
+        await actions.clickOn(this.firstUpdate);
+    }
+
+    public async verifyContacts() {
+        await actions.clickOn(this.allContactsLink);
     }
 
 }

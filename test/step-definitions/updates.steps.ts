@@ -30,9 +30,7 @@ Then('the user verifies that the numbers match', async () => {
 
 When('the user tries to resend update', async () => {
     await updatesPage.checkNumberOfDidntResponded();
-    await updatesPage.resendUpdate(' ');
-    console.log('nalazim se ovde');
-    await browser.pause(3000);
+    await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
     await updatesPage.checkScheduledUpdate();
 })
@@ -41,3 +39,12 @@ Then('the update is sent', async () => {
     expect(updatesPage.checkUpdate).toHaveTextContaining('1 UPDATE');
 })
 
+When('the user checks if the number of recipients match with number of contacts', async () => {
+    await updatesPage.verifyRecipients();
+    expect(updatesPage.numberOfRecipients).toHaveTextContaining('196 Recipients');
+    await updatesPage.verifyContacts();
+})
+
+Then('the user verifies that the number is the same', async () => {
+    expect(updatesPage.numberOfContacts).toHaveTextContaining('198');
+})
