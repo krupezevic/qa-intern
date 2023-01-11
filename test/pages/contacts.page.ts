@@ -11,15 +11,15 @@ class ContactsPage {
         return $('.SpModalContentHolder-inner .amount');
     }
 
-    public get SpentValue() {
+    public get spentValue() {
         return $('.message-stats .clickable');
     }
 
-    public get CommerceAmountInput() {
+    public get commerceAmountInput() {
         return $('.ContributionEditItem [placeholder="Amount"]');
     }
 
-    public get CommerceNameInput() {
+    public get commerceNameInput() {
         return $('.ContributionEditItem .field-name [placeholder="Name"]');
     }
     
@@ -58,10 +58,10 @@ class ContactsPage {
         await actions.clickOn(this.contactFromList);
         await actions.clickOn(this.editContactButton);
         await actions.clickOn(this.addContributionButton);
-        await actions.typeIn(this.CommerceNameInput, contacts.commerceName);
-        await actions.typeIn(this.CommerceAmountInput, contacts.commerceAmount);
+        await actions.typeIn(this.commerceNameInput, contacts.commerceName);
+        await actions.typeIn(this.commerceAmountInput, contacts.commerceAmount);
         await actions.clickOn(this.saveButton);
-        await actions.clickOn(this.SpentValue);
+        await actions.clickOn(this.spentValue);
     }
     
 }
