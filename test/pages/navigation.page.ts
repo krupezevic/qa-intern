@@ -1,4 +1,4 @@
-import Actions from "../utils/actions";
+import actions from "../utils/actions";
 
 class NavigationPage {
 
@@ -40,20 +40,20 @@ class NavigationPage {
   }
 
   public async navigationToPhoneNumbersPage() {
-    await Actions.clickOn(this.dropDownMenu);
-    await Actions.clickOn(this.phoneNumersCard);
+    await actions.clickOn(this.dropDownMenu);
+    await actions.clickOn(this.phoneNumersCard);
   }
 
   public async formsLink() {
-    await Actions.waitForPageLoad();
-    await Actions.clickOn(this.navBar);
-    await Actions.waitForPageLoad();
-    await Actions.clickOn(this.formsButton);
+    await actions.waitForPageLoad();
+    await actions.clickOn(this.navBar);
+    await actions.waitForPageLoad();
+    await actions.clickOn(this.formsButton);
   }
 
   public async tagsLink() {
-    await Actions.clickOn(this.navBar);
-    await Actions.clickOn(this.tagsButton);
+    await actions.clickOn(this.navBar);
+    await actions.clickOn(this.tagsButton);
   }
   
   public async navigateToContactsPage() {
@@ -63,7 +63,7 @@ class NavigationPage {
 
   public async navigateToProfilePage() {
     await this.profileLink.moveTo();
-    await Actions.clickOn(this.profileLink);
+    await actions.clickOn(this.profileLink);
   }
 
   public async navigateToDynamicSegmentAndCLick() {
