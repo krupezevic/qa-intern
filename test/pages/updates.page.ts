@@ -5,8 +5,28 @@ class UpdatesPage {
         return $('.cta__new-update-button')
     }
 
-    public get updateTextField() {
+    public get savedResponce() {
+        return $("//img[@alt='⚡']")
+    }
+
+    public get firstSavedResponce() {
+        return $('.sc-fpyFWH.bcPHss.SpSortableItem:nth-child(1)')
+    }
+
+    public get textBox() {
         return $("div[role='textbox']")
+    }
+
+    public get updateTextField() {
+        return $('.DraftEditor-root')
+    }
+
+    public get includeBrandName() {
+        return $('//*[text()="Include Brand Name"]')
+    }
+
+    public get includeOptOut() {
+        return $('//*[text()="Include Opt Out"]')
     }
 
     public get updateRecipients() {
@@ -46,7 +66,7 @@ class UpdatesPage {
     }
 
     public get firstUpdate() {
-        return $('.update-item:nth-child(1)')
+        return $('.SpUpdateListWrapper >div:nth-child(1) >div:nth-child(2)')
     }
 
     public get numberOfDidntRespond() {
@@ -61,10 +81,14 @@ class UpdatesPage {
         return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
     }
 
+    public get resendButton() {
+        return $("//span[contains(text(),'Send Update')]")
+    }
+
     public async newUpdate(name: string) {
         await actions.clickOn(this.newUpdateButton);
-        await actions.clickOn(this.updateTextField);
-        await actions.typeIn(this.updateTextField, name);
+        await actions.clickOn(this.textBox);
+        await actions.typeIn(this.textBox, name);
         await actions.clickOn(this.updateRecipients);
         await actions.clickOn(this.selectAllContacts);
         await actions.clickOn(this.scheduledTime);
@@ -73,6 +97,7 @@ class UpdatesPage {
 
     public async sendUpdate() {
         await actions.clickOn(this.saveUpdate);
+        await browser.pause(3000);
         await actions.clickOn(this.scheduleUpdate);
     }
 
@@ -87,6 +112,15 @@ class UpdatesPage {
 
     public async verifyNumberOfDidntResponded() {
         await actions.clickOn(this.viewNumberOfDidntRespond);
+    }
+
+    public async resendUpdate(name: string) {
+        await actions.clickOn(this.resendButton);
+        await actions.clickOn(this.savedResponce);
+        await actions.clickOn(this.firstSavedResponce);
+        await actions.clickOn(this.includeBrandName);
+        await actions.clickOn(this.includeOptOut);
+        await actions.typeIn(this.updateTextField, name);
     }
 
 }
