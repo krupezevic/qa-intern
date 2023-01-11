@@ -22,3 +22,4 @@ node_modules/
 allure-results/
 JsonResults/
 allure-report/
+CucumberJson/
