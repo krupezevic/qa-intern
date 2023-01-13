@@ -97,6 +97,10 @@ class ConversationPage {
         return $('.SpConversationListWrapper .sp-sidebaritem .inline');
     }
 
+    public get chooseTag(){
+        return $('.SpSegmentTagWrapper .SpSegmentTagContent .Select-input input');
+    }
+
     public async sendMessage(message: String){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -136,7 +140,9 @@ class ConversationPage {
         await actions.waitForElementToBeDisplayed(this.updateButton);
         await actions.clickOn(this.updateButton);  
         await actions.clickOn(this.searchConversations);  
-        await actions.clickOn(this.taggedButton);  
+        await actions.clickOn(this.taggedButton); 
+        await actions.clickOn(this.chooseTag);
+        await actions.typeIn(this.chooseTag, fakerTag); 
         await actions.clickOn(this.resultsButton);
         await actions.clickOn(this.taggedContact);
     }
