@@ -19,3 +19,8 @@ Scenario: Verify the number of recipients
   Given the user is on updates page
   When the user checks if the number of recipients match with number of contacts
   Then the user verifies that the number is the same
+
+Scenario: User is able to change brand name and opt out
+  Given the user is on compliance page
+  When the user tries to change brand name and opt out
+  Then the brand name and opt out is changed

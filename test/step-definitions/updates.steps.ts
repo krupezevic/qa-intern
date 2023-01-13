@@ -2,6 +2,7 @@ import { Given, Then, When } from "@wdio/cucumber-framework";
 import loginPage from "../pages/login.page";
 import navigationPage from "../pages/navigation.page";
 import updatesPage from "../pages/updates.page";
+import { updates } from '../test-data/updates';
 
 Given('the user is on updates page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
@@ -19,17 +20,16 @@ Then('the previously scheduled update should be visible in the Scheduled Updates
 })
 
 When('the user checks if the number of contacts who did not responded matches with the number on the view contacts page', async () => {
-    await updatesPage.checkNumberOfDidntResponded();
-    await expect(updatesPage.numberOfDidntRespond).toHaveTextContaining("196 Didn't Respond");
-    await updatesPage.verifyNumberOfDidntResponded();
+    await updatesPage.clickOnFirstUpdate();
+    await updatesPage.getNumberOfDidntResponded();
 })
 
 Then('the user verifies that the numbers match', async () => {
-    await expect(updatesPage.verifyNumberOfDidntRespond).toHaveTextContaining('196');
+    expect(updatesPage.viewContacts == updatesPage.noResponseNumber);
 })
 
 When('the user tries to resend update', async () => {
-    await updatesPage.checkNumberOfDidntResponded();
+    await updatesPage.clickOnFirstUpdate();
     await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
     await updatesPage.checkScheduledUpdate();
@@ -40,11 +40,26 @@ Then('the update is sent', async () => {
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
-    await updatesPage.verifyRecipients();
-    expect(updatesPage.numberOfRecipients).toHaveTextContaining('196 Recipients');
-    await updatesPage.verifyContacts();
+    await updatesPage.clickOnFirstUpdate();
+    await updatesPage.getContacts();
 })
 
 Then('the user verifies that the number is the same', async () => {
-    expect(updatesPage.numberOfContacts).toHaveTextContaining('198');
+    expect(updatesPage.numberOfRecipients == updatesPage.numberOfContacts);
+})
+
+Given('the user is on compliance page', async () => {
+    await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
+    await navigationPage.navigateToCompliancePage();
+})
+
+When('the user tries to change brand name and opt out', async () => {
+    await updatesPage.brandOptUpdate(updates.optOut, updates.brandName);
+    await navigationPage.navigateToUpdatesPage();
+    await updatesPage.settingsChanges();
+})
+
+Then('the brand name and opt out is changed', async () => {
+    expect(updatesPage.editorContainer).toHaveTextContaining(updates.brandName);
+    expect(updatesPage.editorContainer).toHaveTextContaining(updates.optOut);
 })

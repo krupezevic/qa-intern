@@ -14,6 +14,10 @@ class NavigationPage {
     return $('.desktopNavigation a[href="/updates"]')
   }
 
+  public get complianceLink() {
+    return $('.desktopNavigation a[href="/compliance"]')
+  }
+
   public async navigateToProfilePage() {
     await this.profileLink.moveTo();
     await actions.clickOn(this.profileLink);
@@ -27,6 +31,11 @@ class NavigationPage {
   public async navigateToUpdatesPage() {
     await this.updatesLink.moveTo();
     await this.updatesLink.click();
+  }
+
+  public async navigateToCompliancePage() {
+    await this.complianceLink.moveTo();
+    await this.complianceLink.click();
   }
 
   public get widgetsPageLink() {

@@ -7,6 +7,16 @@ class Actions {
     await element.setValue(value);
   }
 
+  public async clearValueAndType(element, value) {
+    await this.waitForElementToBeClickable(element);
+    await element.click();
+    await browser.execute(s => {
+      s.value = null;
+    },
+      await element);
+    await element.setValue(value);
+  }
+
   public async clickOn(element) {
     await this.waitForElementToBeClickable(element);
     await element.click();

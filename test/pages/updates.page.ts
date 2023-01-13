@@ -10,7 +10,7 @@ class UpdatesPage {
     }
 
     public get firstSavedResponse() {
-        return $('.sc-fpyFWH.bcPHss.SpSortableItem:nth-child(1)')
+        return $('.SpSortable >div:nth-child(1)')
     }
 
     public get textBox() {
@@ -26,7 +26,7 @@ class UpdatesPage {
     }
 
     public get includeOptOut() {
-        return $('//*[text()="Include Opt Out"]')
+        return $('.SpComplianceActions >div:nth-child(2)')
     }
 
     public get updateRecipients() {
@@ -62,22 +62,22 @@ class UpdatesPage {
     }
 
     public get checkUpdate() {
-        return $('.filter-label span')
+        return $('.SpFilterBar .filter-label span')
     }
 
     public get firstUpdate() {
-        return $('.SpUpdateListWrapper >div:nth-child(1) >div:nth-child(2)')
+        return $(".SpUpdateListWrapper .update-item:nth-child(2)")
     }
 
-    public get numberOfDidntRespond() {
+    public get noResponseNumber() {
         return $('.SpAvatarContent > div:nth-child(1)')
     }
 
-    public get viewNumberOfDidntRespond() {
+    public get responseViewButton() {
         return $('.Supper-button-text')
     }
 
-    public get verifyNumberOfDidntRespond() {
+    public get viewContacts() {
         return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
     }
 
@@ -90,11 +90,35 @@ class UpdatesPage {
     }
 
     public get allContactsLink() {
-        return $("//b[@class='sc-evQXBP bGGIBJ SpSendToName']")
+        return $('#analytic-report .SpSendToName')
     }
 
     public get numberOfContacts() {
-        return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
+        return $('.title-content .SpHeading')
+    }
+
+    public get settings() {
+        return $('.nav-tabs a[href="/compliance/settings"]')
+    }
+
+    public get editBrandName() {
+        return $("input[placeholder='Enter brand name']")
+    }
+
+    public get editOptOut() {
+        return $('//div[@class="form-group"][2]/div/input')
+    }
+
+    public get defaultOptOut() {
+        return $("//span[normalize-space()='Set to Default']")
+    }
+
+    public get saveButton() {
+        return $("//span[normalize-space()='save']")
+    }
+
+    public get editorContainer() {
+        return $('.DraftEditor-editorContainer')
     }
 
     public async newUpdate(name: string) {
@@ -119,12 +143,12 @@ class UpdatesPage {
         await actions.clickOn(this.scheduledUpdates);
     }
 
-    public async checkNumberOfDidntResponded() {
+    public async clickOnFirstUpdate() {
         await actions.clickOn(this.firstUpdate);
     }
 
-    public async verifyNumberOfDidntResponded() {
-        await actions.clickOn(this.viewNumberOfDidntRespond);
+    public async getNumberOfDidntResponded() {
+        await actions.clickOn(this.responseViewButton);
     }
 
     public async resendUpdate() {
@@ -133,17 +157,27 @@ class UpdatesPage {
         await actions.clickOn(this.firstSavedResponse);
         await actions.clickOn(this.includeBrandName);
         await actions.clickOn(this.includeOptOut);
-        await browser.keys('Space'); //TODO remove this ones the bug is fixed: The merge field is not recognized after choosing 'saved response' on Updates Page
+        await browser.keys('Space'); //TODO remove this once the bug is fixed: The merge field is not recognized after choosing 'saved response' on Updates Page
     }
 
-    public async verifyRecipients() {
-        await actions.clickOn(this.firstUpdate);
-    }
-
-    public async verifyContacts() {
+    public async getContacts() {
         await actions.clickOn(this.allContactsLink);
     }
 
+    public async brandOptUpdate(faker: string, brand: string) {
+        await actions.clickOn(this.settings);
+        await actions.clickOn(this.editBrandName);
+        await actions.typeIn(this.editBrandName, brand);
+        await actions.clickOn(this.editOptOut);
+        await actions.clearValueAndType(this.editOptOut, faker +' stop');
+        await actions.clickOn(this.saveButton);
+    }
+
+    public async settingsChanges() {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.includeBrandName);
+        await actions.clickOn(this.includeOptOut);
+    }
 }
 
 export default new UpdatesPage();
