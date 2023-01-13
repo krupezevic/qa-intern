@@ -2,7 +2,40 @@ import actions from "../utils/actions";
 import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
+
+    public get contactNameForAssertionFromDetailsBar() {
+        return $('.SpDetailsContent .SpContactName');
+    }
+
+    public get contactNameForAssertion() {
+        return $('.SpResponsiveTable .name-field');
+       
+       // return $('.SpTable td:nth-child(2)');
+        //.SpTable td:nth-child(2)
+        //.SpTable .table-row:nth-child(1)
+    }
     
+    public get tagNameButton() {
+        return $('.SpTagWrapper .SpTags:nth-child(2)');
+    }
+    
+    public get tagNameForAssertion() {
+        return $('.tags-list');
+        //return $('.SpTags');    
+    }
+    
+    public get addTagSaveButton() {
+        return $('.button-wrapper:nth-child(2)');
+    }
+
+    public get addTagInput() {
+        return $('.SpTagSelection .Select-input input');
+    }
+
+    public get addTagButton() {
+        return $('.tags-list .SpTagEditIcon');
+    }
+
     public get nameForAssertion() {
         return $('.SpModalContentHolder .name');
     }
@@ -63,6 +96,26 @@ class ContactsPage {
         await actions.clickOn(this.saveButton);
         await actions.clickOn(this.SpentValue);
     }
+
+    public async addTag(tagName: string) {
+        await actions.clickOn(this.contactFromList);
+        await actions.clickOn(this.addTagButton);
+        await actions.typeIn(this.addTagInput, tagName);
+        await browser.keys('Enter');
+        await actions.clickOn(this.addTagSaveButton);
+        //await (this.assertMessage).waitForExist;
+       // await actions.waitForElementToBeClickable(this.tagNameButton);
+        await actions.clickOn(this.tagNameButton);
+        //await actions.waitForElementToBeDisplayed(this.contactNameForAssertion);
+    }
+    public async getTextContactNameDetailsBar() {
+        await this.contactNameForAssertionFromDetailsBar.getText();
+    }
+    public async getTextTagName() {
+        await this.tagNameForAssertion.getText();
+        console.log(this.getTextTagName);
+    }
+    
     
 }
 export default new ContactsPage();
