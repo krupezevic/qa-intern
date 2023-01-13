@@ -1,3 +1,5 @@
+import { Console } from "console";
+import { conversationFaker } from "../test-data/conversationFaker";
 import actions from "../utils/actions";
 import navigationPage from "./navigation.page";
 
@@ -63,6 +65,38 @@ class ConversationPage {
         return $('.ps--active-y .initials');
     }
 
+    public get tagDropDownButton(){
+        return $('.sp__bulk-actions #tags-icon');
+    }
+
+    public get tagField(){
+        return $('.tag-contacts .is-searchable .Select-input input');
+    }
+
+    public get createTag(){
+        return $('.tag-contacts .Select-menu-outer .Select-create-option-placeholder');
+    }
+
+    public get updateButton(){
+        return $('//span[.="Update"]');
+    }
+
+    public get taggedButton(){
+        return $('.tagged .item-name');
+    }
+
+    public get removePreviousTag(){
+        return $('.tag-contacts .Select-value .Select-value-icon');
+    }
+
+    public get tagNameText(){
+        return $('.tags-list .SpTags');
+    }
+
+    public get taggedContact(){
+        return $('.SpConversationListWrapper .sp-sidebaritem .inline');
+    }
+
     public async sendMessage(message: String){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -87,6 +121,24 @@ class ConversationPage {
         await actions.clickOn(this.searchConversations);
         await actions.clickOn(this.archivedConversation);
         await actions.clickOn(this.resultsButton);
+    }
+
+    public async tagConversation(fakerTag: string){
+        await actions.clickOn(this.contactIcon);
+        await actions.clickOn(this.actionsButton);  
+        await actions.clickOn(this.tagDropDownButton);  
+        await actions.clickOn(this.tagField);
+        await this.tagField.clearValue();
+        await actions.clickOn(this.tagField);
+        await actions.typeIn(this.tagField, fakerTag);
+        await actions.waitForElementToBeDisplayed(this.createTag);
+        await actions.clickOn(this.createTag);
+        await actions.waitForElementToBeDisplayed(this.updateButton);
+        await actions.clickOn(this.updateButton);  
+        await actions.clickOn(this.searchConversations);  
+        await actions.clickOn(this.taggedButton);  
+        await actions.clickOn(this.resultsButton);
+        await actions.clickOn(this.taggedContact);
     }
 
 }

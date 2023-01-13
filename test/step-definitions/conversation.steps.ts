@@ -1,6 +1,7 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
 import conversationPage from "../pages/conversation.page";
 import loginPage from "../pages/login.page";
+import { conversationFaker } from "../test-data/conversationFaker";
 import actions from "../utils/actions";
 
 
@@ -27,4 +28,12 @@ When('user tries to archive conversation', async () => {
 
 Then('the conversation was archived', async () => {
     await expect(conversationPage.contactIcon).toBeClickable();
+});
+
+When('user tries to add tag to the conversation', async () => {
+    await conversationPage.tagConversation(conversationFaker.tagName);
+});
+
+Then('the tag is added to the conversation', async () => {
+    await expect(conversationPage.tagNameText).toHaveTextContaining(conversationFaker.tagName);
 });
