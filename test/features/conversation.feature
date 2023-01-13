@@ -19,3 +19,8 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user tries to add tag to the conversation
         Then the tag is added to the conversation 
+    
+    Scenario: User is able to see decrament in number of remaining characters when writing message
+        Given user is on the conversation page
+        When user input text in message box
+        Then number of remaining characters were decreased

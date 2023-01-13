@@ -37,3 +37,11 @@ When('user tries to add tag to the conversation', async () => {
 Then('the tag is added to the conversation', async () => {
     await expect(conversationPage.tagNameText).toHaveTextContaining(conversationFaker.tagName);
 });
+
+When('user input text in message box', async () => {
+    await conversationPage.messageCharactersDecrament("test");
+});
+
+Then('number of remaining characters were decreased', async () => {
+    await expect(conversationPage.numberOfCharactersAfterInputMessage).toHaveTextContaining("156");
+});

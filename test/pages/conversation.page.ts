@@ -101,6 +101,15 @@ class ConversationPage {
         return $('.SpSegmentTagWrapper .SpSegmentTagContent .Select-input input');
     }
 
+    public get messageBox(){
+        return $('#composeMessageContainer .SpSegmentCalculator .DraftEditor-root .public-DraftEditor-content');
+        
+    }
+
+    public get numberOfCharactersAfterInputMessage(){
+        return $('.SpCounterBoxWrapper .SpCountBox .Avpex');
+    }
+
     public async sendMessage(message: String){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -145,6 +154,12 @@ class ConversationPage {
         await actions.typeIn(this.chooseTag, fakerTag); 
         await actions.clickOn(this.resultsButton);
         await actions.clickOn(this.taggedContact);
+    }
+
+    public async messageCharactersDecrament(message: string){
+        await actions.clickOn(this.contact);
+        await actions.clickOn(this.messageBox);
+        await actions.typeIn(this.messageBox, message);
     }
 
 }
