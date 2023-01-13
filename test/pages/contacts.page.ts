@@ -20,8 +20,7 @@ class ContactsPage {
     }
     
     public get tagNameForAssertion() {
-        return $('.tags-list');
-        //return $('.SpTags');    
+        return $('.tags-list');   
     }
     
     public get addTagSaveButton() {
@@ -108,12 +107,13 @@ class ContactsPage {
         await actions.clickOn(this.tagNameButton);
         //await actions.waitForElementToBeDisplayed(this.contactNameForAssertion);
     }
+    
     public async getTextContactNameDetailsBar() {
         await this.contactNameForAssertionFromDetailsBar.getText();
     }
+
     public async getTextTagName() {
         await this.tagNameForAssertion.getText();
-        console.log(this.getTextTagName);
     }
     
     
