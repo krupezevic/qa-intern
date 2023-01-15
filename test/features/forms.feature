@@ -1,6 +1,5 @@
 Feature: Forms functionality
-
-
+ 
     Scenario: User is able to create New form with SuperPhone URL and Form Submission fields
         Given User is on the Forms Page
         When user tries to create New form
