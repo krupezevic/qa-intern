@@ -23,16 +23,6 @@ class NavigationPage {
     return $('.desktopNavigation a[href="/compliance"]')
   }
 
-  public async navigateToProfilePage() {
-    await this.profileLink.moveTo();
-    await actions.clickOn(this.profileLink);
-  }
-
-  public async navigateToDynamicSegmentAndCLick() {
-    await this.dynamicSegmentLink.moveTo();
-    await this.dynamicSegmentLink.click();
-  }
-
   public async navigateToUpdatesPage() {
     await this.updatesLink.moveTo();
     await this.updatesLink.click();
@@ -53,11 +43,6 @@ class NavigationPage {
 
   public get phoneNumersCard() {
     return $('.SpActionDropdownContent a[href="/phone-numbers"]');
-  }
-
-  public async navigationToPhoneNumbersPage() {
-    await actions.clickOn(this.dropDownMenu);
-    await actions.clickOn(this.phoneNumersCard);
   }
 
   public get navBar() {
