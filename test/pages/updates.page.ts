@@ -86,7 +86,7 @@ class UpdatesPage {
     }
 
     public get numberOfRecipients() {
-        return $('//*[text()="196 Recipients"]')
+        return $('.popoup-wrapper >div:nth-child(1)')
     }
 
     public get allContactsLink() {
