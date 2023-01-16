@@ -29,3 +29,8 @@ Scenario: Number of characters limit
   Given the user is on updates page
   When the user clicks on the new update and inputs text
   Then the characters limit is decreased
+
+Scenario: User is able to create segment on update
+  Given the user is on updates page
+  When the user tries to create a segment on update
+  Then the segment is created

@@ -77,3 +77,11 @@ When('the user clicks on the new update and inputs text', async () => {
 Then('the characters limit is decreased', async () => {
     expect (updatesPage.charactersLimit).toHaveTextContaining('156');
 })
+
+When('the user tries to create a segment on update', async () => {
+    await updatesPage.updateSegment('segment');
+})
+
+Then('the segment is created', async () => {
+    expect(updatesPage.segmentLabel).toHaveText('Added This Year');
+})

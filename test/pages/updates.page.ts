@@ -125,6 +125,26 @@ class UpdatesPage {
         return $("//span[@class='sc-jSYIrd Avpex SpCounterBoxText']")
     }
 
+    public get manageButton2() {
+        return $("//a[@class='manage clickable']")
+    }
+
+    public get myNewSegment() {
+        return $("input[placeholder='My New Segment']")
+    }
+
+    public get segmentFilter() {
+        return $('.SpFormItem #filter >div:nth-child(1)')
+    }
+
+    public get addedThisYear() {
+        return $("#react-select-4-option-4")
+    }
+
+    public get segmentLabel() {
+        return $('segment-label')
+    }
+
     public async newUpdate(name: string) {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.textBox);
@@ -187,6 +207,14 @@ class UpdatesPage {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.textBox);
         await actions.typeIn(this.textBox, message);
+    }
+
+    public async updateSegment(segment: string) {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.manageButton2);
+        await actions.typeIn(this.myNewSegment, segment);
+        await actions.clickOn(this.segmentFilter);
+        await actions.clickOn(this.addedThisYear);
     }
 }
 
