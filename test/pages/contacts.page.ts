@@ -3,7 +3,7 @@ import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
 
-    public get countBoxText(){
+    public get countBoxTextInput(){
         return $('.SpCounterBoxWrapper  .SpCountBox:nth-child(1) .SpCounterBoxText');
 
     }
