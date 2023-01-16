@@ -29,4 +29,9 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user add nickname to contact
         Then user had nickname with first and last name
+    @only
+    Scenario: User is able to send Vcard to contact
+        Given user is on the conversation page
+        When user tries to send Vcard 
+        Then Vcard download link was sent
  

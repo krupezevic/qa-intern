@@ -53,3 +53,11 @@ When('user add nickname to contact', async () => {
 Then('user had nickname with first and last name', async () => {
     await expect(conversationPage.nickname).toHaveTextContaining(conversation.nickname);
 });
+
+When('user tries to send Vcard', async () => {
+    await conversationPage.sendVcardToContact();
+});
+
+Then('Vcard download link was sent', async () => {
+    await expect(conversationPage.messageList).toHaveTextContaining("Download vCard");
+});

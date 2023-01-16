@@ -123,6 +123,18 @@ class ConversationPage {
         return $('.SpContactDetailsBar b');
     }
 
+    public get threeDotsDropdown(){
+        return $('.SpDetailsContent .contact-action .dropdown');
+    }
+
+    public get vCard(){
+        return $('.SpDetailsContent .icon-button:nth-child(3) .text-black');
+    }
+
+    public get messageList(){
+        return $('.SpConversationMessageList .conversation-message-list-container-internal ');
+    }
+
     public async sendMessage(message: string){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -180,6 +192,13 @@ class ConversationPage {
         await actions.clickOn(this.editIcon);
         await actions.typeIn(this.nicknameInput, nickname);
         await actions.clickOn(this.saveButton);
+    }
+
+    public async sendVcardToContact(){
+        await actions.clickOn(this.contact);
+        await actions.clickOn(this.threeDotsDropdown);
+        await actions.waitForElementToBeClickable(this.vCard);
+        await actions.clickOn(this.vCard);
     }
 
 }
