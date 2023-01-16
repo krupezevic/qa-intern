@@ -42,5 +42,5 @@ When('user tries to enter text message', async () => {
 });
 
 Then('characters limit number is changed', async () => {
-    await expect(contactsPage.countBoxTextIput).toHaveText('142');
+    await expect(contactsPage.countBoxTextInput).toHaveText('142');
 });
