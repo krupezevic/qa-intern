@@ -24,7 +24,7 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user input text in message box
         Then number of remaining characters were decreased
-    @only
+    
     Scenario: User is able to add nickname to contact
         Given user is on the conversation page
         When user add nickname to contact
