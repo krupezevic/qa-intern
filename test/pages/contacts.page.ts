@@ -2,18 +2,48 @@ import actions from "../utils/actions";
 import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
+    
+    public get nameDataFieldForAssertion(){
+        return $('.SpTableTbody .table-row:nth-child(1) td:nth-child(1) div:nth-child(2)');
+    }
+
+    public get textInputDataField(){
+        return $('[placeholder="Enter the field name..."]');
+    }
+
+    public get textButton(){
+        return $('.SpFormElementButton:nth-child(1)');
+    }
+
+    public get newButton(){
+        return $('.buttons-content .button-wrapper');
+    }
+
+    public get dataFieldButton(){
+        return $('[href="/settings/contacts-import/fields"]');
+    }
+
+    public get contactImportButton(){
+        return $('.SpRightContentWrapper .action-menu-second .menu-content-item:nth-child(2)');
+    }
+
+    public get addContactsButton(){
+        return $('.SpRightContentWrapper .contact-add');
+    }
 
     public get countBoxTextInput(){
-        return $('.SpCounterBoxWrapper  .SpCountBox:nth-child(1) .SpCounterBoxText');
-
+        return $('.SpCounterBoxWrapper .SpCountBox:nth-child(1) .SpCounterBoxText');
     }
+
     public get textBoxMessage() {
         return $('.SpEditor .DraftEditor-editorContainer [data-contents]');
         //return $('.SpEditor .DraftEditor-editorContainer .public-DraftEditor-content');
     }
+
     public get composeIconButton() {
         return $('#compose-icon');
     }
+
     public get contactNameForAssertionFromDetailsBar() {
         return $('.SpDetailsContent .SpContactName');
     }
@@ -132,6 +162,16 @@ class ContactsPage {
         await actions.typeIn(this.textBoxMessage, textMessage);
     }
     
+    public async createNewDataField(fieldName: string) {
+        await actions.clickOn(this.addContactsButton);
+        await actions.clickOn(this.contactImportButton);
+        await actions.clickOn(this.dataFieldButton);
+        await actions.clickOn(this.newButton);
+        await actions.clickOn(this.textButton);
+        await actions.typeIn(this.textInputDataField, fieldName);
+        await actions.clickOn(this.saveButton);
+        await (this.nameDataFieldForAssertion).waitForExist;
+    }
     
 }
 export default new ContactsPage();

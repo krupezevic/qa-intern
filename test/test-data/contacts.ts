@@ -5,4 +5,5 @@ export const contacts = {
     commerceName: faker.name.firstName(),
     commerceAmount: faker.finance.amount(0,10,2),
     tagName: faker.word.adjective(),
+    fieldName: faker.random.word(),
     }
