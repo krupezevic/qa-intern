@@ -78,7 +78,7 @@ class UpdatesPage {
     }
 
     public get viewContacts() {
-        return $("//div[@class='sc-dtDOqo gMcGwr SpHeading']")
+        return $('.title-content .SpHeading')
     }
 
     public get resendButton() {
