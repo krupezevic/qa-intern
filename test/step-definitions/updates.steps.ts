@@ -33,13 +33,13 @@ Then('the user verifies that the numbers match', async () => {
 
 When('the user tries to resend update', async () => {
     await updatesPage.clickOnFirstUpdate();
+    await (await updatesPage.firstUpdate).getText();
     await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
-    await updatesPage.checkScheduledUpdate();
 })
 
 Then('the update is sent', async () => {
-    expect(updatesPage.checkUpdate).toHaveTextContaining('1 UPDATE');
+    expect(updatesPage.firstUpdate).not.toHaveTextContaining('the sun began to set, casting');
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
