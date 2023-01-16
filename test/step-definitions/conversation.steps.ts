@@ -45,3 +45,11 @@ When('user input text in message box', async () => {
 Then('number of remaining characters were decreased', async () => {
     await expect(conversationPage.numberOfCharactersAfterInputMessage).toHaveTextContaining("156");
 });
+
+When('user add nickname to contact', async () => {
+    await conversationPage.addNicknameToContact(conversation.nickname);
+});
+
+Then('user had nickname with first and last name', async () => {
+    await expect(conversationPage.nickname).toHaveTextContaining(conversation.nickname);
+});

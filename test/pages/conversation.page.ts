@@ -107,6 +107,22 @@ class ConversationPage {
         return $('.SpCounterBoxWrapper .SpCountBox .Avpex');
     }
 
+    public get editIcon(){
+        return $('.SpUserImage .initials');
+    }
+
+    public get nicknameInput(){
+        return $('.contact-editing .form-group:nth-child(3) input');
+    }
+
+    public get saveButton(){
+        return $('//span[.="Save"]');
+    }
+
+    public get nickname(){
+        return $('.SpContactDetailsBar b');
+    }
+
     public async sendMessage(message: string){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -157,6 +173,13 @@ class ConversationPage {
         await actions.clickOn(this.contact);
         await actions.clickOn(this.messageBox);
         await actions.typeIn(this.messageBox, message);
+    }
+
+    public async addNicknameToContact(nickname: string){
+        await actions.clickOn(this.contact);
+        await actions.clickOn(this.editIcon);
+        await actions.typeIn(this.nicknameInput, nickname);
+        await actions.clickOn(this.saveButton);
     }
 
 }
