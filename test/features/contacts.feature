@@ -10,7 +10,7 @@ Feature: Contacts functionality
       Given user is on the Contacts Page
       When user tries to add contribution
       Then contribution is added
-
+@only
    Scenario: User is able to edit contact (Add tag)
       Given user is on the Contacts Page
       When user tries to add tag

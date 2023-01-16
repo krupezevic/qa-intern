@@ -8,7 +8,7 @@ class ContactsPage {
     }
 
     public get contactNameForAssertion() {
-        return $('.SpResponsiveTable .name-field');
+        return $('.SpResponsiveTable .name-field .name');
        
        // return $('.SpTable td:nth-child(2)');
         //.SpTable td:nth-child(2)
@@ -115,7 +115,6 @@ class ContactsPage {
     public async getTextTagName() {
         await this.tagNameForAssertion.getText();
     }
-    
     
 }
 export default new ContactsPage();
