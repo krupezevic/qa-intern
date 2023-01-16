@@ -1,7 +1,7 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
 import conversationPage from "../pages/conversation.page";
 import loginPage from "../pages/login.page";
-import { conversationFaker } from "../test-data/conversationFaker";
+import { conversation } from "../test-data/conversation";
 import actions from "../utils/actions";
 
 
@@ -31,15 +31,15 @@ Then('the conversation was archived', async () => {
 });
 
 When('user tries to add tag to the conversation', async () => {
-    await conversationPage.tagConversation(conversationFaker.tagName);
+    await conversationPage.tagConversation(conversation.tagName);
 });
 
 Then('the tag is added to the conversation', async () => {
-    await expect(conversationPage.tagNameText).toHaveTextContaining(conversationFaker.tagName);
+    await expect(conversationPage.tagNameText).toHaveTextContaining(conversation.tagName);
 });
 
 When('user input text in message box', async () => {
-    await conversationPage.messageCharactersDecrament("test");
+    await conversationPage.messageCharactersDecrement("test");
 });
 
 Then('number of remaining characters were decreased', async () => {

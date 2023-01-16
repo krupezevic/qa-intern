@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
 
-export const conversationFaker = {
+export const conversation = {
     tagName: faker.word.adjective(),
 }

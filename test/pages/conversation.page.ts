@@ -1,7 +1,4 @@
-import { Console } from "console";
-import { conversationFaker } from "../test-data/conversationFaker";
 import actions from "../utils/actions";
-import navigationPage from "./navigation.page";
 
 class ConversationPage {
 
@@ -78,7 +75,7 @@ class ConversationPage {
     }
 
     public get updateButton(){
-        return $('//span[.="Update"]');
+        return $('span[.="Update"]');
     }
 
     public get taggedButton(){
@@ -110,7 +107,7 @@ class ConversationPage {
         return $('.SpCounterBoxWrapper .SpCountBox .Avpex');
     }
 
-    public async sendMessage(message: String){
+    public async sendMessage(message: string){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
         await actions.typeIn(this.textBox, message);
@@ -136,27 +133,27 @@ class ConversationPage {
         await actions.clickOn(this.resultsButton);
     }
 
-    public async tagConversation(fakerTag: string){
+    public async tagConversation(tag: string){
         await actions.clickOn(this.contactIcon);
         await actions.clickOn(this.actionsButton);  
         await actions.clickOn(this.tagDropDownButton);  
         await actions.clickOn(this.tagField);
         await this.tagField.clearValue();
-        await actions.clickOn(this.tagField);
-        await actions.typeIn(this.tagField, fakerTag);
-        await actions.waitForElementToBeDisplayed(this.createTag);
+        await actions.waitForElementToBeClickable(this.tagField)
+        await actions.typeIn(this.tagField, tag);
+        await actions.waitForElementToBeClickable(this.createTag);
         await actions.clickOn(this.createTag);
-        await actions.waitForElementToBeDisplayed(this.updateButton);
+        await actions.waitForElementToBeClickable(this.updateButton);
         await actions.clickOn(this.updateButton);  
         await actions.clickOn(this.searchConversations);  
         await actions.clickOn(this.taggedButton); 
         await actions.clickOn(this.chooseTag);
-        await actions.typeIn(this.chooseTag, fakerTag); 
+        await actions.typeIn(this.chooseTag, tag); 
         await actions.clickOn(this.resultsButton);
         await actions.clickOn(this.taggedContact);
     }
 
-    public async messageCharactersDecrament(message: string){
+    public async messageCharactersDecrement(message: string){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.messageBox);
         await actions.typeIn(this.messageBox, message);
