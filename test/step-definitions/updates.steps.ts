@@ -21,11 +21,14 @@ Then('the previously scheduled update should be visible in the Scheduled Updates
 
 When('the user checks if the number of contacts who did not responded matches with the number on the view contacts page', async () => {
     await updatesPage.clickOnFirstUpdate();
+    await (await updatesPage.noResponseNumber).getText();
     await updatesPage.getNumberOfDidntResponded();
+    await (await updatesPage.viewContacts).getText();
 })
 
 Then('the user verifies that the numbers match', async () => {
-    expect(updatesPage.viewContacts == updatesPage.noResponseNumber);
+    expect(updatesPage.noResponseNumber).toHaveTextContaining('196');
+    expect(updatesPage.viewContacts).toHaveTextContaining('196');
 })
 
 When('the user tries to resend update', async () => {
@@ -41,11 +44,14 @@ Then('the update is sent', async () => {
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
     await updatesPage.clickOnFirstUpdate();
+    await (await updatesPage.numberOfRecipients).getText();
     await updatesPage.getContacts();
+    await (await updatesPage.numberOfContacts).getText();
 })
 
 Then('the user verifies that the number is the same', async () => {
-    expect(updatesPage.numberOfRecipients == updatesPage.numberOfContacts);
+    expect(updatesPage.numberOfRecipients).toHaveTextContaining('198');
+    expect (updatesPage.numberOfContacts).toHaveTextContaining('199');
 })
 
 Given('the user is on compliance page', async () => {
@@ -62,4 +68,12 @@ When('the user tries to change brand name and opt out', async () => {
 Then('the brand name and opt out is changed', async () => {
     expect(updatesPage.editorContainer).toHaveTextContaining(updates.brandName);
     expect(updatesPage.editorContainer).toHaveTextContaining(updates.optOut);
+})
+
+When('the user clicks on the new update and inputs text', async () => {
+    await updatesPage.numberOfCharacters('test');
+})
+
+Then('the characters limit is decreased', async () => {
+    expect (updatesPage.charactersLimit).toHaveTextContaining('156');
 })

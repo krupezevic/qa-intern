@@ -24,3 +24,8 @@ Scenario: User is able to change brand name and opt out
   Given the user is on compliance page
   When the user tries to change brand name and opt out
   Then the brand name and opt out is changed
+
+Scenario: Number of characters limit
+  Given the user is on updates page
+  When the user clicks on the new update and inputs text
+  Then the characters limit is decreased

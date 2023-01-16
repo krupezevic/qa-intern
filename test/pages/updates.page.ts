@@ -86,7 +86,7 @@ class UpdatesPage {
     }
 
     public get numberOfRecipients() {
-        return $('.popoup-wrapper >div:nth-child(1)')
+        return $("(//div[@class='item-amount'][normalize-space()='198'])[1]")
     }
 
     public get allContactsLink() {
@@ -119,6 +119,10 @@ class UpdatesPage {
 
     public get editorContainer() {
         return $('.DraftEditor-editorContainer')
+    }
+
+    public get charactersLimit() {
+        return $("//span[@class='sc-jSYIrd Avpex SpCounterBoxText']")
     }
 
     public async newUpdate(name: string) {
@@ -177,6 +181,12 @@ class UpdatesPage {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.includeBrandName);
         await actions.clickOn(this.includeOptOut);
+    }
+
+    public async numberOfCharacters(message: string) {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.textBox);
+        await actions.typeIn(this.textBox, message);
     }
 }
 
