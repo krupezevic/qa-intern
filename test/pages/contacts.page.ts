@@ -3,6 +3,17 @@ import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
 
+    public get countBoxText(){
+        return $('.SpCounterBoxWrapper  .SpCountBox:nth-child(1) .SpCounterBoxText');
+
+    }
+    public get textBoxMessage() {
+        return $('.SpEditor .DraftEditor-editorContainer [data-contents]');
+        //return $('.SpEditor .DraftEditor-editorContainer .public-DraftEditor-content');
+    }
+    public get composeIconButton() {
+        return $('#compose-icon');
+    }
     public get contactNameForAssertionFromDetailsBar() {
         return $('.SpDetailsContent .SpContactName');
     }
@@ -114,6 +125,11 @@ class ContactsPage {
 
     public async getTextTagName() {
         await this.tagNameForAssertion.getText();
+    }
+
+    public async enterTextMessage(textMessage: string) {
+        await actions.clickOn(this.composeIconButton);
+        await actions.typeIn(this.textBoxMessage, textMessage);
     }
     
     
