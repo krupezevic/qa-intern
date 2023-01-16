@@ -86,7 +86,7 @@ class UpdatesPage {
     }
 
     public get numberOfRecipients() {
-        return $("(//div[@class='item-amount'][normalize-space()='198'])[1]")
+        return $('.hideRevenue >div:nth-child(1) >div:nth-child(1)')
     }
 
     public get allContactsLink() {
