@@ -4,7 +4,7 @@ class NavigationPage {
 
  
   public get contactsLink() {
-    return $('.desktopNavigation .SpNavGroup:nth-child(2) .SpNavGroupContent a[href="/contacts"]');
+    return $('.desktopNavigation .SpNavGroupContent a[href="/contacts"]');
   }
  
   public get profileLink() {

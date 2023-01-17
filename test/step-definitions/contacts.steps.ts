@@ -10,9 +10,18 @@ Given('user is on the Contacts Page', async () => {
 });
 
 When('user tries to edit contact', async () => {
-    await contactsPage.editNickname();
+    await contactsPage.editNickname(contacts.nickname);
 });
 
 Then('contact is edited', async () => {
     await expect(contactsPage.userNickname).toHaveText(contacts.nickname);
+});
+
+When('user tries to add contribution', async () => {
+    await contactsPage.addContrabution(contacts.commerceName, contacts.commerceAmount);
+});
+
+Then('contribution is added', async () => {
+    await expect(contactsPage.amountForAssertion).toHaveTextContaining(contacts.commerceAmount);
+    await expect(contactsPage.nameForAssertion).toHaveText(contacts.commerceName);     
 });
