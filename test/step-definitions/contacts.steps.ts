@@ -37,6 +37,7 @@ Then('tag is added', async () => {
     //await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
     //await expect(contactsPage.getTextContactNameDetailsBar).toHaveTextContaining('Lemke');     
 });
+
 When('user tries to enter text message', async () => {
     await contactsPage.enterTextMessage('Message is entered');
 });

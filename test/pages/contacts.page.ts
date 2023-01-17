@@ -9,21 +9,18 @@ class ContactsPage {
     }
     public get textBoxMessage() {
         return $('.SpEditor .DraftEditor-editorContainer [data-contents]');
-        //return $('.SpEditor .DraftEditor-editorContainer .public-DraftEditor-content');
     }
+
     public get composeIconButton() {
         return $('#compose-icon');
     }
+
     public get contactNameForAssertionFromDetailsBar() {
         return $('.SpDetailsContent .SpContactName');
     }
 
     public get contactNameForAssertion() {
-        return $('.SpResponsiveTable .name-field');
-       
-       // return $('.SpTable td:nth-child(2)');
-        //.SpTable td:nth-child(2)
-        //.SpTable .table-row:nth-child(1)
+        return $('.SpResponsiveTable .name-field')
     }
     
     public get tagNameButton() {
