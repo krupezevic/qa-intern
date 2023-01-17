@@ -129,6 +129,5 @@ class ContactsPage {
         await actions.typeIn(this.textBoxMessage, textMessage);
     }
     
-    
 }
 export default new ContactsPage();
