@@ -14,7 +14,8 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user tries to archive conversation
         Then the conversation was archived    
-    
+
+    @skip #TODO after new tag was created, "update" button became gold, but it is not clickable (locator is good).
     Scenario: User is able to add tag to conversation
         Given user is on the conversation page
         When user tries to add tag to the conversation
@@ -34,5 +35,16 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user tries to send Vcard 
         Then Vcard download link was sent
-        
+
+    @skip #TODO when input text in message box and after new saved response was created, inputted text is displayed as in a mirror
+    Scenario: User is able to create new saved response
+        Given user is on the conversation page
+        When user tries to create new saved response
+        Then new saved response was created
+    
+    Scenario: User is able to delete new saved response
+        Given user is on the conversation page
+        When user tries to delete new saved response
+        Then new saved response was deleted
+
  

@@ -135,6 +135,35 @@ class ConversationPage {
         return $('.SpConversationMessageList .conversation-message-list-container-internal ');
     }
 
+    public get plusButton(){
+        return $('.SpPopperTooltip .SpEmojiWrapper .plus ');
+    }
+
+    public get responseName(){
+        return $('.popover-modal .SpModalContentHolder .input-field input');
+    }
+
+    public get savedResponseMessageBox(){
+        return $('.popover-modal .DraftEditor-editorContainer .public-DraftStyleDefault-block');
+    
+    }
+
+    public get createdResponse(){
+        return $('.SpPopperTooltip .SpSortableWrapper .SpSortableItem:nth-child(2) .SpSavedResponsesWrapper');
+    }
+
+    public get xButton(){
+        return $('.SpPopperTooltip .SpSortableWrapper .SpSortableItem:nth-child(2) .SpSavedResponsesWrapper .tag-x');
+    }
+
+    public get yesButton(){
+        return $('.SpPopperTooltip .SpSortable .gold');
+    }
+
+    public get responseModal(){
+        return $('.SpPopperTooltip');
+    }
+
     public async sendMessage(message: string){
         await actions.clickOn(this.contact);
         await actions.clickOn(this.composeMessageButton);
@@ -199,6 +228,33 @@ class ConversationPage {
         await actions.clickOn(this.threeDotsDropdown);
         await actions.waitForElementToBeClickable(this.vCard);
         await actions.clickOn(this.vCard);
+    }
+
+    public async createNewSavedResponse(responseTittle: string, responseText: string){
+        await actions.clickOn(this.contact);
+        await actions.clickOn(this.composeMessageButton);
+        await actions.clickOn(this.savedResponseButton);
+        await actions.clickOn(this.plusButton);
+        await actions.waitForElementToBeClickable(this.responseName);
+        await actions.typeIn(this.responseName, responseTittle);
+        await actions.waitForElementToBeClickable(this.savedResponseMessageBox);
+        await actions.typeIn(this.savedResponseMessageBox, responseText);
+        await actions.clickOn(this.saveButton);
+    }
+
+    public async deleteNewSavedResponse(responseTittle: string, responseText: string){
+        await actions.clickOn(this.contact);
+        await actions.clickOn(this.composeMessageButton);
+        await actions.clickOn(this.savedResponseButton);
+        await actions.clickOn(this.plusButton);
+        await actions.waitForElementToBeClickable(this.responseName);
+        await actions.typeIn(this.responseName, responseTittle);
+        await actions.waitForElementToBeClickable(this.savedResponseMessageBox);
+        await actions.typeIn(this.savedResponseMessageBox, responseText);
+        await actions.clickOn(this.saveButton);
+        await actions.clickOn(this.xButton);
+        await actions.waitForElementToBeClickable(this.yesButton);
+        await actions.clickOn(this.yesButton);
     }
 
 }

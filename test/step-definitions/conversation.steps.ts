@@ -61,3 +61,19 @@ When('user tries to send Vcard', async () => {
 Then('Vcard download link was sent', async () => {
     await expect(conversationPage.messageList).toHaveTextContaining("Download vCard");
 });
+
+When('user tries to create new saved response', async () => {
+    await conversationPage.createNewSavedResponse(conversation.tagName, conversation.nickname);
+});
+
+Then('new saved response was created', async () => {
+    await expect(conversationPage.createdResponse).toHaveTextContaining(conversation.nickname);
+});
+
+When('user tries to delete new saved response', async () => {
+    await conversationPage.deleteNewSavedResponse(conversation.tagName, conversation.nickname);
+});
+
+Then('new saved response was deleted', async () => {
+    await expect(conversationPage.responseModal).not.toHaveTextContaining(conversation.nickname);
+});
