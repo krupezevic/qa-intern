@@ -199,9 +199,6 @@ class ContactsPage {
         await actions.clickOn(this.singleContactButton);
         await actions.typeIn(this.firstNameInput, firstName);
         await actions.typeIn(this.lastNameInput, lastName);
-        //await actions.clickOn(this.phoneNumberInput);
-        //await this.phoneNumberInput.clearValue();
-        //await browser.keys('Delete');
         await actions.typeIn(this.phoneNumberInput, phoneNumber)
         await actions.typeIn(this.emailInput, email)
         await actions.clickOn(this.saveButton);  
