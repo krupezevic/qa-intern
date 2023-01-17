@@ -1,7 +1,35 @@
 import actions from "../utils/actions";
 
 class ContactsPage {
+
+    public get contactNameForAssertionFromDetailsBar() {
+        return $('.SpDetailsContent .SpContactName');
+    }
+
+    public get contactNameForAssertion() {
+        return $('.SpResponsiveTable .name-field .name');
+    }
     
+    public get tagNameButton() {
+        return $('.SpTagWrapper .SpTags:nth-child(2)');
+    }
+    
+    public get tagNameForAssertion() {
+        return $('.tags-list');   
+    }
+    
+    public get addTagSaveButton() {
+        return $('.button-wrapper:nth-child(2)');
+    }
+
+    public get addTagInput() {
+        return $('.SpTagSelection [style="display: inline-block;"] input');
+    }
+
+    public get addTagButton() {
+        return $('.tags-list .SpTagEditIcon');
+    }
+
     public get nameForAssertion() {
         return $('.SpModalContentHolder .name');
     }
@@ -61,6 +89,31 @@ class ContactsPage {
         await actions.typeIn(this.commerceAmountInput, commerceAmount);
         await actions.clickOn(this.saveButton);
         await actions.clickOn(this.spentValue);
+    }
+
+    public async addTag(tagName: string) {
+        await actions.clickOn(this.contactFromList);
+        await actions.clickOn(this.addTagButton);
+        await this.addTagInput.doubleClick();
+        await this.addTagInput.setValue(tagName);
+        await browser.keys('Enter'); //TODO add tag input is changed
+        await actions.clickOn(this.addTagSaveButton);
+        await actions.clickOn(this.tagNameButton);
+    }
+    
+    public async getTextContactNameForAssertion() {
+        await this.contactNameForAssertion.getText();
+        return this.getTextContactNameForAssertion();
+    }
+
+    public async getTextContactNameForAssertionFromaDetailsBar() {
+        await this.contactNameForAssertionFromDetailsBar.getText();
+        return this.getTextContactNameForAssertionFromaDetailsBar();
+    }
+
+    public async getTextTagName() {
+        await this.tagNameForAssertion.getText();
+        return this.getTextTagName();
     }
     
 }
