@@ -10,7 +10,7 @@ Given('user is on the Contacts Page', async () => {
 });
 
 When('user tries to edit contact', async () => {
-    await contactsPage.editNickname();
+    await contactsPage.editNickname(contacts.nickname);
 });
 
 Then('contact is edited', async () => {
@@ -18,7 +18,7 @@ Then('contact is edited', async () => {
 });
 
 When('user tries to add contribution', async () => {
-    await contactsPage.addContrabution();
+    await contactsPage.addContrabution(contacts.commerceName, contacts.commerceAmount);
 });
 
 Then('contribution is added', async () => {

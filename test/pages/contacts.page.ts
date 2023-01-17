@@ -1,5 +1,4 @@
 import actions from "../utils/actions";
-import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
 
@@ -43,15 +42,15 @@ class ContactsPage {
         return $('.SpModalContentHolder-inner .amount');
     }
 
-    public get SpentValue() {
+    public get spentValue() {
         return $('.message-stats .clickable');
     }
 
-    public get CommerceAmountInput() {
+    public get commerceAmountInput() {
         return $('.ContributionEditItem [placeholder="Amount"]');
     }
 
-    public get CommerceNameInput() {
+    public get commerceNameInput() {
         return $('.ContributionEditItem .field-name [placeholder="Name"]');
     }
     
@@ -79,21 +78,21 @@ class ContactsPage {
         return $('.SpTableTbody tr:nth-child(1) td:nth-child(2)');
     }
     
-    public async editNickname() {
+    public async editNickname(nickname: string) {
         await actions.clickOn(this.contactFromList);
         await actions.clickOn(this.editContactButton);
-        await actions.typeIn(this.nicknameInput, contacts.nickname);
+        await actions.typeIn(this.nicknameInput, nickname);
         await actions.clickOn(this.saveButton);
     }
 
-    public async addContrabution() {
+    public async addContrabution(commerceName: string, commerceAmount: string) {
         await actions.clickOn(this.contactFromList);
         await actions.clickOn(this.editContactButton);
         await actions.clickOn(this.addContributionButton);
-        await actions.typeIn(this.CommerceNameInput, contacts.commerceName);
-        await actions.typeIn(this.CommerceAmountInput, contacts.commerceAmount);
+        await actions.typeIn(this.commerceNameInput, commerceName);
+        await actions.typeIn(this.commerceAmountInput, commerceAmount);
         await actions.clickOn(this.saveButton);
-        await actions.clickOn(this.SpentValue);
+        await actions.clickOn(this.spentValue);
     }
 
     public async addTag(tagName: string) {
