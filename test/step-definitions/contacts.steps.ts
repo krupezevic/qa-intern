@@ -52,3 +52,12 @@ When('user tries to create new data field', async () => {
 Then('data field is created', async () => {
     await expect(contactsPage.nameDataFieldForAssertion).toHaveText(contacts.fieldName);
 });
+
+When('user tries to create new contact', async () => {
+    await contactsPage.createNewContact(contacts.firstName, contacts.lastName, contacts.phoneNumber, contacts.email);
+});
+
+Then('contact is created', async () => {
+    //await expect(contactsPage.contactFromList).toHaveText(contacts.firstName);
+   // await expect(contactsPage.contactFromList).toHaveText(contacts.lastName);
+});

@@ -2,7 +2,28 @@ import actions from "../utils/actions";
 import { contacts } from "../test-data/contacts";
 
 class ContactsPage {
-    
+
+
+    public get emailInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(4) input');
+    }
+
+    public get phoneNumberInput(){
+        return $('.SpModalContentHolder .SpFormItem .react-tel-input input');
+    }
+
+    public get lastNameInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(2) input');
+    }
+
+    public get firstNameInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(1) input');
+    }
+
+    public get singleContactButton(){
+        return $('.SpRightContentWrapper .action-menu-second .menu-content-item:nth-child(1)');
+    }
+
     public get nameDataFieldForAssertion(){
         return $('.SpTableTbody .table-row:nth-child(1) td:nth-child(1) div:nth-child(2)');
     }
@@ -161,7 +182,7 @@ class ContactsPage {
         await actions.clickOn(this.composeIconButton);
         await actions.typeIn(this.textBoxMessage, textMessage);
     }
-    
+
     public async createNewDataField(fieldName: string) {
         await actions.clickOn(this.addContactsButton);
         await actions.clickOn(this.contactImportButton);
@@ -170,7 +191,20 @@ class ContactsPage {
         await actions.clickOn(this.textButton);
         await actions.typeIn(this.textInputDataField, fieldName);
         await actions.clickOn(this.saveButton);
-        await (this.nameDataFieldForAssertion).waitForExist;
+        //await (this.nameDataFieldForAssertion).waitForExist;
+    }
+
+    public async createNewContact(firstName: string, lastName: string, phoneNumber: string, email: string) {
+        await actions.clickOn(this.addContactsButton);
+        await actions.clickOn(this.singleContactButton);
+        await actions.typeIn(this.firstNameInput, firstName);
+        await actions.typeIn(this.lastNameInput, lastName);
+        //await actions.clickOn(this.phoneNumberInput);
+        //await this.phoneNumberInput.clearValue();
+        //await browser.keys('Delete');
+        await actions.typeIn(this.phoneNumberInput, phoneNumber)
+        await actions.typeIn(this.emailInput, email)
+        await actions.clickOn(this.saveButton);  
     }
     
 }

@@ -6,4 +6,8 @@ export const contacts = {
     commerceAmount: faker.finance.amount(0,10,2),
     tagName: faker.word.adjective(),
     fieldName: faker.random.word(),
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+    phoneNumber: faker.phone.number('4373######'),
+    email: faker.internet.email('test','test1'),
     }

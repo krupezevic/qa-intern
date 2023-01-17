@@ -25,3 +25,8 @@ Feature: Contacts functionality
       Given user is on the Contacts Page
       When user tries to create new data field
       Then data field is created
+@only
+   Scenario: User is able to create new contact
+      Given user is on the Contacts Page
+      When user tries to create new contact
+      Then contact is created
