@@ -252,6 +252,7 @@ class ConversationPage {
         await actions.waitForElementToBeClickable(this.savedResponseMessageBox);
         await actions.typeIn(this.savedResponseMessageBox, responseText);
         await actions.clickOn(this.saveButton);
+        await actions.waitForElementToBeClickable(this.xButton);
         await actions.clickOn(this.xButton);
         await actions.waitForElementToBeClickable(this.yesButton);
         await actions.clickOn(this.yesButton);
