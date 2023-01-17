@@ -1,3 +1,4 @@
+
 Feature: Updates Page Functionality
 
 Scenario: User is able to send scheduled update
@@ -34,3 +35,13 @@ Scenario: User is able to create segment on update
   Given the user is on updates page
   When the user tries to create a segment on update
   Then the segment is created
+
+Scenario: User is able to create new saved response
+  Given the user is on updates page
+  When the user tries to create new saved response
+  Then the new saved response is created
+
+Scenario: User is able to delete saved response
+  Given the user is on updates page
+  When the user tries to delete saved response
+  Then the saved response is deleted

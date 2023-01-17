@@ -46,7 +46,7 @@ class UpdatesPage {
     }
 
     public get saveUpdate() {
-        return $("//span[normalize-space()='Save']")
+        return $(".text-center >div:nth-child(2)")
     }
 
     public get scheduleUpdate() {
@@ -145,6 +145,42 @@ class UpdatesPage {
         return $('segment-label')
     }
 
+    public get createSavedResponse() {
+        return $('.sr-add')
+    }
+
+    public get responseName() {
+        return $('.sr-form .title-input')
+    }
+
+    public get saveNewResponseButton() {
+        return $("(//span[contains(text(),'Save')])[2]")
+    }
+
+    public get textboxSavedResponse() {
+        return $('(//div[@class="notranslate public-DraftEditor-content"])[2]')
+    }
+
+    public get savedResponseSearch() {
+        return $("input[class='form-control']")
+    }
+
+    public get deleteResponse() {
+        return $('//span[@class="btn pointer inline svg-icon"]')
+    }
+
+    public get savedResponseList() {
+        return $('.SpSavedResponsesWrapper')
+    }
+
+    public get allSavedResponses() {
+        return $('.SpSortable')
+    }
+
+    public get confirmDelete() {
+        return $('//div[@class="pointer sp-boxbutton inline gold"]')
+    }
+
     public async newUpdate(name: string) {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.textBox);
@@ -215,6 +251,28 @@ class UpdatesPage {
         await actions.typeIn(this.myNewSegment, segment);
         await actions.clickOn(this.segmentFilter);
         await actions.clickOn(this.addedThisYear);
+    }
+
+    public async newSavedResponse(name: string, text: string) {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.savedResponse);
+        await actions.clickOn(this.createSavedResponse);
+        await actions.typeIn(this.responseName, name);
+        await actions.typeIn(this.textboxSavedResponse, text);
+        await actions.clickOn(this.saveNewResponseButton);
+        await actions.clickOn(this.savedResponse);
+    }
+
+    public async deleteSavedResponse(response: string) {
+        await actions.clickOn(this.newUpdateButton);
+        await actions.clickOn(this.savedResponse);
+        await actions.clickOn(this.savedResponseSearch);
+        await actions.typeIn(this.savedResponseSearch, response);
+        await actions.waitForElementToBeDisplayed(this.savedResponseList);
+        await this.savedResponseList.moveTo();
+        await actions.waitForElementToBeDisplayed(this.deleteResponse);
+        await actions.clickOn(this.deleteResponse);
+        await actions.clickOn(this.confirmDelete);
     }
 }
 

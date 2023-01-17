@@ -85,3 +85,19 @@ When('the user tries to create a segment on update', async () => {
 Then('the segment is created', async () => {
     expect(updatesPage.segmentLabel).toHaveText('Added This Year');
 })
+
+When('the user tries to create new saved response', async () => {
+    await updatesPage.newSavedResponse('Hey!', 'New Response');
+})
+
+Then ('the new saved response is created', async () => {
+    expect (updatesPage.allSavedResponses).toHaveTextContaining('New Response');
+})
+
+When ('the user tries to delete saved response', async () => {
+    await updatesPage.deleteSavedResponse('new');
+})
+
+Then ('the saved response is deleted', async () => {
+    expect(updatesPage.allSavedResponses).not.toContain('New Response');
+})
