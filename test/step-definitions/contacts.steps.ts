@@ -37,6 +37,7 @@ Then('tag is added', async () => {
     //await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
     //await expect(contactsPage.getTextContactNameDetailsBar).toHaveTextContaining('Lemke');     
 });
+
 When('user tries to enter text message', async () => {
     await contactsPage.enterTextMessage('Message is entered');
 });
@@ -58,6 +59,6 @@ When('user tries to create new contact', async () => {
 });
 
 Then('contact is created', async () => {
-    //await expect(contactsPage.contactFromList).toHaveText(contacts.firstName);
-   // await expect(contactsPage.contactFromList).toHaveText(contacts.lastName);
+    await expect(contactsPage.contactFromList).toHaveTextContaining(contacts.firstName);
+    await expect(contactsPage.contactFromList).toHaveTextContaining(contacts.lastName);
 });
