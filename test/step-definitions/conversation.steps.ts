@@ -1,6 +1,7 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
 import conversationPage from "../pages/conversation.page";
 import loginPage from "../pages/login.page";
+import { conversation } from "../test-data/conversation";
 import actions from "../utils/actions";
 
 
@@ -27,4 +28,36 @@ When('user tries to archive conversation', async () => {
 
 Then('the conversation was archived', async () => {
     await expect(conversationPage.contactIcon).toBeClickable();
+});
+
+When('user tries to add tag to the conversation', async () => {
+    await conversationPage.tagConversation(conversation.tagName);
+});
+
+Then('the tag is added to the conversation', async () => {
+    await expect(conversationPage.tagNameText).toHaveTextContaining(conversation.tagName);
+});
+
+When('user input text in message box', async () => {
+    await conversationPage.messageCharactersDecrement("test");
+});
+
+Then('number of remaining characters were decreased', async () => {
+    await expect(conversationPage.numberOfCharactersAfterInputMessage).toHaveTextContaining("156");
+});
+
+When('user add nickname to contact', async () => {
+    await conversationPage.addNicknameToContact(conversation.nickname);
+});
+
+Then('user had nickname with first and last name', async () => {
+    await expect(conversationPage.nickname).toHaveTextContaining(conversation.nickname);
+});
+
+When('user tries to send Vcard', async () => {
+    await conversationPage.sendVcardToContact();
+});
+
+Then('Vcard download link was sent', async () => {
+    await expect(conversationPage.messageList).toHaveTextContaining("Download vCard");
 });
