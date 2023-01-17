@@ -31,10 +31,6 @@ When('user tries to add tag', async () => {
 });
 
 Then('tag is added', async () => {
-    const tag=await contactsPage.getTextTagName();
-    console.log(tag);
-    console.log(contactsPage.getTextTagName);
-    //await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
-    //await expect(contactsPage.getTextContactNameDetailsBar).toHaveTextContaining('Lemke');
-    await expect(contactsPage.contactNameForAssertion).toHaveTextContaining('Lemke');     
+    await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
+    await expect(contactsPage.contactNameForAssertion()).toHaveTextContaining(contactsPage.contactNameForAssertionFromDetailsBar());     
 });

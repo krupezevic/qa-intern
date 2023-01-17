@@ -8,10 +8,6 @@ class ContactsPage {
 
     public get contactNameForAssertion() {
         return $('.SpResponsiveTable .name-field .name');
-       
-       // return $('.SpTable td:nth-child(2)');
-        //.SpTable td:nth-child(2)
-        //.SpTable .table-row:nth-child(1)
     }
     
     public get tagNameButton() {
@@ -27,7 +23,7 @@ class ContactsPage {
     }
 
     public get addTagInput() {
-        return $('.SpTagSelection .Select-input input');
+        return $('.SpTagSelection [style="display: inline-block;"] input');
     }
 
     public get addTagButton() {
@@ -98,21 +94,26 @@ class ContactsPage {
     public async addTag(tagName: string) {
         await actions.clickOn(this.contactFromList);
         await actions.clickOn(this.addTagButton);
-        await actions.typeIn(this.addTagInput, tagName);
-        await browser.keys('Enter');
+        await this.addTagInput.doubleClick();
+        await this.addTagInput.setValue(tagName);
+        await browser.keys('Enter'); //TODO add tag input is changed
         await actions.clickOn(this.addTagSaveButton);
-        //await (this.assertMessage).waitForExist;
-       // await actions.waitForElementToBeClickable(this.tagNameButton);
         await actions.clickOn(this.tagNameButton);
-        //await actions.waitForElementToBeDisplayed(this.contactNameForAssertion);
     }
     
-    public async getTextContactNameDetailsBar() {
+    public async getTextContactNameForAssertion() {
+        await this.contactNameForAssertion.getText();
+        return this.getTextContactNameForAssertion();
+    }
+
+    public async getTextContactNameForAssertionFromaDetailsBar() {
         await this.contactNameForAssertionFromDetailsBar.getText();
+        return this.getTextContactNameForAssertionFromaDetailsBar();
     }
 
     public async getTextTagName() {
         await this.tagNameForAssertion.getText();
+        return this.getTextTagName();
     }
     
 }
