@@ -30,7 +30,7 @@ class UpdatesPage {
     }
 
     public get updateRecipients() {
-        return $('.css-tlfecz-indicatorContainer');
+        return $('.item-recipients .sp-select__indicators >div>div');
     }
 
     public get selectAllContacts() {
@@ -86,7 +86,7 @@ class UpdatesPage {
     }
 
     public get numberOfRecipients() {
-        return $('.hideRevenue >div:nth-child(1) >div:nth-child(1) .item-amount');
+        return $('.hideRevenue >div:nth-child(1) .item-amount');
     }
 
     public get allContactsLink() {
@@ -118,7 +118,7 @@ class UpdatesPage {
     }
 
     public get charactersLimit() {
-        return $('.SpCounterBoxWrapper >div:nth-child(1) >div:nth-child(2)');
+        return $('.update-content-wrapper .SpCounterBoxWrapper .SpCounterBox span');
     }
 
     public get manageButton2() {
@@ -230,10 +230,11 @@ class UpdatesPage {
     public async numberOfRecipientsText(){
         await this.numberOfRecipients.getText();
         return this.numberOfRecipientsText();
-    } 
+    }
 
-    public async getNumberOfDidntResponded() {
-        await actions.clickOn(this.responseViewButton);
+    public async charactersLimitText(){
+        await this.charactersLimit.getText();
+        return this.charactersLimitText();
     }
 
     public async resendUpdate() {
@@ -244,10 +245,6 @@ class UpdatesPage {
         await actions.clickOn(this.includeBrandName);
         await actions.clickOn(this.includeOptOut);
         await browser.keys('Space'); //TODO remove this once the bug is fixed: The merge field is not recognized after choosing 'saved response' on Updates Page
-    }
-
-    public async getContacts() {
-        await actions.clickOn(this.allContactsLink);
     }
 
     public async brandOptUpdate(faker: string, brand: string) {
@@ -294,14 +291,19 @@ class UpdatesPage {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.savedResponse);
         await actions.clickOn(this.createSavedResponse);
+        await actions.waitForElementToBeClickable(this.responseName);
         await actions.typeIn(this.responseName, name);
+        await actions.waitForElementToBeClickable(this.textboxSavedResponse);
         await actions.typeIn(this.textboxSavedResponse, text);
         await actions.clickOn(this.saveNewResponseButton);
         await actions.clickOn(this.savedResponseSearch);
+        await actions.waitForElementToBeClickable(this.savedResponseSearch);
         await actions.typeIn(this.savedResponseSearch, response);
         await actions.waitForElementToBeDisplayed(this.savedResponseList);
-        await this.deleteResponse.moveTo();
+        await this.savedResponseList.moveTo();
+        await actions.waitForElementToBeClickable(this.deleteResponse);
         await actions.clickOn(this.deleteResponse);
+        await actions.waitForElementToBeClickable(this.confirmDelete);
         await actions.clickOn(this.confirmDelete);
         await actions.clickOn(this.savedResponseSearch);
         await browser.keys('Space');

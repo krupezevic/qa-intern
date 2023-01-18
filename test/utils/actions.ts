@@ -7,7 +7,7 @@ class Actions {
     await element.setValue(value);
   }
   
-  //TODO Try to use TypeIn instead, if not posible, continue using this and delete this comment
+  //TODO Try to use TypeIn instead, if not possible, continue using this and delete this comment
   public async clearValueAndType(element, value) {
     await this.waitForElementToBeClickable(element);
     await element.click();
