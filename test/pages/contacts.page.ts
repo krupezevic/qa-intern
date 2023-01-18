@@ -1,4 +1,5 @@
 import actions from "../utils/actions";
+import { Contact } from "../test-data/contacts";
 
 class ContactsPage {
 
@@ -192,13 +193,13 @@ class ContactsPage {
         await actions.clickOn(this.saveButton);
     }
 
-    public async createNewContact(firstName: string, lastName: string, phoneNumber: string, email: string) {
+    public async createNewContact(newContact: Contact) {
         await actions.clickOn(this.addContactsButton);
         await actions.clickOn(this.singleContactButton);
-        await actions.typeIn(this.firstNameInput, firstName);
-        await actions.typeIn(this.lastNameInput, lastName);
-        await actions.typeIn(this.phoneNumberInput, phoneNumber)
-        await actions.typeIn(this.emailInput, email)
+        await actions.typeIn(this.firstNameInput, newContact.firstName);
+        await actions.typeIn(this.lastNameInput, newContact.lastName);
+        await actions.typeIn(this.phoneNumberInput, newContact.phoneNumber)
+        await actions.typeIn(this.emailInput, newContact.email)
         await actions.clickOn(this.saveButton);  
     }
     

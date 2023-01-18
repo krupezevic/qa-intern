@@ -1,6 +1,18 @@
 import { faker } from '@faker-js/faker';
 
-export const contacts = {
+export interface Contact {
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+    nickname?: string;
+    commerceName?: string;
+    commerceAmount?: string;
+    tagName?: string;
+    fieldName?: string;
+    }
+
+export const contacts: Contact = {
     nickname: faker.name.firstName(),
     commerceName: faker.name.firstName(),
     commerceAmount: faker.finance.amount(0,10,2),

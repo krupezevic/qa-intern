@@ -6,6 +6,7 @@ import { contacts } from "../test-data/contacts";
 
 const {nickname, tagName, firstName, lastName, fieldName, commerceName, commerceAmount} = contacts;
 
+
 Given('user is on the Contacts Page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.navigateToContactsPage(); 
@@ -54,7 +55,7 @@ Then('data field is created', async () => {
 });
 
 When('user tries to create new contact', async () => {
-    await contactsPage.createNewContact(contacts.firstName, contacts.lastName, contacts.phoneNumber, contacts.email);
+    await contactsPage.createNewContact(contacts);
 });
 
 Then('contact is created', async () => {
