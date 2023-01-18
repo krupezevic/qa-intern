@@ -1,7 +1,29 @@
 import actions from "../utils/actions";
+import { Contact } from "../test-data/contacts";
 
 class ContactsPage {
-    
+
+
+    public get emailInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(4) input');
+    }
+
+    public get phoneNumberInput(){
+        return $('.SpModalContentHolder .SpFormItem .react-tel-input input');
+    }
+
+    public get lastNameInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(2) input');
+    }
+
+    public get firstNameInput(){
+        return $('.SpModalContentHolder .form-group:nth-child(1) input');
+    }
+
+    public get singleContactButton(){
+        return $('.SpRightContentWrapper .action-menu-second .menu-content-item:nth-child(1)');
+    }
+
     public get nameDataFieldForAssertion(){
         return $('.SpTableTbody .table-row:nth-child(1) td:nth-child(1) div:nth-child(2)');
     }
@@ -160,7 +182,7 @@ class ContactsPage {
         await actions.clickOn(this.composeIconButton);
         await actions.typeIn(this.textBoxMessage, textMessage);
     }
-    
+
     public async createNewDataField(fieldName: string) {
         await actions.clickOn(this.addContactsButton);
         await actions.clickOn(this.contactImportButton);
@@ -169,7 +191,16 @@ class ContactsPage {
         await actions.clickOn(this.textButton);
         await actions.typeIn(this.textInputDataField, fieldName);
         await actions.clickOn(this.saveButton);
-        await (this.nameDataFieldForAssertion).waitForExist;
+    }
+
+    public async createNewContact(newContact: Contact) {
+        await actions.clickOn(this.addContactsButton);
+        await actions.clickOn(this.singleContactButton);
+        await actions.typeIn(this.firstNameInput, newContact.firstName);
+        await actions.typeIn(this.lastNameInput, newContact.lastName);
+        await actions.typeIn(this.phoneNumberInput, newContact.phoneNumber)
+        await actions.typeIn(this.emailInput, newContact.email)
+        await actions.clickOn(this.saveButton);  
     }
     
 }
