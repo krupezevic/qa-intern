@@ -11,7 +11,8 @@
     "win-e2e-only": "SET NODE_ENV=stage&&wdio run test/configs/wdio.conf.ts --cucumberOpts.tagExpression=@only",
     "e2e-regression": "NODE_ENV=stage wdio run test/configs/regressionTests.conf.ts --cucumberOpts.tagExpression=@regression",
     "win-e2e-regression": "SET NODE_ENV=stage&&wdio run test/configs/regressionTests.conf.ts --cucumberOpts.tagExpression=@regression",
-    "win-e2e-saucelabs-only": "SET NODE_ENV=stage&&wdio run test/configs/saucelab.conf.ts --cucumberOpts.tagExpression=@only"
+    "win-e2e-saucelabs-only": "SET NODE_ENV=stage&&wdio run test/configs/saucelab.conf.ts --cucumberOpts.tagExpression=@only",
+    "e2e-lambdatest-only": "NODE_ENV=stage wdio run test/configs/lambdatest.conf.ts --cucumberOpts.tagExpression=@only"
 
   },
   "author": "",
