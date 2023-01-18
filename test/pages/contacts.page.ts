@@ -58,7 +58,6 @@ class ContactsPage {
 
     public get textBoxMessage() {
         return $('.SpEditor .DraftEditor-editorContainer [data-contents]');
-        //return $('.SpEditor .DraftEditor-editorContainer .public-DraftEditor-content');
     }
 
     public get composeIconButton() {
@@ -71,10 +70,6 @@ class ContactsPage {
 
     public get contactNameForAssertion() {
         return $('.SpResponsiveTable .name-field');
-       
-       // return $('.SpTable td:nth-child(2)');
-        //.SpTable td:nth-child(2)
-        //.SpTable .table-row:nth-child(1)
     }
     
     public get tagNameButton() {
@@ -164,10 +159,7 @@ class ContactsPage {
         await actions.typeIn(this.addTagInput, tagName);
         await browser.keys('Enter');
         await actions.clickOn(this.addTagSaveButton);
-        //await (this.assertMessage).waitForExist;
-       // await actions.waitForElementToBeClickable(this.tagNameButton);
         await actions.clickOn(this.tagNameButton);
-        //await actions.waitForElementToBeDisplayed(this.contactNameForAssertion);
     }
     
     public async getTextContactNameDetailsBar() {
@@ -191,7 +183,6 @@ class ContactsPage {
         await actions.clickOn(this.textButton);
         await actions.typeIn(this.textInputDataField, fieldName);
         await actions.clickOn(this.saveButton);
-        //await (this.nameDataFieldForAssertion).waitForExist;
     }
 
     public async createNewContact(firstName: string, lastName: string, phoneNumber: string, email: string) {
