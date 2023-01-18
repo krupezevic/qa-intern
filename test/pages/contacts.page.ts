@@ -2,6 +2,18 @@ import actions from "../utils/actions";
 
 class ContactsPage {
 
+    public get countBoxTextInput(){
+        return $('.SpCounterBoxWrapper  .SpCountBox:nth-child(1) .SpCounterBoxText');
+
+    }
+    public get textBoxMessage() {
+        return $('.SpEditor .DraftEditor-editorContainer [data-contents]');
+    }
+
+    public get composeIconButton() {
+        return $('#compose-icon');
+    }
+
     public get contactNameForAssertionFromDetailsBar() {
         return $('.SpDetailsContent .SpContactName');
     }
@@ -114,6 +126,11 @@ class ContactsPage {
     public async getTextTagName() {
         await this.tagNameForAssertion.getText();
         return this.getTextTagName();
+    }
+
+    public async enterTextMessage(textMessage: string) {
+        await actions.clickOn(this.composeIconButton);
+        await actions.typeIn(this.textBoxMessage, textMessage);
     }
     
 }

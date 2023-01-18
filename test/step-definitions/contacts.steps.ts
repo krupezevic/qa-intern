@@ -34,3 +34,11 @@ Then('tag is added', async () => {
     await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
     await expect(contactsPage.contactNameForAssertion()).toHaveTextContaining(contactsPage.contactNameForAssertionFromDetailsBar());     
 });
+
+When('user tries to enter text message', async () => {
+    await contactsPage.enterTextMessage('Message is entered');
+});
+
+Then('characters limit number is changed', async () => {
+    await expect(contactsPage.countBoxTextInput).toHaveText('142');
+});

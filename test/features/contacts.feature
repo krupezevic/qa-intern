@@ -16,3 +16,8 @@ Feature: Contacts functionality
       Given user is on the Contacts Page
       When user tries to add tag
       Then tag is added
+
+   Scenario: Verify that characters limit number in Message Contacts is changed after typing text
+      Given user is on the Contacts Page
+      When user tries to enter text message
+      Then characters limit number is changed
