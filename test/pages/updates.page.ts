@@ -2,183 +2,183 @@ import actions from "../utils/actions";
 
 class UpdatesPage {
     public get newUpdateButton() {
-        return $('.cta__new-update-button')
+        return $('.cta__new-update-button');
     }
 
     public get savedResponse() {
-        return $("//img[@alt='⚡']")
+        return $("//img[@alt='⚡']");
     }
 
     public get firstSavedResponse() {
-        return $('.SpSortable >div:nth-child(1)')
+        return $('.SpSortable >div:nth-child(1)');
     }
 
     public get textBox() {
-        return $("div[role='textbox']")
+        return $("div[role='textbox']");
     }
 
     public get updateTextField() {
-        return $('.DraftEditor-root')
+        return $('.DraftEditor-root');
     }
 
     public get includeBrandName() {
-        return $('//*[text()="Include Brand Name"]')
+        return $('//*[text()="Include Brand Name"]');
     }
 
     public get includeOptOut() {
-        return $('.SpComplianceActions >div:nth-child(2)')
+        return $('.SpComplianceActions >div:nth-child(2)');
     }
 
     public get updateRecipients() {
-        return $('.css-tlfecz-indicatorContainer')
+        return $('.css-tlfecz-indicatorContainer');
     }
 
     public get selectAllContacts() {
-        return $("//div[contains(text(),'All Contacts')]")
+        return $("//div[contains(text(),'All Contacts')]");
     }
 
     public get scheduledTime() {
-        return $('.react-datepicker__input-container')
+        return $('.react-datepicker__input-container');
     }
 
     public get selectTime() {
-        return $('.react-datepicker__time-list')
+        return $('.react-datepicker__time-list');
     }
 
     public get saveUpdate() {
-        return $(".text-center >div:nth-child(2)")
+        return $(".text-center >div:nth-child(2)");
     }
 
     public get scheduleUpdate() {
-        return $("//span[normalize-space()='Schedule']")
+        return $("//span[normalize-space()='Schedule']");
     }
 
     public get allUpdates() {
-        return $("//span[@class='label-text']")
+        return $("//span[@class='label-text']");
     }
 
     public get scheduledUpdates() {
-        return $("//span[normalize-space()='Scheduled Updates']")
-    }
-
-    public get checkUpdate() {
-        return $('.SpFilterBar .filter-label span')
+        return $("//span[normalize-space()='Scheduled Updates']");
     }
 
     public get firstUpdate() {
-        return $(".SpUpdateListWrapper .update-item:nth-child(2)")
+        return $(".SpUpdateListWrapper .update-item:nth-child(1)");
+    }
+
+    public get secondUpdate() {
+        return $(".SpUpdateListWrapper .update-item:nth-child(3)");
     }
 
     public get noResponseNumber() {
-        return $('.SpAvatarContent > div:nth-child(1)')
+        return $('.SpAvatarContent > div:nth-child(1)');
     }
 
     public get responseViewButton() {
-        return $('.Supper-button-text')
+        return $('.Supper-button-text');
     }
 
     public get viewContacts() {
-        return $('.title-content .SpHeading')
+        return $('.SpHeading');
     }
 
     public get resendButton() {
-        return $("//span[contains(text(),'Send Update')]")
+        return $("//span[contains(text(),'Send Update')]");
     }
 
     public get numberOfRecipients() {
-        return $('.hideRevenue >div:nth-child(1) >div:nth-child(1)')
+        return $('.hideRevenue >div:nth-child(1) >div:nth-child(1) .item-amount');
     }
 
     public get allContactsLink() {
-        return $('#analytic-report .SpSendToName')
-    }
-
-    public get numberOfContacts() {
-        return $('.title-content .SpHeading')
+        return $('#analytic-report .SpSendToName');
     }
 
     public get settings() {
-        return $('.nav-tabs a[href="/compliance/settings"]')
+        return $('.nav-tabs a[href="/compliance/settings"]');
     }
 
     public get editBrandName() {
-        return $("input[placeholder='Enter brand name']")
+        return $("input[placeholder='Enter brand name']");
     }
 
     public get editOptOut() {
-        return $('//div[@class="form-group"][2]/div/input')
+        return $('.settingsViews .SpShadeBoxInner >div:nth-child(2) input');
     }
 
     public get defaultOptOut() {
-        return $("//span[normalize-space()='Set to Default']")
+        return $("//span[normalize-space()='Set to Default']");
     }
 
     public get saveButton() {
-        return $("//span[normalize-space()='save']")
+        return $("//span[normalize-space()='save']");
     }
 
     public get editorContainer() {
-        return $('.DraftEditor-editorContainer')
+        return $('.DraftEditor-editorContainer');
     }
 
     public get charactersLimit() {
-        return $("//span[@class='sc-jSYIrd Avpex SpCounterBoxText']")
+        return $('.SpCounterBoxWrapper >div:nth-child(1) >div:nth-child(2)');
     }
 
     public get manageButton2() {
-        return $("//a[@class='manage clickable']")
+        return $("//a[@class='manage clickable']");
     }
 
     public get myNewSegment() {
-        return $("input[placeholder='My New Segment']")
+        return $("input[placeholder='My New Segment']");
     }
 
     public get segmentFilter() {
-        return $('.SpFormItem #filter >div:nth-child(1)')
+        return $('.SpFormItem #filter >div:nth-child(1)');
     }
 
     public get addedThisYear() {
-        return $("#react-select-4-option-4")
+        return $('.sp-select__menu-list >div:nth-child(5)');
     }
 
     public get segmentLabel() {
-        return $('segment-label')
+        return $('segment-label');
     }
 
     public get createSavedResponse() {
-        return $('.sr-add')
+        return $('.sr-add');
     }
 
     public get responseName() {
-        return $('.sr-form .title-input')
+        return $('.sr-form .title-input');
     }
 
     public get saveNewResponseButton() {
-        return $("(//span[contains(text(),'Save')])[2]")
+        return $('.SuperModal .text-center span');
     }
 
     public get textboxSavedResponse() {
-        return $('(//div[@class="notranslate public-DraftEditor-content"])[2]')
+        return $('(//div[@class="notranslate public-DraftEditor-content"])[2]');
     }
 
     public get savedResponseSearch() {
-        return $("input[class='form-control']")
+        return $('.SpSavedResponseListWrapper .form-control');
     }
 
     public get deleteResponse() {
-        return $('//span[@class="btn pointer inline svg-icon"]')
+        return $('.SpSortableItem:nth-child(1) .tag-x');
     }
 
     public get savedResponseList() {
-        return $('.SpSavedResponsesWrapper')
+        return $('.SpSortableWrapper >div:nth-child(1)');
     }
 
     public get allSavedResponses() {
-        return $('.SpSortable')
+        return $('.SpSortable');
     }
 
     public get confirmDelete() {
-        return $('//div[@class="pointer sp-boxbutton inline gold"]')
+        return $('.SpPopperTooltip .SpSortable .gold');
+    }
+
+    public get noResponseFound() {
+        return $('.SpSavedResponseListWrapper .gray-center-container >div:nth-child(1)');
     }
 
     public async newUpdate(name: string) {
@@ -207,6 +207,31 @@ class UpdatesPage {
         await actions.clickOn(this.firstUpdate);
     }
 
+    public async firstUpdateText() {
+        await this.firstUpdate.getText();
+        return this.firstUpdateText();
+    }
+
+    public async secondUpdateText() {
+        await this.firstUpdate.getText();
+        return this.secondUpdateText();
+    }
+
+    public async noResponseText() {
+        await this.noResponseNumber.getText();
+        return this.noResponseText();
+    }
+
+    public async allContactsText() {
+        await this.viewContacts.getText();
+        return this.allContactsText();
+    }
+
+    public async numberOfRecipientsText(){
+        await this.numberOfRecipients.getText();
+        return this.numberOfRecipientsText();
+    } 
+
     public async getNumberOfDidntResponded() {
         await actions.clickOn(this.responseViewButton);
     }
@@ -214,6 +239,7 @@ class UpdatesPage {
     public async resendUpdate() {
         await actions.clickOn(this.resendButton);
         await actions.clickOn(this.savedResponse);
+        await actions.waitForElementToBeDisplayed(this.firstSavedResponse);
         await actions.clickOn(this.firstSavedResponse);
         await actions.clickOn(this.includeBrandName);
         await actions.clickOn(this.includeOptOut);
@@ -230,6 +256,7 @@ class UpdatesPage {
         await actions.typeIn(this.editBrandName, brand);
         await actions.clickOn(this.editOptOut);
         await actions.clearValueAndType(this.editOptOut, faker +' stop');
+        await actions.waitForElementToBeClickable(this.saveButton);
         await actions.clickOn(this.saveButton);
     }
 
@@ -263,17 +290,23 @@ class UpdatesPage {
         await actions.clickOn(this.savedResponse);
     }
 
-    public async deleteSavedResponse(response: string) {
+    public async deleteSavedResponse(name: string, text: string, response: string) {
         await actions.clickOn(this.newUpdateButton);
         await actions.clickOn(this.savedResponse);
+        await actions.clickOn(this.createSavedResponse);
+        await actions.typeIn(this.responseName, name);
+        await actions.typeIn(this.textboxSavedResponse, text);
+        await actions.clickOn(this.saveNewResponseButton);
         await actions.clickOn(this.savedResponseSearch);
         await actions.typeIn(this.savedResponseSearch, response);
         await actions.waitForElementToBeDisplayed(this.savedResponseList);
-        await this.savedResponseList.moveTo();
-        await actions.waitForElementToBeDisplayed(this.deleteResponse);
+        await this.deleteResponse.moveTo();
         await actions.clickOn(this.deleteResponse);
         await actions.clickOn(this.confirmDelete);
+        await actions.clickOn(this.savedResponseSearch);
+        await browser.keys('Space');
     }
+
 }
 
 export default new UpdatesPage();

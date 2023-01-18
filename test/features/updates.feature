@@ -1,4 +1,3 @@
-
 Feature: Updates Page Functionality
 
 Scenario: User is able to send scheduled update

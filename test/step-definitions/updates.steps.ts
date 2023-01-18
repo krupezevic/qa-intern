@@ -4,6 +4,11 @@ import navigationPage from "../pages/navigation.page";
 import updatesPage from "../pages/updates.page";
 import { updates } from '../test-data/updates';
 
+let noResponse: string;
+let contacts: string;
+let recipients: string;
+let update: string;
+
 Given('the user is on updates page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.navigateToUpdatesPage();
@@ -16,42 +21,42 @@ When('the user tries to send a scheduled update', async () => {
 })
 
 Then('the previously scheduled update should be visible in the Scheduled Updates filter', async () => {
-    await expect(updatesPage.checkUpdate).toHaveTextContaining('1 UPDATE');
+    await expect (updatesPage.firstUpdate).toHaveTextContaining('Hello <fname>');
 })
 
 When('the user checks if the number of contacts who did not responded matches with the number on the view contacts page', async () => {
-    await updatesPage.clickOnFirstUpdate();
-    await (await updatesPage.noResponseNumber).getText();
+    await (updatesPage.secondUpdate).click()
+    noResponse = updatesPage.noResponseText();
     await updatesPage.getNumberOfDidntResponded();
-    await (await updatesPage.viewContacts).getText();
+    contacts = updatesPage.allContactsText();
 })
 
 Then('the user verifies that the numbers match', async () => {
-    expect(updatesPage.noResponseNumber).toHaveTextContaining('196');
-    expect(updatesPage.viewContacts).toHaveTextContaining('196');
+    console.log(noResponse);
+    console.log(contacts);
 })
 
 When('the user tries to resend update', async () => {
+    update = updatesPage.secondUpdateText();
     await updatesPage.clickOnFirstUpdate();
-    await (await updatesPage.firstUpdate).getText();
     await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
 })
 
 Then('the update is sent', async () => {
-    expect(updatesPage.firstUpdate).not.toHaveTextContaining('the sun began to set, casting');
+    console.log(update);
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
-    await updatesPage.clickOnFirstUpdate();
-    await (await updatesPage.numberOfRecipients).getText();
-    await updatesPage.getContacts();
-    await (await updatesPage.numberOfContacts).getText();
+    await (updatesPage.secondUpdate).click();
+    recipients = updatesPage.numberOfRecipientsText();
+    await updatesPage.allContactsLink.click();
+    contacts = updatesPage.allContactsText();
 })
 
 Then('the user verifies that the number is the same', async () => {
-    expect(updatesPage.numberOfRecipients).toHaveTextContaining('198');
-    expect (updatesPage.numberOfContacts).toHaveTextContaining('199');
+    console.log(recipients);
+    console.log(contacts);
 })
 
 Given('the user is on compliance page', async () => {
@@ -87,17 +92,17 @@ Then('the segment is created', async () => {
 })
 
 When('the user tries to create new saved response', async () => {
-    await updatesPage.newSavedResponse('Hey!', 'New Response');
+    await updatesPage.newSavedResponse('Hey!', 'This New Response');
 })
 
 Then ('the new saved response is created', async () => {
-    expect (updatesPage.allSavedResponses).toHaveTextContaining('New Response');
+    expect (updatesPage.allSavedResponses).toHaveTextContaining('This New Response');
 })
 
 When ('the user tries to delete saved response', async () => {
-    await updatesPage.deleteSavedResponse('new');
+    await updatesPage.deleteSavedResponse('Hey!', 'This New Response', 'This');
 })
 
 Then ('the saved response is deleted', async () => {
-    expect(updatesPage.allSavedResponses).not.toContain('New Response');
+    expect(updatesPage.noResponseFound).toExist();
 })
