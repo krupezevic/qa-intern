@@ -15,6 +15,14 @@ class NavigationPage {
     return $('.desktopNavigation a[href="/segments"]');
   }
 
+  public get updatesLink() {
+    return $('.desktopNavigation a[href="/updates"]')
+  }
+
+  public get complianceLink() {
+    return $('.desktopNavigation a[href="/compliance"]')
+  }
+
   public get widgetsPageLink() {
     return $('.desktopNavigation a[href="/widgets"]');
   }
@@ -69,6 +77,16 @@ class NavigationPage {
   public async navigateToDynamicSegmentAndCLick() {
     await this.dynamicSegmentLink.moveTo();
     await this.dynamicSegmentLink.click();
+  }
+
+  public async navigateToUpdatesPage() {
+    await this.updatesLink.moveTo();
+    await this.updatesLink.click();
+  }
+
+  public async navigateToCompliancePage() {
+    await this.complianceLink.moveTo();
+    await this.complianceLink.click();
   }
   
 }
