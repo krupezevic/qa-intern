@@ -15,6 +15,9 @@ node_modules/
 # Optional npm cache directory
 .npm
 .npmrc
+.yarn
+.yarnrc.yml
+yarn.lock
 
 # dotenv environment variables file
 .env
