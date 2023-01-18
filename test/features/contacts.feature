@@ -21,3 +21,8 @@ Feature: Contacts functionality
       Given user is on the Contacts Page
       When user tries to enter text message
       Then characters limit number is changed
+
+   Scenario: User is able to create new data field
+      Given user is on the Contacts Page
+      When user tries to create new data field
+      Then data field is created

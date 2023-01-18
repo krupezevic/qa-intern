@@ -42,3 +42,11 @@ When('user tries to enter text message', async () => {
 Then('characters limit number is changed', async () => {
     await expect(contactsPage.countBoxTextInput).toHaveText('142');
 });
+
+When('user tries to create new data field', async () => {
+    await contactsPage.createNewDataField(contacts.fieldName);
+});
+
+Then('data field is created', async () => {
+    await expect(contactsPage.nameDataFieldForAssertion).toHaveText(contacts.fieldName);
+});
