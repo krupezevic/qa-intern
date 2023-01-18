@@ -1,5 +1,5 @@
 Feature: Conversation functionality
-   
+    
     Scenario: User is able to send message
         Given user is on the conversation page
         When user tries to send new message
@@ -41,7 +41,7 @@ Feature: Conversation functionality
         Given user is on the conversation page
         When user tries to create new saved response
         Then new saved response was created
-    
+
     Scenario: User is able to delete new saved response
         Given user is on the conversation page
         When user tries to delete new saved response
