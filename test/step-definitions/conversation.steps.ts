@@ -5,6 +5,9 @@ import { conversation } from "../test-data/conversation";
 import actions from "../utils/actions";
 
 
+const {tagName, nickname} = conversation;
+
+
 Given('user is on the conversation page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
 });
@@ -31,11 +34,11 @@ Then('the conversation was archived', async () => {
 });
 
 When('user tries to add tag to the conversation', async () => {
-    await conversationPage.tagConversation(conversation.tagName);
+    await conversationPage.tagConversation(tagName);
 });
 
 Then('the tag is added to the conversation', async () => {
-    await expect(conversationPage.tagNameText).toHaveTextContaining(conversation.tagName);
+    await expect(conversationPage.tagNameText).toHaveTextContaining(tagName);
 });
 
 When('user input text in message box', async () => {
@@ -47,11 +50,11 @@ Then('number of remaining characters were decreased', async () => {
 });
 
 When('user add nickname to contact', async () => {
-    await conversationPage.addNicknameToContact(conversation.nickname);
+    await conversationPage.addNicknameToContact(nickname);
 });
 
 Then('user had nickname with first and last name', async () => {
-    await expect(conversationPage.nickname).toHaveTextContaining(conversation.nickname);
+    await expect(conversationPage.nickname).toHaveTextContaining(nickname);
 });
 
 When('user tries to send Vcard', async () => {
@@ -63,17 +66,17 @@ Then('Vcard download link was sent', async () => {
 });
 
 When('user tries to create new saved response', async () => {
-    await conversationPage.createNewSavedResponse(conversation.tagName, conversation.nickname);
+    await conversationPage.createNewSavedResponse(tagName, nickname);
 });
 
 Then('new saved response was created', async () => {
-    await expect(conversationPage.createdResponse).toHaveTextContaining(conversation.nickname);
+    await expect(conversationPage.createdResponse).toHaveTextContaining(nickname);
 });
 
 When('user tries to delete new saved response', async () => {
-    await conversationPage.deleteNewSavedResponse(conversation.tagName, conversation.nickname);
+    await conversationPage.deleteNewSavedResponse(tagName, nickname);
 });
 
 Then('new saved response was deleted', async () => {
-    await expect(conversationPage.responseModal).not.toHaveTextContaining(conversation.nickname);
+    await expect(conversationPage.responseModal).not.toHaveTextContaining(nickname);
 });
