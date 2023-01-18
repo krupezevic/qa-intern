@@ -38,7 +38,7 @@ Then('the user verifies that the numbers match', async () => {
 
 When('the user tries to resend update', async () => {
     update = updatesPage.secondUpdateText();
-    await updatesPage.clickOnFirstUpdate();
+    await updatesPage.secondUpdate.click();
     await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
 })
