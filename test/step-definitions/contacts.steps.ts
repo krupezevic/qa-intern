@@ -4,34 +4,36 @@ import navigationPage from "../pages/navigation.page";
 import contactsPage from "../pages/contacts.page";
 import { contacts } from "../test-data/contacts";
 
+const {nickname, tagName, firstName, lastName, fieldName, commerceName, commerceAmount} = contacts;
+
 Given('user is on the Contacts Page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.navigateToContactsPage(); 
 });
 
 When('user tries to edit contact', async () => {
-    await contactsPage.editNickname(contacts.nickname);
+    await contactsPage.editNickname(nickname);
 });
 
 Then('contact is edited', async () => {
-    await expect(contactsPage.userNickname).toHaveText(contacts.nickname);
+    await expect(contactsPage.userNickname).toHaveText(nickname);
 });
 
 When('user tries to add contribution', async () => {
-    await contactsPage.addContrabution(contacts.commerceName, contacts.commerceAmount);
+    await contactsPage.addContrabution(commerceName, commerceAmount);
 });
 
 Then('contribution is added', async () => {
-    await expect(contactsPage.amountForAssertion).toHaveTextContaining(contacts.commerceAmount);
-    await expect(contactsPage.nameForAssertion).toHaveText(contacts.commerceName);     
+    await expect(contactsPage.amountForAssertion).toHaveTextContaining(commerceAmount);
+    await expect(contactsPage.nameForAssertion).toHaveText(commerceName);     
 });
 
 When('user tries to add tag', async () => {
-    await contactsPage.addTag(contacts.tagName);
+    await contactsPage.addTag(tagName);
 });
 
 Then('tag is added', async () => {
-    await expect(contactsPage.getTextTagName()).toHaveTextContaining(contacts.tagName);
+    await expect(contactsPage.getTextTagName()).toHaveTextContaining(tagName);
     await expect(contactsPage.contactNameForAssertion()).toHaveTextContaining(contactsPage.contactNameForAssertionFromDetailsBar());         
 });
 
@@ -44,11 +46,11 @@ Then('characters limit number is changed', async () => {
 });
 
 When('user tries to create new data field', async () => {
-    await contactsPage.createNewDataField(contacts.fieldName);
+    await contactsPage.createNewDataField(fieldName);
 });
 
 Then('data field is created', async () => {
-    await expect(contactsPage.nameDataFieldForAssertion).toHaveText(contacts.fieldName);
+    await expect(contactsPage.nameDataFieldForAssertion).toHaveText(fieldName);
 });
 
 When('user tries to create new contact', async () => {
@@ -56,6 +58,6 @@ When('user tries to create new contact', async () => {
 });
 
 Then('contact is created', async () => {
-    await expect(contactsPage.contactFromList).toHaveTextContaining(contacts.firstName);
-    await expect(contactsPage.contactFromList).toHaveTextContaining(contacts.lastName);
+    await expect(contactsPage.contactFromList).toHaveTextContaining(firstName);
+    await expect(contactsPage.contactFromList).toHaveTextContaining(lastName);
 });
