@@ -9,6 +9,8 @@ let contacts: string;
 let recipients: string;
 let update: string;
 
+const {brandName, optOut} = updates
+
 Given('the user is on updates page', async () => {
     await loginPage.login(`${process.env.CHARGEBEE_EMAIL}`, `${process.env.PASSWORD}`);
     await navigationPage.navigateToUpdatesPage();
@@ -25,9 +27,9 @@ Then('the previously scheduled update should be visible in the Scheduled Updates
 })
 
 When('the user checks if the number of contacts who did not responded matches with the number on the view contacts page', async () => {
-    await (updatesPage.secondUpdate).click()
+    await updatesPage.secondUpdate.click()
     noResponse = updatesPage.noResponseText();
-    await updatesPage.getNumberOfDidntResponded();
+    await updatesPage.responseViewButton.click();
     contacts = updatesPage.allContactsText();
 })
 
@@ -48,7 +50,7 @@ Then('the update is sent', async () => {
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
-    await (updatesPage.secondUpdate).click();
+    await updatesPage.secondUpdate.click();
     recipients = updatesPage.numberOfRecipientsText();
     await updatesPage.allContactsLink.click();
     contacts = updatesPage.allContactsText();
@@ -65,14 +67,14 @@ Given('the user is on compliance page', async () => {
 })
 
 When('the user tries to change brand name and opt out', async () => {
-    await updatesPage.brandOptUpdate(updates.optOut, updates.brandName);
+    await updatesPage.brandOptUpdate(optOut, brandName);
     await navigationPage.navigateToUpdatesPage();
     await updatesPage.settingsChanges();
 })
 
 Then('the brand name and opt out is changed', async () => {
-    expect(updatesPage.editorContainer).toHaveTextContaining(updates.brandName);
-    expect(updatesPage.editorContainer).toHaveTextContaining(updates.optOut);
+    expect(updatesPage.editorContainer).toHaveTextContaining(brandName);
+    expect(updatesPage.editorContainer).toHaveTextContaining(optOut);
 })
 
 When('the user clicks on the new update and inputs text', async () => {
