@@ -142,7 +142,7 @@ class UpdatesPage {
     }
 
     public get createSavedResponse() {
-        return $('.sr-add');
+        return $('.sr-add .moon');
     }
 
     public get responseName() {
