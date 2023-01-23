@@ -34,8 +34,7 @@ When('the user checks if the number of contacts who did not responded matches wi
 })
 
 Then('the user verifies that the numbers match', async () => {
-    console.log(noResponse);
-    console.log(contacts);
+    expect (updatesPage.allContactsText).toHaveTextContaining(noResponse);
 })
 
 When('the user tries to resend update', async () => {
@@ -43,10 +42,11 @@ When('the user tries to resend update', async () => {
     await updatesPage.secondUpdate.click();
     await updatesPage.resendUpdate();
     await updatesPage.sendUpdate();
+    await updatesPage.checkScheduledUpdate();
 })
 
 Then('the update is sent', async () => {
-    console.log(update);
+    expect (updatesPage.allUpdates).toHaveTextContaining('stop')
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
