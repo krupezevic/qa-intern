@@ -1,5 +1,5 @@
 Feature: Conversation functionality
-    @only
+    
     Scenario: User is able to send message
         Given user is on the conversation page
         When user tries to send new message
