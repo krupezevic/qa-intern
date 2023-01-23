@@ -34,7 +34,7 @@ When('the user checks if the number of contacts who did not responded matches wi
 })
 
 Then('the user verifies that the numbers match', async () => {
-    expect (updatesPage.allContactsText).toHaveTextContaining(noResponse);
+    expect (updatesPage.viewContacts).toHaveTextContaining(noResponse);
 })
 
 When('the user tries to resend update', async () => {
@@ -46,7 +46,7 @@ When('the user tries to resend update', async () => {
 })
 
 Then('the update is sent', async () => {
-    expect (updatesPage.allUpdates).toHaveTextContaining('stop')
+    expect (updatesPage.firstUpdate).toHaveTextContaining('stop');
 })
 
 When('the user checks if the number of recipients match with number of contacts', async () => {
@@ -57,8 +57,7 @@ When('the user checks if the number of recipients match with number of contacts'
 })
 
 Then('the user verifies that the number is the same', async () => {
-    console.log(recipients);
-    console.log(contacts);
+    expect (updatesPage.allContactsLink).toHaveTextContaining(recipients);
 })
 
 Given('the user is on compliance page', async () => {
@@ -94,15 +93,15 @@ Then('the segment is created', async () => {
 })
 
 When('the user tries to create new saved response', async () => {
-    await updatesPage.newSavedResponse('Hey!', 'This New Response');
+    await updatesPage.newSavedResponse('Hey!', 'New Response');
 })
 
 Then ('the new saved response is created', async () => {
-    expect (updatesPage.allSavedResponses).toHaveTextContaining('This New Response');
+    expect (updatesPage.allSavedResponses).toHaveTextContaining('New Response');
 })
 
 When ('the user tries to delete saved response', async () => {
-    await updatesPage.deleteSavedResponse('Hey!', 'This New Response', 'This');
+    await updatesPage.deleteSavedResponse('Hey!', 'Great!', 'Great!');
 })
 
 Then ('the saved response is deleted', async () => {
