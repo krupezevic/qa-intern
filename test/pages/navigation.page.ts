@@ -2,7 +2,10 @@ import actions from "../utils/actions";
 
 class NavigationPage {
 
- 
+  public get tagsLinkButton() {
+    return $('.desktopNavigation .SpNavGroup:nth-child(2) [href="/tags"]');
+  }
+
   public get contactsLink() {
     return $('.desktopNavigation .SpNavGroupContent a[href="/contacts"]');
   }
@@ -87,6 +90,11 @@ class NavigationPage {
   public async navigateToCompliancePage() {
     await this.complianceLink.moveTo();
     await this.complianceLink.click();
+  }
+
+  public async navigateToTagsPage() {
+    await this.tagsLinkButton.moveTo();
+    await this.tagsLinkButton.click();
   }
   
 }
