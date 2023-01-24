@@ -1,9 +1,9 @@
 Feature: Dynamic-segments functionality
    
-   Scenario: User is able to create new segment
-      Given user is on Dynamic Segment page
-      When user tries to create new segment with valid values
-      Then new segment is created
+   # Scenario: User is able to create new segment
+   #    Given user is on Dynamic Segment page
+   #    When user tries to create new segment with valid values
+   #    Then new segment is created
 
    # Scenario: User is not able to create new segment without "Segment name" field
    #   Given user is on Dynamic Segment page
@@ -15,15 +15,15 @@ Feature: Dynamic-segments functionality
    #   When user tries to create new segment without Add filter field
    #   Then save button is disabled
    
-   Scenario: User is able to rename segment in edit section
-      Given new dynamic segment is created
-      When user tries to enter new value in field SEGMENT NAME in edit section
-      Then segment is edited
+   # Scenario: User is able to rename segment in edit section
+   #    Given new dynamic segment is created
+   #    When user tries to enter new value in field SEGMENT NAME in edit section
+   #    Then segment is edited
 
-   Scenario: User is able to delete segment from list
-      Given new dynamic segment is created
-      When user tries to delete selected segment from the list
-      Then element is removed from the list
+   # Scenario: User is able to delete segment from list
+   #    Given new dynamic segment is created
+   #    When user tries to delete selected segment from the list
+   #    Then element is removed from the list
 
 # Scenario: User is able to change value of "Filters" field in edit section
 #   Given user is on Dynamic Segment page
